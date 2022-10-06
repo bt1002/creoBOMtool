@@ -1,0 +1,7 @@
+# Use attached file and add bom_format option at the end of your config.pro file.
+
+.summary
+
+List of components used in the assembly %$name
+
+.row %$quantity[4d]; %$type[-8s]; %$name[-32s]

@@ -1,0 +1,17 @@
+
+
+Assembly ASM0001 contains:
+     2         Part  MYBOTTLE
+     2         Part  PD
+     1 Sub-Assembly  ASM0002
+
+
+
+Sub-Assembly ASM0002 contains:
+     1         Part  PD
+     1         Part  MYBOTTLE
+
+
+Summary of parts for assembly ASM0001:
+     3         Part  MYBOTTLE
+     3         Part  PD
