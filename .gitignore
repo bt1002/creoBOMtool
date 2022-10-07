@@ -1,2 +1,11 @@
 *.pyc
-./__pycache__/*
+
+__pycache__/
+
+*.pyc
+notes/
+
+*_env/
+*_env*/
+
+*.DS_Store
