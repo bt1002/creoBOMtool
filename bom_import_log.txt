@@ -1,0 +1,1490 @@
+2022-10-06 22:03:52,886 - CRITICAL - Sub-bom item routine started: 7U-BOTTOM, QTY 1
+2022-10-06 22:03:52,886 - CRITICAL - Sub-bom item routine started: 7U-COVER-TOP, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM79XXX-GPU-TRAY-MODULE, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: K2-TRAY-MODULE-LEFT, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: K2-TRAY-MODULE-RIGHT, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: BACKPLANE-BD-MODULE-ASM, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: NFC-TRAY-MODULE, QTY 1
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM79XXX-4FAN-MODULE, QTY 8
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM79XXX-PDB-TRAY-ASSY, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-NFC-DUMMY-COVER, QTY 1
+2022-10-06 22:03:52,887 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-BOTTOM
+2022-10-06 22:03:52,887 - DEBUG - Parent Level: 0
+2022-10-06 22:03:52,887 - DEBUG - Current Level: 1
+2022-10-06 22:03:52,887 - DEBUG - Length of Tree: 1
+2022-10-06 22:03:52,887 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,887 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,887 - DEBUG - New length of Tree: 1
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: 7U-BOTTOM-RIVET, QTY 1
+2022-10-06 22:03:52,887 - DEBUG - Current Asm Level: 2 Current Tree Level: 1
+2022-10-06 22:03:52,887 - DEBUG - New Length of Tree: [CreoAsm(bomID=1, level=0, name='RM7922000201-CHASSIS-000', qty=1, type='Assembly', unID='RM7922000201-CHASSIS-000.Assembly.0.1'), CreoAsm(bomID=1, level=1, name='7U-BOTTOM', qty='1', type='Sub-Assembly', unID='7U-BOTTOM.Sub-Assembly.1.1')]
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-LATCH-BKT-R-ASM, QTY 1
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-LATCH-BKT-L-ASM, QTY 1
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-CHASSIS-LATCH, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM79XXX-CHASSIS-HANDLE, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: FAN-BAR-MODULE-SP, QTY 4
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-231-BP-MODULE-STOP, QTY 2
+2022-10-06 22:03:52,887 - CRITICAL - Sub-bom item routine started: RM7922000201-250-TRAY-GUIDE, QTY 2
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-251-STOPER-METAL, QTY 2
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-198-STOPER-SUP-BKT, QTY 2
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 32
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: SCREW-M5-60H123250-161, QTY 12
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: SCREW-M5-160-10101-101000, QTY 4
+2022-10-06 22:03:52,888 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-BOTTOM-RIVET
+2022-10-06 22:03:52,888 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,888 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,888 - DEBUG - Length of Tree: 2
+2022-10-06 22:03:52,888 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,888 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,888 - DEBUG - New length of Tree: 2
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-101-BOTTOM-BASE, QTY 1
+2022-10-06 22:03:52,888 - DEBUG - Current Asm Level: 3 Current Tree Level: 2
+2022-10-06 22:03:52,888 - DEBUG - New Length of Tree: [CreoAsm(bomID=1, level=0, name='RM7922000201-CHASSIS-000', qty=1, type='Assembly', unID='RM7922000201-CHASSIS-000.Assembly.0.1'), CreoAsm(bomID=1, level=1, name='7U-BOTTOM', qty='1', type='Sub-Assembly', unID='7U-BOTTOM.Sub-Assembly.1.1'), CreoAsm(bomID=1, level=2, name='7U-BOTTOM-RIVET', qty='1', type='Sub-Assembly', unID='7U-BOTTOM-RIVET.Sub-Assembly.1.1')]
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-102-COV-TOP-FRONT, QTY 1
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: 7U-BOTTOM-BASE-SUPPORT, QTY 1
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-107-BOTTOM-PAR-H, QTY 1
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-108-CANISTER-BAR, QTY 1
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-109-TOP-PUSH-BKT, QTY 2
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-CHASSIS-SUP-BKT-L, QTY 1
+2022-10-06 22:03:52,888 - CRITICAL - Sub-bom item routine started: RM7922000201-CHASSIS-SUP-BKT-R, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-248-CROSS-BAR, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-TOP-AIR-DUCT, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-REAR-WINDOW-ASSY, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-CHASSIS-BP-SUP-BKT, QTY 4
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 84
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A052-L2_3, QTY 86
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 19
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 4
+2022-10-06 22:03:52,889 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-101-BOTTOM-BASE
+2022-10-06 22:03:52,889 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,889 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,889 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,889 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,889 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,889 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-BOTTOM-BASE, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S06, QTY 1
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S01, QTY 4
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S10, QTY 2
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S11, QTY 2
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM59901-101-S01, QTY 20
+2022-10-06 22:03:52,889 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S05, QTY 2
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S08, QTY 7
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S12, QTY 2
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S09, QTY 2
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S03, QTY 12
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S04, QTY 4
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-101-S13, QTY 1
+2022-10-06 22:03:52,890 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-102-COV-TOP-FRONT
+2022-10-06 22:03:52,890 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,890 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,890 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,890 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,890 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,890 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-102-COV-TOP-FRONT, QTY 1
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-102-S01, QTY 4
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: SI-0135-60H703200-022, QTY 6
+2022-10-06 22:03:52,890 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-BOTTOM-BASE-SUPPORT
+2022-10-06 22:03:52,890 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,890 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,890 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,890 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,890 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,890 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,890 - CRITICAL - Sub-bom item routine started: RM7922000201-105-BOTTOM-SUPPORT, QTY 1
+2022-10-06 22:03:52,890 - DEBUG - Current Asm Level: 4 Current Tree Level: 3
+2022-10-06 22:03:52,891 - DEBUG - New Length of Tree: [CreoAsm(bomID=1, level=0, name='RM7922000201-CHASSIS-000', qty=1, type='Assembly', unID='RM7922000201-CHASSIS-000.Assembly.0.1'), CreoAsm(bomID=1, level=1, name='7U-BOTTOM', qty='1', type='Sub-Assembly', unID='7U-BOTTOM.Sub-Assembly.1.1'), CreoAsm(bomID=1, level=2, name='7U-BOTTOM-RIVET', qty='1', type='Sub-Assembly', unID='7U-BOTTOM-RIVET.Sub-Assembly.1.1'), CreoAsm(bomID=3, level=3, name='7U-BOTTOM-BASE-SUPPORT', qty='1', type='Sub-Assembly', unID='7U-BOTTOM-BASE-SUPPORT.Sub-Assembly.1.3')]
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: RM7922000201-106-BOTTOM-PAR-V, QTY 1
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 9
+2022-10-06 22:03:52,891 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-105-BOTTOM-SUPPORT
+2022-10-06 22:03:52,891 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,891 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,891 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,891 - DEBUG - New Parent Level: 4
+2022-10-06 22:03:52,891 - DEBUG - New Current Level: 5
+2022-10-06 22:03:52,891 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: RM7922000201-105-BOTTOM-SUPPORT, QTY 1
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: SI-0123-60H703000-155, QTY 4
+2022-10-06 22:03:52,891 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-106-BOTTOM-PAR-V
+2022-10-06 22:03:52,891 - DEBUG - Parent Level: 4
+2022-10-06 22:03:52,891 - DEBUG - Current Level: 5
+2022-10-06 22:03:52,891 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,891 - DEBUG - New Parent Level: 4
+2022-10-06 22:03:52,891 - DEBUG - New Current Level: 5
+2022-10-06 22:03:52,891 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: RM7922000201-106-BOTTOM-PAR-V, QTY 1
+2022-10-06 22:03:52,891 - CRITICAL - Sub-bom item routine started: RM7922000201-106-S01, QTY 1
+2022-10-06 22:03:52,891 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-107-BOTTOM-PAR-H
+2022-10-06 22:03:52,892 - DEBUG - Parent Level: 4
+2022-10-06 22:03:52,892 - DEBUG - Current Level: 5
+2022-10-06 22:03:52,892 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,892 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,892 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,892 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,892 - CRITICAL - Sub-bom item routine started: RM7922000201-107-BOTTOM-PAR-H, QTY 1
+2022-10-06 22:03:52,892 - CRITICAL - Sub-bom item routine started: RM7922000201-107-S01, QTY 4
+2022-10-06 22:03:52,892 - CRITICAL - Sub-bom item routine started: RM7922000201-107-S02, QTY 2
+2022-10-06 22:03:52,892 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-108-CANISTER-BAR
+2022-10-06 22:03:52,892 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,892 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,892 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,893 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,893 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,893 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: RM7922000201-108-CANISTER-BAR, QTY 1
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: RM7922000201-108-S01, QTY 2
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: BUSHING, QTY 2
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: GUIDE-STD, QTY 2
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,893 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-CHASSIS-SUP-BKT-L
+2022-10-06 22:03:52,893 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,893 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,893 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,893 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,893 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,893 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: RM7922000201-110-CHASSIS-SUP-BK, QTY 1
+2022-10-06 22:03:52,893 - CRITICAL - Sub-bom item routine started: RM7922000201-SOFT-STOP-COVER-L, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RM7922000201-243-PULL-OUT-CARD, QTY 2
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,894 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-110-CHASSIS-SUP-BK
+2022-10-06 22:03:52,894 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,894 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,894 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RM7922000201-110-CHASSIS-SUP-BK, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: NU-0018-60H303240-002, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: 2U_CHASSIS_YSKS-69172-ZI_1, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A052-L2_3, QTY 4
+2022-10-06 22:03:52,894 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-SOFT-STOP-COVER-L
+2022-10-06 22:03:52,894 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,894 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,894 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RM7922000201-418-HINGE-BKT-L, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RM7922000201-419-SOFTSTOP-CVR-L, QTY 8
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: RM7922000201-355-COVER-SPRING, QTY 1
+2022-10-06 22:03:52,894 - CRITICAL - Sub-bom item routine started: HG-209-031-01_A_-20150311, QTY 2
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,895 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-419-SOFTSTOP-CVR-L
+2022-10-06 22:03:52,895 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,895 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,895 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RM7922000201-419-SOFTSTOP-CVR-L, QTY 1
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RM7922000201-417-S01, QTY 1
+2022-10-06 22:03:52,895 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-CHASSIS-SUP-BKT-R
+2022-10-06 22:03:52,895 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,895 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,895 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,895 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,895 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,895 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RM7922000201-111-CHAS-SUP-BKT-R, QTY 1
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RM7922000201-SOFT-STOP-COVER-R, QTY 1
+2022-10-06 22:03:52,895 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,895 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-111-CHAS-SUP-BKT-R
+2022-10-06 22:03:52,895 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,895 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,895 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-111-CHAS-SUP-BKT-R, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: NU-0018-60H303240-002, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A052-L2_3, QTY 4
+2022-10-06 22:03:52,896 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-SOFT-STOP-COVER-R
+2022-10-06 22:03:52,896 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,896 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,896 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-416-HINGE-BKT-R, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-417-SOFTSTOP-CVR-R, QTY 3
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: HG-209-031-01_A_-20150311, QTY 2
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-355-COVER-SPRING, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,896 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-417-SOFTSTOP-CVR-R
+2022-10-06 22:03:52,896 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,896 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,896 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-417-SOFTSTOP-CVR-R, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-417-S01, QTY 1
+2022-10-06 22:03:52,896 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-248-CROSS-BAR
+2022-10-06 22:03:52,896 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,896 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,896 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,896 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,896 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,896 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,896 - CRITICAL - Sub-bom item routine started: RM7922000201-248-CROSS-BAR, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-TOP-AIR-DUCT
+2022-10-06 22:03:52,897 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,897 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,897 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,897 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,897 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,897 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-201-TOP-AIR-DUCT, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-321-AIRDUCT, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: SCREW-60H151103-043, QTY 9
+2022-10-06 22:03:52,897 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-201-TOP-AIR-DUCT
+2022-10-06 22:03:52,897 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,897 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,897 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-201-TOP-AIR-DUCT, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-201-S02, QTY 9
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-201-S03, QTY 8
+2022-10-06 22:03:52,897 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-REAR-WINDOW-ASSY
+2022-10-06 22:03:52,897 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,897 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,897 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,897 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,897 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,897 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-103-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-174-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-177-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-140-BAR-PROTECTOR, QTY 2
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-178-REARWIN-SUP-BK, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-179-REARWIN-SUP-BK, QTY 1
+2022-10-06 22:03:52,897 - CRITICAL - Sub-bom item routine started: RM7922000201-196-REAR-NFC-SUP, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-197-CROSS-BAR, QTY 2
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-249-CROSS-BAR-ZN, QTY 2
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RD-22SEP-22客戶_20220930_, QTY 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: SCREW-60H151103-042, QTY 8
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 26
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 14
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-244-CABLE-CLIP, QTY 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-2XX-CABLE-CLIP, QTY 8
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-1XX-BRACKET-1, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 7
+2022-10-06 22:03:52,898 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-103-REAR-WINDOW
+2022-10-06 22:03:52,898 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,898 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,898 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: ST-0309-60H703103-541, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S01, QTY 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S02, QTY 2
+2022-10-06 22:03:52,898 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-174-REAR-WINDOW
+2022-10-06 22:03:52,898 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,898 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,898 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-174-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: ST-0309-60H703103-541, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S01, QTY 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S02, QTY 2
+2022-10-06 22:03:52,898 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-177-REAR-WINDOW
+2022-10-06 22:03:52,898 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,898 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,898 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-177-REAR-WINDOW, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: ST-0309-60H703103-541, QTY 1
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S01, QTY 6
+2022-10-06 22:03:52,898 - CRITICAL - Sub-bom item routine started: RM7922000201-103-S02, QTY 2
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-177-S01, QTY 12
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-140-BAR-PROTECTOR
+2022-10-06 22:03:52,899 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-140-BAR-PROTECTOR, QTY 1
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-196-REAR-NFC-SUP
+2022-10-06 22:03:52,899 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-196-REAR-NFC-SUP, QTY 1
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RIVET-60H453203A001, QTY 4
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-197-CROSS-BAR
+2022-10-06 22:03:52,899 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-197-CROSS-BAR, QTY 1
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-197-S01, QTY 4
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-249-CROSS-BAR-ZN
+2022-10-06 22:03:52,899 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-249-CROSS-BAR-ZN, QTY 1
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-CHASSIS-BP-SUP-BKT
+2022-10-06 22:03:52,899 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,899 - DEBUG - New Parent Level: 3
+2022-10-06 22:03:52,899 - DEBUG - New Current Level: 4
+2022-10-06 22:03:52,899 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-173-BD-SUP-BKT, QTY 1
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: RM7922000201-235-SLIDING-HOLDER, QTY 2
+2022-10-06 22:03:52,899 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 6
+2022-10-06 22:03:52,899 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-173-BD-SUP-BKT
+2022-10-06 22:03:52,900 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,900 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,900 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-173-BD-SUP-BKT, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-173-S01, QTY 3
+2022-10-06 22:03:52,900 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-235-SLIDING-HOLDER
+2022-10-06 22:03:52,900 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,900 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,900 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-235-SLIDING-HOLDER, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-235-S01, QTY 3
+2022-10-06 22:03:52,900 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-LATCH-BKT-R-ASM
+2022-10-06 22:03:52,900 - DEBUG - Parent Level: 3
+2022-10-06 22:03:52,900 - DEBUG - Current Level: 4
+2022-10-06 22:03:52,900 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,900 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,900 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,900 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-116-LATCH-BKT-R, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-188-LATCH-COVER-R, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-187-SUP-BRACKET-2, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-230-LATCH-SUP-BLOC, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-112-LATCH-BT-R_MOD, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM19808-AUTOLOCK, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 6
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RIVET-171-00012-200030, QTY 13
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RIVET-L-6_2, QTY 2
+2022-10-06 22:03:52,900 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-116-LATCH-BKT-R
+2022-10-06 22:03:52,900 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,900 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,900 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-116-LATCH-BKT-R, QTY 1
+2022-10-06 22:03:52,900 - CRITICAL - Sub-bom item routine started: RM7922000201-116-S01, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RIVET-171-00012-200030, QTY 8
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-188-LATCH-COVER-R
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RM7922000201-188-LATCH-COVER-R, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-187-SUP-BRACKET-2
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RM7922000201-187-SUP-BRACKET-2, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-112-LATCH-BT-R_MOD
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RM7922000201-112-LATCH-BT-R_MOD, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19808-AUTOLOCK
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RM19808-AUTO-LOCKED-L_ASM, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 2
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19808-AUTO-LOCKED-L_ASM
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: ASSEM24, QTY 1
+2022-10-06 22:03:52,901 - CRITICAL - Assembly Header Identified: Sub-Assembly, ASSEM24
+2022-10-06 22:03:52,901 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,901 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,901 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,901 - CRITICAL - Sub-bom item routine started: RM7922000201-113-LOCKED-BTM-L, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM19808-315-LOCKED-SPRING, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-114-LOCKED-TOP, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-202-LOCK-SLIDE-ZN, QTY 2
+2022-10-06 22:03:52,902 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-113-LOCKED-BTM-L
+2022-10-06 22:03:52,902 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,902 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,902 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-113-S01, QTY 2
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-113-LOCKED-BTM-L, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-114-LOCKED-TOP
+2022-10-06 22:03:52,902 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,902 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,902 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-114-LOCKED-TOP, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-LATCH-BKT-L-ASM
+2022-10-06 22:03:52,902 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,902 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,902 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,902 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,902 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,902 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-115-LATCH-BKT-L-NE, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-112-LATCH-BT-R_MOD, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-230-LATCH-SUP-BLOC, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-186-LATCH-COVER-L, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-187-SUP-BRACKET-2, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM19808-AUTOLOCK, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 6
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RIVET-171-00012-200030, QTY 13
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RIVET-L-6_2, QTY 2
+2022-10-06 22:03:52,902 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-115-LATCH-BKT-L-NE
+2022-10-06 22:03:52,902 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,902 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,902 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-115-LATCH-BKT-L-NE, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RM7922000201-116-S01, QTY 1
+2022-10-06 22:03:52,902 - CRITICAL - Sub-bom item routine started: RIVET-171-00012-200030, QTY 8
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-186-LATCH-COVER-L
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-186-LATCH-COVER-L, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-CHASSIS-LATCH
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,903 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-203-HANDLE-COVER, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-204-LATCH, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-205-HANDLE, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM19302-301-HANDLE-SPRING, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-317-SCREW-6-32X10, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: 160-01000-000880-SCREW-632X8L, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-203-HANDLE-COVER
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-203-HANDLE-COVER, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: 60H726103-701, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922-201-S01, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-204-LATCH
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-204-LATCH, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-205-HANDLE
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,903 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: RM7922000201-205-HANDLE, QTY 1
+2022-10-06 22:03:52,903 - CRITICAL - Sub-bom item routine started: 60H726103-701, QTY 2
+2022-10-06 22:03:52,903 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-CHASSIS-HANDLE
+2022-10-06 22:03:52,903 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,903 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,904 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-117-HANDLE-BKT, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: 6R-72076-5_B_-20110527, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: SCREW-60H141240-060, QTY 2
+2022-10-06 22:03:52,904 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-117-HANDLE-BKT
+2022-10-06 22:03:52,904 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-117-HANDLE-BKT, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: SI-0147-60H703000-109, QTY 2
+2022-10-06 22:03:52,904 - CRITICAL - Assembly Header Identified: Sub-Assembly, FAN-BAR-MODULE-SP
+2022-10-06 22:03:52,904 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,904 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-118-FAN-BAR-01-SP, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-119-FAN-BAR-02-SP, QTY 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-120-FAN-PAR-OP1-SP, QTY 7
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-121-BAR-SUP-BKT-L, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-122-BAR-SUP-BKT-R, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-172-FAN-SUP-BKT, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-189-FAN-BKT-L, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-190-FAN-BKT-R, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 91
+2022-10-06 22:03:52,904 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-118-FAN-BAR-01-SP
+2022-10-06 22:03:52,904 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,904 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-118-FAN-BAR-01-SP, QTY 1
+2022-10-06 22:03:52,904 - CRITICAL - Sub-bom item routine started: RM7922000201-118-S01, QTY 8
+2022-10-06 22:03:52,904 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-119-FAN-BAR-02-SP
+2022-10-06 22:03:52,904 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,904 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: RM7922000201-119-FAN-BAR-02-SP, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 2
+2022-10-06 22:03:52,905 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-121-BAR-SUP-BKT-L
+2022-10-06 22:03:52,905 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,905 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: RM7922000201-121-BAR-SUP-BKT-L, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-122-BAR-SUP-BKT-R
+2022-10-06 22:03:52,905 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,905 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: RM7922000201-122-BAR-SUP-BKT-R, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-250-TRAY-GUIDE
+2022-10-06 22:03:52,905 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,905 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,905 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,905 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: RM7922000201-250-TRAY-GUIDE, QTY 1
+2022-10-06 22:03:52,905 - CRITICAL - Sub-bom item routine started: RM7922000201-250-S01, QTY 5
+2022-10-06 22:03:52,905 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-198-STOPER-SUP-BKT
+2022-10-06 22:03:52,905 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,905 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,905 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,906 - DEBUG - New Parent Level: 2
+2022-10-06 22:03:52,906 - DEBUG - New Current Level: 3
+2022-10-06 22:03:52,906 - DEBUG - New length of Tree: 4
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: RM7922000201-198-STOPER-SUP-BKT, QTY 1
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: 9317012-152-B-M5-1ZI-4, QTY 8
+2022-10-06 22:03:52,906 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-COVER-TOP
+2022-10-06 22:03:52,906 - DEBUG - Parent Level: 2
+2022-10-06 22:03:52,906 - DEBUG - Current Level: 3
+2022-10-06 22:03:52,906 - DEBUG - Length of Tree: 4
+2022-10-06 22:03:52,906 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,906 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,906 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: 7U-COVER-TOP-REAR-ASSY, QTY 1
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: RM19811-NFC-TOP_ASM, QTY 1
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: SCREW-60H111103-021, QTY 4
+2022-10-06 22:03:52,906 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-COVER-TOP-REAR-ASSY
+2022-10-06 22:03:52,906 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,906 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,906 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: 7U-COVER-TOP-REAR-RIVET, QTY 1
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: RM7922000201-317-LATCH-MYLAR, QTY 2
+2022-10-06 22:03:52,906 - CRITICAL - Sub-bom item routine started: RM1921000701-301-TWIN-ADHESIVE, QTY 1
+2022-10-06 22:03:52,906 - CRITICAL - Assembly Header Identified: Sub-Assembly, 7U-COVER-TOP-REAR-RIVET
+2022-10-06 22:03:52,907 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,907 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,907 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM7922000201-104-COVER-TOP-REAR, QTY 1
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM21918-28-TOP-COVER-LOCK, QTY 2
+2022-10-06 22:03:52,907 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-104-COVER-TOP-REAR
+2022-10-06 22:03:52,907 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,907 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,907 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM7922000201-104-COVER-TOP-REAR, QTY 1
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM7922000201-104-S01, QTY 4
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM7922000201-104-S02, QTY 2
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: SI-0308, QTY 2
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: SI-0086-60H703000-186, QTY 6
+2022-10-06 22:03:52,907 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM21918-28-TOP-COVER-LOCK
+2022-10-06 22:03:52,907 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,907 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,907 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM21918-28-TOP-COVER-LOCK, QTY 1
+2022-10-06 22:03:52,907 - CRITICAL - Sub-bom item routine started: RM21918-28-S01, QTY 1
+2022-10-06 22:03:52,907 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM1921000701-301-TWIN-ADHESIVE
+2022-10-06 22:03:52,907 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,907 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,908 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,908 - CRITICAL - Sub-bom item routine started: TESA_HAF_58475_3, QTY 1
+2022-10-06 22:03:52,908 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19811-NFC-TOP_ASM
+2022-10-06 22:03:52,908 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,908 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,908 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,908 - CRITICAL - Sub-bom item routine started: RM19811-211-NFC-TOP-COVER_ASM_5, QTY 1
+2022-10-06 22:03:52,908 - CRITICAL - Sub-bom item routine started: RM19811-212-NFC-INNER-COVER_ASM, QTY 1
+2022-10-06 22:03:52,908 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19811-211-NFC-TOP-COVER_ASM_5
+2022-10-06 22:03:52,908 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,908 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,908 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,908 - CRITICAL - Sub-bom item routine started: 020-00276-B_WITH_ADHESIEVE_ASM_, QTY 1
+2022-10-06 22:03:52,908 - CRITICAL - Assembly Header Identified: Sub-Assembly, 020-00276-B_WITH_ADHESIEVE_ASM_
+2022-10-06 22:03:52,908 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,908 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,908 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,909 - CRITICAL - Sub-bom item routine started: 020-00276-B_ASM_6_ASM_4, QTY 1
+2022-10-06 22:03:52,909 - CRITICAL - Assembly Header Identified: Sub-Assembly, 020-00276-B_ASM_6_ASM_4
+2022-10-06 22:03:52,909 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,909 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,909 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,909 - CRITICAL - Sub-bom item routine started: 020-00276-B_7_3, QTY 1
+2022-10-06 22:03:52,909 - CRITICAL - Sub-bom item routine started: NUT-172-05000-000450_1, QTY 2
+2022-10-06 22:03:52,909 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19811-212-NFC-INNER-COVER_ASM
+2022-10-06 22:03:52,909 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,909 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,909 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,909 - CRITICAL - Sub-bom item routine started: RM19811-212-NFC-INNER-COVER_A_1, QTY 1
+2022-10-06 22:03:52,909 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19811-212-NFC-INNER-COVER_A_1
+2022-10-06 22:03:52,909 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,909 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,910 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,910 - CRITICAL - Sub-bom item routine started: 020-00277-0A_002_45, QTY 4
+2022-10-06 22:03:52,910 - CRITICAL - Sub-bom item routine started: 020-00277-B_INNER_CVR-20220104_, QTY 1
+2022-10-06 22:03:52,910 - CRITICAL - Assembly Header Identified: Sub-Assembly, 020-00277-B_INNER_CVR-20220104_
+2022-10-06 22:03:52,910 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,910 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,910 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,910 - CRITICAL - Sub-bom item routine started: 020-00277-B_ASM_3_1_ASM_1, QTY 1
+2022-10-06 22:03:52,910 - CRITICAL - Assembly Header Identified: Sub-Assembly, 020-00277-B_ASM_3_1_ASM_1
+2022-10-06 22:03:52,910 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,910 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,910 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,910 - CRITICAL - Sub-bom item routine started: 020-00277-B_6_1, QTY 1
+2022-10-06 22:03:52,910 - CRITICAL - Sub-bom item routine started: TM1-AC1_1-NFC-INNER-COVER-NUT_4, QTY 4
+2022-10-06 22:03:52,910 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-GPU-TRAY-MODULE
+2022-10-06 22:03:52,910 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,910 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,910 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,911 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,911 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,911 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-TRAY-BASE, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RIGEL-GPU-TRAY-RAIL-09212022, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-MAGNET-LATCH, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: INTRUSION-CABLE-ROUTING, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 6
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-PRESS-SW-LATCH, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 2
+2022-10-06 22:03:52,911 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-TRAY-BASE
+2022-10-06 22:03:52,911 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,911 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,911 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-TRAY-RIVET, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-135-GPU-BAR-T, QTY 5
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: TRAY-GPU-LOCKER-MODULE, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-HANDLE-SCREW, QTY 20
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: PANNEL-MOUNT-BKT-0519, QTY 4
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-313-GPU_PDB-SPONGE, QTY 1
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: WLL-24V0-3M, QTY 3
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-252-GPU-AIR-CVR-ZN, QTY 5
+2022-10-06 22:03:52,911 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-AIRDUCT-L, QTY 2
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: YSF-54438-ZI, QTY 2
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: HG-449-045-01_X01_-20220926, QTY 2
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 16
+2022-10-06 22:03:52,912 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-TRAY-RIVET
+2022-10-06 22:03:52,912 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,912 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,912 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-GPU-TRAY-BASE-S, QTY 1
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-128-K2-TRAY-SPRING, QTY 2
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-402-SUPPORT-BKT, QTY 1
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-401-GPU-SUP-BKT, QTY 1
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-199-GPU-SUP-BKT-F, QTY 1
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-404-GPU-BAR-HOLD, QTY 2
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A052, QTY 4
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 66
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 10
+2022-10-06 22:03:52,912 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-TRAY-BASE-S
+2022-10-06 22:03:52,912 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,912 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,912 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,912 - CRITICAL - Sub-bom item routine started: RM7922000201-126-GPU-TRAY-BASE, QTY 1
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S01, QTY 17
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S02, QTY 1
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S04, QTY 1
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S05, QTY 2
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S06-RAIL-T-PIN, QTY 18
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S07, QTY 1
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S08, QTY 2
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S09-T-PIN, QTY 4
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S10-NUT, QTY 2
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-126-S11-FOR_SRING, QTY 2
+2022-10-06 22:03:52,913 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-401-GPU-SUP-BKT
+2022-10-06 22:03:52,913 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,913 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,913 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,913 - CRITICAL - Sub-bom item routine started: RM7922000201-401-GPU-SUP-BKT, QTY 1
+2022-10-06 22:03:52,913 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-199-GPU-SUP-BKT-F
+2022-10-06 22:03:52,913 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,913 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,914 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RM7922000201-199-GPU-SUP-BKT-F, QTY 1
+2022-10-06 22:03:52,914 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-404-GPU-BAR-HOLD
+2022-10-06 22:03:52,914 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,914 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,914 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RM7922000201-404-GPU-BAR-HOLD, QTY 1
+2022-10-06 22:03:52,914 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-135-GPU-BAR-T
+2022-10-06 22:03:52,914 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,914 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,914 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RM7922000201-135-GPU-BAR-T, QTY 1
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: STD-THR, QTY 2
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RM7922000201-135-S01, QTY 4
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: 27-721-501-6_A_下壓-20220314, QTY 2
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: 27-721-501-6_A_釋放-20220314, QTY 2
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 4
+2022-10-06 22:03:52,914 - CRITICAL - Assembly Header Identified: Sub-Assembly, TRAY-GPU-LOCKER-MODULE
+2022-10-06 22:03:52,914 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,914 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,914 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,914 - CRITICAL - Sub-bom item routine started: RM7922000201-INTERLOCK-PIN-ASSY, QTY 2
+2022-10-06 22:03:52,914 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-INTERLOCK-PIN-ASSY
+2022-10-06 22:03:52,914 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,914 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,915 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-134-MB-TRAY-BKT, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-311-LOCK-PIN-L, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-312-LOCK-PIN-S, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: SCREW-60H161103-037, QTY 2
+2022-10-06 22:03:52,915 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-134-MB-TRAY-BKT
+2022-10-06 22:03:52,915 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,915 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,915 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-134-MB-TRAY-BKT, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: 12-111-209-6_A-L, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-HANDLE-SCREW
+2022-10-06 22:03:52,915 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,915 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,915 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-410-HANDLE-SCREW-M, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-408-HANDLE-SCREW-L, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-409-HANDLE-SCREW-R, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-132-HANDLE-SUP-S, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: RM7922000201-353-WARNING-LABEL, QTY 1
+2022-10-06 22:03:52,915 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 6
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-061, QTY 6
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RIVET-171-00032-200230, QTY 6
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 6
+2022-10-06 22:03:52,916 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-410-HANDLE-SCREW-M
+2022-10-06 22:03:52,916 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,916 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,916 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-410-HANDLE-SCREW-M, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-410-S01, QTY 6
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: 27-721-503-6_X01_下壓-20220927, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: 27-721-503-6_X01_釋放-20220927, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-408-HANDLE-SCREW-L
+2022-10-06 22:03:52,916 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,916 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,916 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-408-HANDLE-SCREW-L, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-131-S01, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-409-HANDLE-SCREW-R
+2022-10-06 22:03:52,916 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,916 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,916 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-409-HANDLE-SCREW-R, QTY 1
+2022-10-06 22:03:52,916 - CRITICAL - Sub-bom item routine started: RM7922000201-131-S01, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-132-HANDLE-SUP-S
+2022-10-06 22:03:52,917 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,917 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,917 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: RM7922000201-132-HANDLE-SUP, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Assembly Header Identified: Sub-Assembly, PANNEL-MOUNT-BKT-0519
+2022-10-06 22:03:52,917 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,917 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,917 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: RM7922000201-133-PNL-MOUNT-BKT, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: T-PIN-XXX-0519, QTY 2
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: 441330400, QTY 2
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: 27-421-214-6_A_下壓_標準版-20220217, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: 27-421-214-6_A_釋放_標準版-20220217, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,917 - CRITICAL - Assembly Header Identified: Sub-Assembly, WLL-24V0-3M
+2022-10-06 22:03:52,917 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,917 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,917 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: WLL-24V0, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Sub-bom item routine started: WLL-24V0-TAPE, QTY 1
+2022-10-06 22:03:52,917 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-252-GPU-AIR-CVR-ZN
+2022-10-06 22:03:52,918 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,918 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,918 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: RM7922000201-252-GPU-AIR-CVR-ZN, QTY 1
+2022-10-06 22:03:52,918 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-AIRDUCT-L
+2022-10-06 22:03:52,918 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,918 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,918 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: RM7922000201-207-GPU-AIRDUCT-L, QTY 1
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: RM7922000201-342-AIRDUCT-FOAM-S, QTY 2
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: RM7922000201-343-AIRDUCT-FOAM-T, QTY 2
+2022-10-06 22:03:52,918 - CRITICAL - Assembly Header Identified: Sub-Assembly, RIGEL-GPU-TRAY-RAIL-09212022
+2022-10-06 22:03:52,918 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,918 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,918 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: U968-540-CLOSE, QTY 2
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: U968-540-OPEN, QTY 2
+2022-10-06 22:03:52,918 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-CLOSE
+2022-10-06 22:03:52,918 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,918 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,918 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,918 - CRITICAL - Sub-bom item routine started: U968-540_ASM_0001, QTY 1
+2022-10-06 22:03:52,918 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540_ASM_0001
+2022-10-06 22:03:52,918 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,919 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,919 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-01_ASM_0002, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-02_ASM_0003, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-03_ASM-09212022, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-01_ASM_0002
+2022-10-06 22:03:52,919 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,919 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,919 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-01_0009, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: RAIL-T-PIN_2_0010, QTY 6
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: GJAA0101DQ-4Z0S_0011, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-02_ASM_0003
+2022-10-06 22:03:52,919 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,919 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,919 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-02_0012, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-03_ASM-09212022
+2022-10-06 22:03:52,919 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,919 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,919 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: U968-540-03_09212022, QTY 1
+2022-10-06 22:03:52,919 - CRITICAL - Sub-bom item routine started: GJAA0101DQ-4Z0S-08252022, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-OPEN
+2022-10-06 22:03:52,920 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,920 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,920 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: U968-540_ASM_0005, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540_ASM_0005
+2022-10-06 22:03:52,920 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,920 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,920 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: U968-540-01_ASM_0006, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: U968-540-02_ASM_0007, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: U968-540-03_ASM-09212022, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-01_ASM_0006
+2022-10-06 22:03:52,920 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,920 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,920 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: U968-540-01_0014, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: RAIL-T-PIN_2_0015, QTY 6
+2022-10-06 22:03:52,920 - CRITICAL - Sub-bom item routine started: GJAA0101DQ-4Z0S_0016, QTY 1
+2022-10-06 22:03:52,920 - CRITICAL - Assembly Header Identified: Sub-Assembly, U968-540-02_ASM_0007
+2022-10-06 22:03:52,920 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,920 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,921 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: U968-540-02_0017, QTY 1
+2022-10-06 22:03:52,921 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-MAGNET-LATCH
+2022-10-06 22:03:52,921 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,921 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,921 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-407-LATCH-MAG-BKT, QTY 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-253-GPU-LATCH-CVR, QTY 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-MAGNET-HOLDER-02, QTY 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-MAGNET-LATCH-SCREW, QTY 6
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-340-LATCH-WASHER, QTY 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-341-GPU-MAG-MYLAR, QTY 3
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-406-GPU-MAGNET-BKT, QTY 1
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-MAGNET-HOLDER-01, QTY 1
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-339-MAG-SPRING, QTY 1
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: RM7922000201-405-MAG-SPRING-BKT, QTY 1
+2022-10-06 22:03:52,921 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 6
+2022-10-06 22:03:52,921 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-407-LATCH-MAG-BKT
+2022-10-06 22:03:52,921 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,922 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,922 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: RM7922000201-407-LATCH-MAG-BKT, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: RM7922000201-407-S01, QTY 2
+2022-10-06 22:03:52,922 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-253-GPU-LATCH-CVR
+2022-10-06 22:03:52,922 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,922 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,922 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: RM7922000201-253-GPU-LATCH-CVR, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: NUT-172-05000-000450_1, QTY 2
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: 57-222-173-02-6_X01_LOCKED-2022, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: 57-222-173-02-6_X01_UNLOCKED-20, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: 57-222-173-01-6_A_定位-20201118, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: 57-222-173-01-6_A_拉起-20201118, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-MAGNET-HOLDER-02
+2022-10-06 22:03:52,922 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,922 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,922 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: RM7922000201-226-MAGNET-HOLDER, QTY 2
+2022-10-06 22:03:52,922 - CRITICAL - Sub-bom item routine started: MAGNET, QTY 1
+2022-10-06 22:03:52,922 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-226-MAGNET-HOLDER
+2022-10-06 22:03:52,922 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,923 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,923 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-226-MAGNET-HOLDER, QTY 1
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-226-S01, QTY 1
+2022-10-06 22:03:52,923 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-406-GPU-MAGNET-BKT
+2022-10-06 22:03:52,923 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,923 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,923 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-1XX-GPU-MAGNET-BKT, QTY 1
+2022-10-06 22:03:52,923 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-MAGNET-HOLDER-01
+2022-10-06 22:03:52,923 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,923 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,923 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-226-MAGNET-HOLDER, QTY 2
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: SENSOR, QTY 1
+2022-10-06 22:03:52,923 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-GPU-PRESS-SW-LATCH
+2022-10-06 22:03:52,923 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,923 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,923 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-422-PRESS-SW-LATCH, QTY 2
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-253-GPU-LATCH-CVR, QTY 2
+2022-10-06 22:03:52,923 - CRITICAL - Sub-bom item routine started: RM7922000201-340-LATCH-WASHER, QTY 2
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-341-GPU-MAG-MYLAR, QTY 2
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-MAGNET-LATCH-SCREW, QTY 4
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-420-INTRUSION-BKT, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-421-PRESS-SW-BKT, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-339-MAG-SPRING, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-405-MAG-SPRING-BKT, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 2
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: INTRUSION-MODULE, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,924 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-422-PRESS-SW-LATCH
+2022-10-06 22:03:52,924 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,924 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,924 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-422-PRESS-SW-LATCH, QTY 1
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RM7922000201-407-S01, QTY 2
+2022-10-06 22:03:52,924 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,924 - CRITICAL - Assembly Header Identified: Sub-Assembly, INTRUSION-MODULE
+2022-10-06 22:03:52,924 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,924 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,924 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: HESWT00103, QTY 2
+2022-10-06 22:03:52,925 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-TRAY-MODULE-LEFT
+2022-10-06 22:03:52,925 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,925 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,925 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,925 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,925 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,925 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: K2-TRAY-BOTTOM-ASSY, QTY 1
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM79XXX-K2-HANDLE-ST, QTY 16
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: TRAY-LOCK-K2, QTY 1
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM79XXX-K2-METAL-SUPPORT, QTY 3
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM7922000201-149-PCIE-SUP-BKT-1, QTY 4
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM7922000201-220-V5-CARDGUIDE-2, QTY 1
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM79XXX-RISER-SUPPORT-METAL-V4, QTY 2
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 4
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 8
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-L-LABEL1, QTY 1
+2022-10-06 22:03:52,925 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-L-LABEL2, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-L-LABEL3, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-L-LABEL4, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RJ45-CABLE, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-317-HINGE, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-147-PCIE-BKT, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: HINGE-YSF-27965-ZI, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: SCREW-60H111220-101-M2, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-TRAY-BOTTOM-ASSY
+2022-10-06 22:03:52,926 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,926 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,926 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-143-K2-TRAY-BOTTOM, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: K2-TRAY-FRONT-COVER-ASM, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-305-K2-TRAY-MYLAR, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-306-K2-TRAY-FOAM, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-128-K2-TRAY-SPRING, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-307-GASKET, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-228-K2-BLOCK, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-193-STOP-SUP-BKT, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 14
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: SCREW-60H161103-037, QTY 2
+2022-10-06 22:03:52,926 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-143-K2-TRAY-BOTTOM
+2022-10-06 22:03:52,926 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,926 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,926 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-143-K2-TRAY-BOTTOM, QTY 1
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S01, QTY 22
+2022-10-06 22:03:52,926 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S02, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S03, QTY 4
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S05, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S04, QTY 4
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S07, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: ST-0304-60H703103-067, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-143-S08, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: SI-0129-60H703000-322, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-TRAY-FRONT-COVER-ASM
+2022-10-06 22:03:52,927 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,927 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,927 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-147-PCIE-BKT, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: K2-TRAY-FRONT-COVER-1, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-LATCH-FIX-S, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-144-K2-TRAY-F-COVE, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM7922000201-148-K2-TRAY-SUP-2, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-STEP-SCREW, QTY 2
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RJ45-COUPLER-BRKT-ASSY_ASM, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 1
+2022-10-06 22:03:52,927 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 15
+2022-10-06 22:03:52,927 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-147-PCIE-BKT
+2022-10-06 22:03:52,927 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,927 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,928 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RM7922000201-147-PCIE-BKT, QTY 1
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: 26-420-200-05_B_L, QTY 1
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,928 - CRITICAL - Assembly Header Identified: Sub-Assembly, 26-420-200-05_B_L
+2022-10-06 22:03:52,928 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,928 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,928 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,928 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-TRAY-FRONT-COVER-1
+2022-10-06 22:03:52,928 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,928 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,928 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: K2-TRAY-FRONT-COVER, QTY 1
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-PCIE-GUIDE-PIN, QTY 22
+2022-10-06 22:03:52,928 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-144-K2-TRAY-F-COVE
+2022-10-06 22:03:52,928 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,928 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,928 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RM7922000201-144-K2-TRAY-F-COVE, QTY 1
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-PCIE-GUIDE-PIN, QTY 22
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S12, QTY 1
+2022-10-06 22:03:52,928 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,929 - CRITICAL - Assembly Header Identified: Sub-Assembly, RJ45-COUPLER-BRKT-ASSY_ASM
+2022-10-06 22:03:52,929 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,929 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,929 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: RJ45-COUPLER-BRKT-ASSY_ASM_17, QTY 1
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: RM7922000201-184-RJ45-BKT, QTY 1
+2022-10-06 22:03:52,929 - CRITICAL - Assembly Header Identified: Sub-Assembly, RJ45-COUPLER-BRKT-ASSY_ASM_17
+2022-10-06 22:03:52,929 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,929 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,929 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: WRJ0-ZZ-0301_ASM_1, QTY 1
+2022-10-06 22:03:52,929 - CRITICAL - Assembly Header Identified: Sub-Assembly, WRJ0-ZZ-0301_ASM_1
+2022-10-06 22:03:52,929 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,929 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,929 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: J212710281-C6_ASM_2, QTY 1
+2022-10-06 22:03:52,929 - CRITICAL - Assembly Header Identified: Sub-Assembly, J212710281-C6_ASM_2
+2022-10-06 22:03:52,929 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,929 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,929 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: C6-PCB_1, QTY 1
+2022-10-06 22:03:52,929 - CRITICAL - Sub-bom item routine started: 0001_1, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: C6K-V0001_1, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: _OTHER0001_1, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: C6K-V0002_1, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-184-RJ45-BKT
+2022-10-06 22:03:52,930 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,930 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,930 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RM7922000201-184-RJ45-BKT, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RM7922000201-184-S01, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,930 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-K2-HANDLE-ST
+2022-10-06 22:03:52,930 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,930 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,930 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RM7922000201-145-K2-TRAY-HANDLE, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RM7922000201-146-HANDLE-SUP-BKT, QTY 1
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 4
+2022-10-06 22:03:52,930 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-145-K2-TRAY-HANDLE
+2022-10-06 22:03:52,930 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,930 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,930 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,930 - CRITICAL - Sub-bom item routine started: RM7922000201-145-K2-TRAY-HANDLE, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01_L-20191224, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01_O-20191224, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-145-S01, QTY 2
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-145-S02, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-145-S03, QTY 3
+2022-10-06 22:03:52,931 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-146-HANDLE-SUP-BKT
+2022-10-06 22:03:52,931 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,931 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,931 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-146-HANDLE-SUP-BKT, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Assembly Header Identified: Sub-Assembly, TRAY-LOCK-K2
+2022-10-06 22:03:52,931 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,931 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,931 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-217-INTER-HOLDER-L, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: RM7922000201-218-INTER-HOLDER-R, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: A5T-MB-TRAY-INTER-HOLDER-A-ASSY, QTY 2
+2022-10-06 22:03:52,931 - CRITICAL - Assembly Header Identified: Sub-Assembly, A5T-MB-TRAY-INTER-HOLDER-A-ASSY
+2022-10-06 22:03:52,931 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,931 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,931 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,931 - CRITICAL - Sub-bom item routine started: MS1-_L21H_V_1_ASM_1, QTY 1
+2022-10-06 22:03:52,931 - CRITICAL - Assembly Header Identified: Sub-Assembly, MS1-_L21H_V_1_ASM_1
+2022-10-06 22:03:52,932 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,932 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,932 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: BREP_WITH_VOIDS_6587083_1, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: MANIFOLD_SOLID_BREP_6589003_1, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-K2-METAL-SUPPORT
+2022-10-06 22:03:52,932 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,932 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,932 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-150-K2-SUPPORT-1-B, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-151-K2-SUPPORT-2, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-152-K2-SUP-BKT-3, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-153-K2-SUP-BKT-4, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-155-K2-SUP-BKT-10, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-154-K2-SUP-BKT-14, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM79XXX-K2V5-MODULE, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-156-K2-SUP-BKT-15, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: RM7922000201-157-K2-SUP-BKT-16, QTY 2
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: SQE-1, QTY 4
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: K2-LATCH-MODULE, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: K2-LATCH-MODULE-L, QTY 1
+2022-10-06 22:03:52,932 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 2
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 51
+2022-10-06 22:03:52,933 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-150-K2-SUPPORT-1-B
+2022-10-06 22:03:52,933 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,933 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,933 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM7922000201-150-K2-SUPPORT-1-B, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S11, QTY 2
+2022-10-06 22:03:52,933 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-151-K2-SUPPORT-2
+2022-10-06 22:03:52,933 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,933 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,933 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM7922000201-151-K2-SUPPORT-2, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S11, QTY 2
+2022-10-06 22:03:52,933 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-152-K2-SUP-BKT-3
+2022-10-06 22:03:52,933 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,933 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,933 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM7922000201-152-K2-SUP-BKT-3, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S05, QTY 2
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: 12-411-207-6_A_LOCK-20191223, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_RELEASE-2020818, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 1
+2022-10-06 22:03:52,933 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-153-K2-SUP-BKT-4
+2022-10-06 22:03:52,933 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,934 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,934 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM7922000201-153-K2-SUP-BKT-4, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S05, QTY 2
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: 12-411-207-6_A_LOCK-20191223, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_RELEASE-2020818, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-154-K2-SUP-BKT-14
+2022-10-06 22:03:52,934 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,934 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,934 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM7922000201-154-K2-SUP-BKT-14, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-K2V5-MODULE
+2022-10-06 22:03:52,934 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,934 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,934 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM7922000201-158-K2X-BOTTOM, QTY 1
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM7922000201-194-K2TRAY-LATCH-L, QTY 6
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: RM7922000201-195-K2TRAY-LATCH-R, QTY 6
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: HG-249-031-01_X02_-20170216, QTY 2
+2022-10-06 22:03:52,934 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 2
+2022-10-06 22:03:52,934 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-158-K2X-BOTTOM
+2022-10-06 22:03:52,934 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,935 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,935 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: RM7922000201-158-K2X-BOTTOM, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: NU-0044-60H721103-021, QTY 2
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S07, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-S08, QTY 2
+2022-10-06 22:03:52,935 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-194-K2TRAY-LATCH-L
+2022-10-06 22:03:52,935 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,935 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,935 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: RM7922000201-194-K2TRAY-LATCH-L, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Assembly Header Identified: Sub-Assembly, 27-421-505-6_X01
+2022-10-06 22:03:52,935 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,935 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,935 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01_FASTENED-20191, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01_UNFASTENED-201, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-195-K2TRAY-LATCH-R
+2022-10-06 22:03:52,935 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,935 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,935 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: RM7922000201-195-K2TRAY-LATCH-R, QTY 1
+2022-10-06 22:03:52,935 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Assembly Header Identified: Sub-Assembly, HG-249-031-01_X02_-20170216
+2022-10-06 22:03:52,936 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,936 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,936 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: HG-520B_X01_-20170210_¹G±_«Á, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-156-K2-SUP-BKT-15
+2022-10-06 22:03:52,936 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,936 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,936 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: RM7922000201-156-K2-SUP-BKT-15, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-157-K2-SUP-BKT-16
+2022-10-06 22:03:52,936 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,936 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,936 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: RM7922000201-157-K2-SUP-BKT-16, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-LATCH-MODULE
+2022-10-06 22:03:52,936 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,936 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,936 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: RM7922000201-185-LATCH-BKT, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: RM7922000201-319-PIN, QTY 2
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: ETW-4, QTY 2
+2022-10-06 22:03:52,936 - CRITICAL - Sub-bom item routine started: RM7922000201-320-LATCH-SPRING, QTY 1
+2022-10-06 22:03:52,936 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-LATCH-MODULE-L
+2022-10-06 22:03:52,936 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,937 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,937 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-192-LATCH-BKT-L, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-319-PIN, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: ETW-4, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-320-LATCH-SPRING, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-149-PCIE-SUP-BKT-1
+2022-10-06 22:03:52,937 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,937 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,937 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-149-PCIE-SUP-BKT-1, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-184-S01, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 2
+2022-10-06 22:03:52,937 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-220-V5-CARDGUIDE-2
+2022-10-06 22:03:52,937 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,937 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,937 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-220-V5-CARDGUIDE-2, QTY 1
+2022-10-06 22:03:52,937 - CRITICAL - Sub-bom item routine started: RM7922000201-220-S01, QTY 2
+2022-10-06 22:03:52,937 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-RISER-SUPPORT-METAL-V4
+2022-10-06 22:03:52,937 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,937 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,937 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RM7922000201-160-RISER-SUP-BKT, QTY 1
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RM7922000201-227-RISER-LATCH, QTY 9
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: SCREW-RISER_LATCH, QTY 9
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 2
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RM7922000201-RISER-BKT-SUP, QTY 1
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: WLL-8, QTY 2
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: SCREW-M3-5L-D4_7, QTY 2
+2022-10-06 22:03:52,938 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-160-RISER-SUP-BKT
+2022-10-06 22:03:52,938 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,938 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,938 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RM7922000201-160-RISER-SUP-BKT, QTY 1
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: 26-420-200-05_B_R, QTY 2
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: 26-420-200-05_B_L, QTY 2
+2022-10-06 22:03:52,938 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 8
+2022-10-06 22:03:52,938 - CRITICAL - Assembly Header Identified: Sub-Assembly, 26-420-200-05_B_R
+2022-10-06 22:03:52,938 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,938 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,938 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,938 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-RISER-BKT-SUP
+2022-10-06 22:03:52,938 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,939 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,939 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-RISER-BKT-SUP, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Assembly Header Identified: Sub-Assembly, K2-TRAY-MODULE-RIGHT
+2022-10-06 22:03:52,939 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,939 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,939 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,939 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,939 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,939 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: K2-TRAY-BOTTOM-ASSY, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM79XXX-K2-HANDLE-ST, QTY 16
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: TRAY-LOCK-K2, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM79XXX-K2-METAL-SUPPORT, QTY 3
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-149-PCIE-SUP-BKT-1, QTY 4
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-220-V5-CARDGUIDE-2, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM79XXX-RISER-SUPPORT-METAL-V4, QTY 2
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 4
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 8
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-R-LABEL1, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-R-LABEL2, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-R-LABEL3, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-3XX-SW-R-LABEL4, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RJ45-CABLE, QTY 1
+2022-10-06 22:03:52,939 - CRITICAL - Sub-bom item routine started: RM7922000201-317-HINGE, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: HINGE-YSF-27965-ZI, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: SCREW-60H111220-101-M2, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Assembly Header Identified: Sub-Assembly, BACKPLANE-BD-MODULE-ASM
+2022-10-06 22:03:52,940 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,940 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,940 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,940 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,940 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,940 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM79XXX-BP-MODULE-SP, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: DIVIDER-ASM, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-BP-MODULE-SP
+2022-10-06 22:03:52,940 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,940 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,940 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-161-BP-TRAY-BASE, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-BACKPLAN-CAM, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-162-BP-TRAY-C, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-163-BP-TRAY-SUP, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-164-BP-TRAY-SUP-1, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-165-BP-GUIDING, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-314-FOAM-2, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RM7922000201-350-BP-TRAY-LABEL, QTY 1
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: HINGE-YSF-27965-ZI, QTY 2
+2022-10-06 22:03:52,940 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 48
+2022-10-06 22:03:52,941 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-161-BP-TRAY-BASE
+2022-10-06 22:03:52,941 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,941 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,941 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-161-BP-TRAY-BASE, QTY 1
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-161-S03, QTY 2
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-161-S01, QTY 4
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-161-S02, QTY 8
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RIVET-60H453203A001, QTY 4
+2022-10-06 22:03:52,941 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-BACKPLAN-CAM
+2022-10-06 22:03:52,941 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,941 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,941 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-166-BP-CAM-TOP, QTY 1
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-414-BP-CAM-SUP, QTY 1
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-059, QTY 6
+2022-10-06 22:03:52,941 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-166-BP-CAM-TOP
+2022-10-06 22:03:52,941 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,941 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,941 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-166-BP-CAM-TOP, QTY 1
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: 27-421-505-6_X01, QTY 2
+2022-10-06 22:03:52,941 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-414-BP-CAM-SUP
+2022-10-06 22:03:52,941 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,941 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,941 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-414-BP-CAM-SUP, QTY 1
+2022-10-06 22:03:52,941 - CRITICAL - Sub-bom item routine started: RM7922000201-166-S01, QTY 6
+2022-10-06 22:03:52,942 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-162-BP-TRAY-C
+2022-10-06 22:03:52,942 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,942 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,942 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-162-BP-TRAY-C, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-162-S01, QTY 16
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-162-S02, QTY 2
+2022-10-06 22:03:52,942 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-163-BP-TRAY-SUP
+2022-10-06 22:03:52,942 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,942 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,942 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-163-BP-TRAY-SUP, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-164-BP-TRAY-SUP-1
+2022-10-06 22:03:52,942 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,942 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,942 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-164-BP-TRAY-SUP-1, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-164-S01, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-165-BP-GUIDING
+2022-10-06 22:03:52,942 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,942 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,942 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-165-BP-GUIDING-BKT, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RM7922000201-165-S01, QTY 1
+2022-10-06 22:03:52,942 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,942 - CRITICAL - Assembly Header Identified: Sub-Assembly, DIVIDER-ASM
+2022-10-06 22:03:52,942 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,942 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,942 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM7922000201-222-BP-PARTI-REAR, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM7922000201-221-BP-PARTI-FRONT, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Assembly Header Identified: Sub-Assembly, NFC-TRAY-MODULE
+2022-10-06 22:03:52,943 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,943 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: NFC-TRAY-SP, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM19811-111-NFC-DUMMY-COVER, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: SCREW-60H161103-037, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Assembly Header Identified: Sub-Assembly, NFC-TRAY-SP
+2022-10-06 22:03:52,943 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM7922000201-125-NFC-TRAY-SP, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM7922000201-125-NFC-BKT-S01, QTY 3
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RM7922000201-125-NFC-BKT-S02, QTY 2
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 2
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_RELEASE-2020818, QTY 2
+2022-10-06 22:03:52,943 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM19811-111-NFC-DUMMY-COVER
+2022-10-06 22:03:52,943 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: 010-11112-A-190808, QTY 1
+2022-10-06 22:03:52,943 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 3
+2022-10-06 22:03:52,943 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-4FAN-MODULE
+2022-10-06 22:03:52,943 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,943 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,943 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,943 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: FAN-6056-AVC-STARK, QTY 4
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-214-FAN-HOLDER, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-139-FAN-CONN-BKT, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-215-FAN-HOLDER-F, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM79XXX-FAN-CABLE, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: 441331000, QTY 4
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM79XXX-1XX-FAN-HANDLE, QTY 14
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-216-FAN-LATCH, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM39196-334-HDD-TRAY-SPRING, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: SCREW-6-32, QTY 4
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-142-SPRING-L, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-141-SPRING-R, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-HANDLE-STEP-SCREW, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: SCREW-60H111103-021, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: SCREW-60H151103-051, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: SCREW-60H151103-042, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 4
+2022-10-06 22:03:52,944 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-214-FAN-HOLDER
+2022-10-06 22:03:52,944 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,944 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,944 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-214-FAN-HOLDER, QTY 1
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-FAN60-RUBBER, QTY 16
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM79XXX-FAN-HOLDER-S01, QTY 2
+2022-10-06 22:03:52,944 - CRITICAL - Sub-bom item routine started: RM7922000201-191-FAN-SUP-BKT, QTY 2
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-215-S01, QTY 2
+2022-10-06 22:03:52,945 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-139-FAN-CONN-BKT
+2022-10-06 22:03:52,945 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,945 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,945 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-139-FAN-CONN-BKT, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-215-FAN-HOLDER-F
+2022-10-06 22:03:52,945 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,945 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,945 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-215-FAN-HOLDER-F, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXX-2XX-FAN60-RUBBER-1, QTY 2
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-FAN60-RUBBER, QTY 14
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXX-FAN-HOLDER-S01, QTY 4
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-215-S01, QTY 2
+2022-10-06 22:03:52,945 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-FAN-CABLE
+2022-10-06 22:03:52,945 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,945 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,945 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXXX-FAN-CABLE-01, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXXX-FAN-CABLE-02, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXXX-FAN-CABLE-03, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM79XXXX-FAN-CABLE-04, QTY 1
+2022-10-06 22:03:52,945 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-1XX-FAN-HANDLE
+2022-10-06 22:03:52,945 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,945 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,945 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,945 - CRITICAL - Sub-bom item routine started: RM7922000201-138-FAN-HANDLE, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM79XXX-PDB-TRAY-ASSY
+2022-10-06 22:03:52,946 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,946 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,946 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,946 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,946 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,946 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-136-PDB-TRAY-OP3, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-137-PDB-BD-SUP-BKT, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-246-HANDLE-CASTING, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-246-HANDLE-SAMPLE, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-303-PDB-SPINGE-3, QTY 2
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-411-PDB-VRM-SUP-L, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-412-PDB-VRM-SUP-R, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-348-PDB-MYLAR-E, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-345-PDB-MYLAR-A, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-344-PDB-MYLAR-B, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-346-PDB-MYLAR-C, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-347-PDB-MYLAR-D, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: RM7922000201-349-PDB-MYLAR-F, QTY 1
+2022-10-06 22:03:52,946 - CRITICAL - Sub-bom item routine started: THUMBSCREW_BLOCK, QTY 2
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: SCREW-60H141103-061, QTY 8
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RIVET-60H453032-032, QTY 22
+2022-10-06 22:03:52,947 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-136-PDB-TRAY-OP3
+2022-10-06 22:03:52,947 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,947 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,947 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-136-PDB-TRAY-OP3, QTY 1
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-136-S02, QTY 20
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-136-S01, QTY 2
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-136-S03, QTY 17
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-136-S04, QTY 2
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 2
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A021, QTY 4
+2022-10-06 22:03:52,947 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-137-PDB-BD-SUP-BKT
+2022-10-06 22:03:52,947 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,947 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,947 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,947 - CRITICAL - Sub-bom item routine started: RM7922000201-137-PDB-BD-SUP-BKT, QTY 1
+2022-10-06 22:03:52,947 - CRITICAL - Assembly Header Identified: Sub-Assembly, RM7922000201-NFC-DUMMY-COVER
+2022-10-06 22:03:52,947 - DEBUG - Parent Level: 1
+2022-10-06 22:03:52,947 - DEBUG - Current Level: 2
+2022-10-06 22:03:52,947 - DEBUG - Length of Tree: 3
+2022-10-06 22:03:52,947 - DEBUG - New Parent Level: 1
+2022-10-06 22:03:52,947 - DEBUG - New Current Level: 2
+2022-10-06 22:03:52,948 - DEBUG - New length of Tree: 3
+2022-10-06 22:03:52,948 - CRITICAL - Sub-bom item routine started: RM7922000201-171-NFC-DUMMY, QTY 1
+2022-10-06 22:03:52,948 - CRITICAL - Sub-bom item routine started: 27-420-501-6_B_FASTENED_2020818, QTY 2
+2022-10-06 22:03:52,948 - CRITICAL - Sub-bom item routine started: RIVET-60H453232A022, QTY 3
