@@ -1,14 +1,18 @@
-from anytree import AnyNode, RenderTree
+from lib.creoClass import CreoAsm
+from pathlib import Path
+import os, logging, pprint
+import pyinputplus as pyip
+from anytree import Node, RenderTree, AsciiStyle, PreOrderIter, PostOrderIter
 
-# root = AnyNode(id="root")   
-# s0 = AnyNode(id="sub0", parent=root)
-# s0b = AnyNode(id="sub0B", parent=s0, foo=4, bar=109)
-# s0a = AnyNode(id="sub0A", parent=s0)
-# s1 = AnyNode(id="sub1", parent=root)
-# s1a = AnyNode(id="sub1A", parent=s1)
-# s1b = AnyNode(id="sub1B", parent=s1, bar=8)
-# s1c = AnyNode(id="sub1C", parent=s1)
-# s1ca = AnyNode(id="sub1Ca", parent=s1c)
+f = Node("f")
+b = Node("b", parent=f)
+a = Node("a", parent=b)
+d = Node("d", parent=b)
+c = Node("c", parent=d)
+e = Node("e", parent=d)
+g = Node("g", parent=f)
+i = Node("i", parent=g)
+h = Node("h", parent=i)
 
 # print(RenderTree(root))
 
@@ -17,11 +21,16 @@ from anytree import AnyNode, RenderTree
 # for child in root.children:
 #     print(child.id)
 
+# root.printTree()
 
-row = '      2         Part  MYBOTTLE'
-row = row.strip()
-print(row)
-row = row.split()
-print(row)
-print(row[0:3])
+# root.printParents()
 
+targetNode = c
+
+# parentNames = [node.name for node in PreOrderIter(c, maxlevel=c.depth)]
+# print(f'{node.name} Depth {node.depth}')
+
+parentNames = []
+for node in targetNode.iter_path_reverse():
+    parentNames.append(node.name)
+print(' -> '.join(parentNames))

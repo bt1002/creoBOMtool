@@ -1,6 +1,5 @@
 # Define part classes
-from distutils.command.build import build
-from anytree import AnyNode, RenderTree
+from anytree import AnyNode, RenderTree, PreOrderIter, PostOrderIter
 
 class CreoAsm(AnyNode):
     '''Inhereted class from AnyNode, creates Tree node with QTY'''
@@ -13,5 +12,14 @@ class CreoAsm(AnyNode):
         self.qty = qty
         self.unID = f'{name}.{type}.{level}.{bomID}'
     
-    def printTree(self):
-        print(RenderTree(self))
+    def printTree(self, level=None):
+        if level == None:
+            print(RenderTree(self,).by_attr())
+        else:
+            print(RenderTree(self, maxlevel=level).by_attr('unID'))
+    
+    def getParents(self):
+        parentNames = []
+        for node in self.iter_path_reverse():
+            parentNames.append(node.name)
+        return ' -> '.join(parentNames)

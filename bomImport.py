@@ -1,9 +1,10 @@
 from lib.creoClass import CreoAsm
 from pathlib import Path
 import os, logging, pprint
+import pyinputplus as pyip
 
 logname = 'bom_import_log.txt'
-logging.basicConfig(filename=logname, level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=logname, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
 # Declare basepath and filenames
@@ -28,18 +29,16 @@ if __name__ == '__main__':
     rootRow = rows[0]
     rows.pop(0)
     rootRow = rootRow.strip().split()
-    rootID = f'{rootRow[1]}.A.0.0'
+    rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
 
     rootNode = CreoAsm(rootRow[1], rootRow[0], 1, 1, 0)
+    logging.critical(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
 
     cLevel = 1
     cBOMID = 1
 
-    # Set index for row increments
-    cLevel = 1
-    cBOMID = 1
-    cTree = [rootNode]
-    cParent = cTree[-1]
+    # cTree = [rootNode]
+    cParent = rootNode
 
     for row in rows:
         row = row.strip().split()
@@ -53,19 +52,16 @@ if __name__ == '__main__':
             logging.critical(f'Assembly Header Identified: {row[0]}, {row[1]}')
             logging.debug(f'Parent Level: {cParent.level}')
             logging.debug(f'Current Level: {cLevel}')
-            logging.debug(f'Length of Tree: {len(cTree)}')
             subName = row[1]
-            for level in reversed(cTree):
-                for iCreoAsm in level.children:
-                    if subName == iCreoAsm.name:
-                        cParent = iCreoAsm
+            for level in cParent.iter_path_reverse():
+                for branch in level.children:
+                    if subName == branch.name:
+                        cParent = branch
                         cLevel = cParent.level + 1
                         cBOMID = len(cParent.children) + 1
-                        cTree = cTree[:cLevel+1]
-                        # logging.debug(f'Parent set to XXX: {cParent}')
-                        logging.debug(f'New Parent Level: {cParent.level}')
+                        logging.debug(f'New Parent {level.name} to {branch.name}, Level: {cParent.level}')
+                        logging.critical(f'\n\n{cParent.getParents()}\n')
                         logging.debug(f'New Current Level: {cLevel}')
-                        logging.debug(f'New length of Tree: {len(cTree)}')
                 else:
                     continue
 
@@ -76,15 +72,9 @@ if __name__ == '__main__':
             cNode = CreoAsm(cName, cType, cBOMID, cQTY, 1, parent=cParent)
             cNode.level = cLevel
             cBOMID += 1
-            # print(cNode.name)
-            if cType == 'Sub-Assembly':
-                # logging.debug(f'Asm Level {cParent.level}')
-                # logging.debug(f'cLevel: {cLevel}')
-                if cLevel > len(cTree):
-                    logging.debug(f'Current Asm Level: {cLevel} Current Tree Level: {len(cTree)}')
-                    cTree.append(cParent)
-                    logging.debug(f'New Length of Tree: {cTree}')
+    rootNode.printTree(2)
 
-
-
-    # rootNode.printTree()
+    # while True:
+    #     print('Print Input: ', end='')
+    #     userInput = pyip.inputStr()
+    #     rootNode.printTree(userInput)
