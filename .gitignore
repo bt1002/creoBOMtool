@@ -9,3 +9,5 @@ notes/
 *_env*/
 
 *.DS_Store
+lib/__pycache__/__init__.cpython-310.pyc
+lib/__pycache__/creoClass.cpython-310.pyc
