@@ -8,8 +8,8 @@ class CreoAsm(AnyNode):
         super().__init__(parent, children, **kwargs)
         self.name = name
         self.bomID = bomID
-        self.qty = qty
-        self.extQTY = 0
+        self.qty = int(qty)
+        self.branchQTY = 0
         if type == "Sub-Assembly" or type == "Assembly":
             self.type = 'A'
         elif type == "Part":
@@ -34,11 +34,7 @@ class CreoAsm(AnyNode):
 
     def getParents(self):
         '''Returns string of parent path'''
-        parentNames = []
-        for node in self.iter_path_reverse():
-            parentNames.append(node)
-        return parentNames
-
+        return self.ancestors
     
     def searchTree(self, partName):
         '''Searches tree for all nodes by str value'''
@@ -64,4 +60,25 @@ class CreoAsm(AnyNode):
             if item.is_leaf:
                 leaves.append(item)
         return leaves
+
+    def setBranchQTY(self):
+        '''This will set branch multiplier to total qty in this leaf for parents qty > 1
+        Unique value to each leaf'''
+        parents = self.getParents()
+        qtyMultiplier = 1
+
+        #### DEBUG block to fix qty rollup
+        # debug_name = 'YSF-54438-ZI'
+        # if self.name == debug_name:
+        #     print(f'debug QTY {self.qty}')
+        #     for parent in parents:
+        #         print(f'"{parent.name} x{parent.qty}')
+        #         qtyMultiplier = parent.qty * qtyMultiplier
+        #     self.branchQTY = self.qty * qtyMultiplier
+        # else:
+        
+        for parent in parents:
+            qtyMultiplier = parent.qty * qtyMultiplier
+        self.branchQTY = self.qty * qtyMultiplier
+        return self.branchQTY
 
