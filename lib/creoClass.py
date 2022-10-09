@@ -7,15 +7,15 @@ from copy import copy, deepcopy
 class CreoFile():
     '''Creo Part'''
     def __init__(self, name, type, bomID, qty):
-        self.name = name
-        self.bomID = bomID
-        self.qty = int(qty)
         if type[0] == "S" or type[0] == "A":
             self.type = 'ASM'
         elif type == "Part":
             self.type = 'PRT'
         else:
             self.type = type
+        self.name = name + '.' + self.type
+        self.bomID = bomID
+        self.qty = int(qty)
 
 
 class CreoNode(NodeMixin, CreoFile):
@@ -40,6 +40,7 @@ class CreoNode(NodeMixin, CreoFile):
         parentNames = []
         for node in self.iter_path_reverse():
             parentNames.append(node.name)
+        parentNames[0] = f'{self.name}.{self.type}'
         return ' -> '.join(parentNames)
 
     def getParents(self) -> "CreoNode":
@@ -51,10 +52,11 @@ class CreoNode(NodeMixin, CreoFile):
         if type(partName) != type('string'):
             return            
         partName = partName.lower()
+        # partType = self.type
         partList = self.findByName(partName, exact=False)
         strNames = []
         for node in partList:
-            strNames.append({'name':node.name, 'path': node.getParentsPrintout})
+            strNames.append({'name':node.name, 'type':node.type, 'path': node.getParentsPrintout})
         return partList
     
     def findByName(self, searchterm='', exact=False):
@@ -144,9 +146,9 @@ class CreoNode(NodeMixin, CreoFile):
                 continue
             if CreoNode.is_leaf:
                 missingChildren.append(CreoNode)
-        for child in missingChildren:
-            print(f'Missing child: {child.type} | {child.name}')
-            print(f'{child.children}')
+        # for child in missingChildren:
+            # print(f'Missing child: {child.type} | {child.name}')
+            # print(f'{child.children}')
         return missingChildren
 
     def assign_children(self, creoNodeCopy) -> "CreoNode":

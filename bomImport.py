@@ -1,3 +1,4 @@
+from unicodedata import name
 from lib.creoClass import CreoNode
 from pathlib import Path
 import os, logging, pprint
@@ -6,7 +7,7 @@ import numpy as np
 from numpy import *
 
 logname = './logs/bom_import_log.txt'
-logging.basicConfig(filename=logname, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
 # Declare basepath and filenames
@@ -36,7 +37,7 @@ def buildDataModel(filePath):
     rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
 
     rootNode = CreoNode(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
-    logging.critical(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
+    logging.debug(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
 
     cLevel = 1
     cBOMID = 1
@@ -50,7 +51,7 @@ def buildDataModel(filePath):
         row = row.strip().split()
         # If read row starts with part summary line, exit loop
         if row[0] == 'Summary':
-            logging.critical(f'Summary of parts found...row: {index}\n---EXITING LOOP---')
+            logging.info(f'Summary of parts found...row: {index}\n---EXITING LOOP---')
             summaryRowStart = index + 1
             break
 
@@ -60,18 +61,38 @@ def buildDataModel(filePath):
             logging.debug(f'Assembly Header Identified: {row[0]}, {row[1]}')
             logging.debug(f'Parent Level: {cParent.depth}')
             logging.debug(f'Current Level: {cLevel}')
-            subName = row[1]
-            for level in cParent.iter_path_reverse():
-                for branch in level.children:
-                    if subName == branch.name:
-                        cParent = branch
-                        cLevel = cParent.depth + 1
-                        cBOMID = len(cParent.children) + 1
-                        logging.debug(f'New Parent {level.name} to {branch.name}, Level: {cParent.depth}')
-                        logging.debug(f'\n\n{cParent.getParentsPrintout()}\n')
-                        logging.debug(f'New Current Level: {cLevel}')
-                else:
-                    continue
+            subAssyName = row[1] + '.ASM'
+
+            # for node in cParent.iter_path_reverse():
+            #     logging.warning(f'Node name {node.name}')
+            #     logging.warning(f'Node children count: {len(node.children)}')
+            #     for branch in node.children:
+            #         logging.info(f'Found node in {branch.name} Subassembly {subAssyName}:  {subAssyName == branch.name}')
+            #         if subAssyName == branch.name:
+            #             cParent = branch
+            #             cLevel = cParent.depth + 1
+            #             cBOMID = len(cParent.children) + 1
+            #             logging.warning(f'New Parent {node.name} to {branch.name}, Level: {cParent.depth}, Type: {cParent.type}')
+            #             logging.debug(f'\n\n{cParent.getParentsPrintout()}\n')
+            #             logging.debug(f'New Current Level: {cLevel}')
+            #             break
+            #         else:
+            #             logging.critical(f'Exit with no parents found for {branch.name}')
+            #     else:
+            #         continue
+
+            asmNameMatch = rootNode.findByName(subAssyName, exact=True)
+            if len(asmNameMatch) > 1:
+                logging.critical(f'Found multiple potential parent assemblies for {subAssyName}')
+                for creoAsm in asmNameMatch:
+                    logging.info(f'{subAssyName} in {creoAsm.name}')
+            elif len(asmNameMatch) == 0:
+                logging.info(f'No parents found for {subAssyName}')
+                cParent = None
+            else:
+                cParent = asmNameMatch[0]
+                logging.info(f'Parent found for {subAssyName}: {cParent.name}')
+                cBOMID = len(cParent.children) + 1
 
         # If read row is a sub-bom item, create node of parts and assign parent and part properties
         else:
@@ -84,7 +105,7 @@ def buildDataModel(filePath):
     # Find assemblies without children and add children items
     missingChildren = rootNode.find_missing_children()
     for node in missingChildren:
-        logging.critical(f'Missing child pre-fix- {node.name} | {node.type}')
+        logging.info(f'Missing child pre-fix- {node.name} | {node.type}')
 
     rootNode.fix_missing_children()
     missingChildren = rootNode.find_missing_children()
@@ -92,7 +113,7 @@ def buildDataModel(filePath):
         logging.critical(f'Missing child post-fix- {node.name} | {node.type}')
 
     # Output list of summary from BOM import
-    logging.critical(f'Starting Part Summary')
+    logging.info(f'Starting Part Summary')
     summaryRows = rows[summaryRowStart:]
     bomSummaryQTY = []
     bomSummaryType = []
@@ -106,7 +127,7 @@ def buildDataModel(filePath):
     # pprint.pprint(bomSummary)
 
     # Crease list of items for calculated unique part items
-    logging.critical(f'Calculating BOM')
+    logging.info(f'Calculating BOM')
     allLeaves = rootNode.searchLeaves()
 
     # Set extended quantities for each branch
@@ -127,13 +148,13 @@ def buildDataModel(filePath):
     np_unmergedBOM = np_unmergedBOM.transpose()
     np_unmergedBOM = np_unmergedBOM[np_unmergedBOM[:,2].argsort()]
 
-    with open('unmerged_mergedBOM.txt', 'w') as fileObject:
-        for i in np_unmergedBOM:
-            a = str(i[0])
-            b = str(i[1])
-            c = str(i[2])
-            # fileObject.write(f'{a.ljust*(10,"_")}{b.ljust*(10,"_")}{c.ljust*(10,"_")}+"\n"')
-            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+    # with open('unmerged_mergedBOM.txt', 'w') as fileObject:
+    #     for i in np_unmergedBOM:
+    #         a = str(i[0])
+    #         b = str(i[1])
+    #         c = str(i[2])
+    #         # fileObject.write(f'{a.ljust*(10,"_")}{b.ljust*(10,"_")}{c.ljust*(10,"_")}+"\n"')
+    #         fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
     # Create merged list of BOM items with full tree quantities for each unique part
     mergedQTY = []
@@ -223,7 +244,7 @@ if __name__ == '__main__':
 
     rootNode = buildDataModel(importedBomFile)
 
-    searchNodes = rootNode.findByName('RM7922000201-194-K2TRAY-LATCH-L', True)
+    searchNodes = rootNode.findByName('K2-TRAY-FRONT-COVER-1', True)
     for node in searchNodes:
         # print(f'Name is {node.name}')
         print(node.getParentsPrintout())
