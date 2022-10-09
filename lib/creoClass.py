@@ -1,6 +1,6 @@
 # Define part classes
-from anytree import AnyNode, RenderTree, PreOrderIter, PostOrderIter, findall
-import re
+from anytree import AnyNode, SymlinkNodeMixin, RenderTree, PreOrderIter, PostOrderIter, findall
+import re, copy
 
 class CreoAsm(AnyNode):
     '''Inhereted class from AnyNode, creates Tree node with QTY'''
@@ -81,4 +81,34 @@ class CreoAsm(AnyNode):
             qtyMultiplier = parent.qty * qtyMultiplier
         self.branchQTY = self.qty * qtyMultiplier
         return self.branchQTY
+    
+    # def copy_my_tree(self):
+    #     """computes a deep copy of the full tree the node belongs to
 
+    #     Returns: the node corresponding to `self` in the copied tree
+    #     """
+    #     my_root = self.root
+    #     my_root_copy = copy.deepcopy(my_root)  # full copy of my tree
+    #     # find copy of myself based on matching the some argument along the path
+    #     # NOTE: more efficient than searching the whole tree
+    #     matched_node = my_root_copy
+    #     for node in self.path:  # walk down from the root
+    #         if (
+    #             node.is_root
+    #         ):  # skip the first node in the path = root, has been matched already
+    #             continue
+    #         label2match = node.search
+    #         matched_node = node.search.find(
+    #             matched_node, lambda n: n.name == label2match
+    #         )
+    #     my_copy = matched_node
+    #     return my_copy
+
+# class CreoAsmSym(CreoAsm, SymlinkNodeMixin):
+#     '''Symbolic link of CreoAsm'''
+#     def __init__(self, name, type, bomID, qty, parent=None, children=None, **kwargs):
+#         super().__init__(name, type, bomID, qty, parent=None, children=None, **kwargs)
+#         if children:
+#              self.children = children
+#         def __repr__(self):
+#             return "SymlinkNode(%r)" % (self.target)
