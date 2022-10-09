@@ -1,11 +1,11 @@
-from lib.creoClass import CreoAsm
+from lib.creoClass import CreoNode
 from pathlib import Path
 import os, logging, pprint
 import pyinputplus as pyip
 import numpy as np
 from numpy import *
 
-logname = 'bom_import_log.txt'
+logname = './logs/bom_import_log.txt'
 logging.basicConfig(filename=logname, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
@@ -35,7 +35,7 @@ def buildDataModel(filePath):
     rootRow = rootRow.strip().split()
     rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
 
-    rootNode = CreoAsm(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
+    rootNode = CreoNode(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
     logging.critical(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
 
     cLevel = 1
@@ -68,7 +68,7 @@ def buildDataModel(filePath):
                         cLevel = cParent.depth + 1
                         cBOMID = len(cParent.children) + 1
                         logging.debug(f'New Parent {level.name} to {branch.name}, Level: {cParent.depth}')
-                        logging.debug(f'\n\n{cParent.printParents()}\n')
+                        logging.debug(f'\n\n{cParent.getParentsPrintout()}\n')
                         logging.debug(f'New Current Level: {cLevel}')
                 else:
                     continue
@@ -77,9 +77,19 @@ def buildDataModel(filePath):
         else:
             logging.debug(f'Sub-bom item routine started: {row[2]}, QTY {row[0]}')
             cQTY, cType, cName = row[0:3]
-            cNode = CreoAsm(cName, cType, cBOMID, cQTY, parent=cParent)
+            cNode = CreoNode(cName, cType, cBOMID, cQTY, parent=cParent)
             cBOMID += 1
         index += 1
+
+    # Find assemblies without children and add children items
+    missingChildren = rootNode.find_missing_children()
+    for node in missingChildren:
+        logging.critical(f'Missing child pre-fix- {node.name} | {node.type}')
+
+    rootNode.fix_missing_children()
+    missingChildren = rootNode.find_missing_children()
+    for node in missingChildren:
+        logging.critical(f'Missing child post-fix- {node.name} | {node.type}')
 
     # Output list of summary from BOM import
     logging.critical(f'Starting Part Summary')
@@ -113,11 +123,9 @@ def buildDataModel(filePath):
         leafName.append(leaves.name)
     unmergedBOM = [leafQTY, leafType, leafName]
 
-    ####### DEBUG CODE ########
     np_unmergedBOM = np.array(unmergedBOM)
     np_unmergedBOM = np_unmergedBOM.transpose()
     np_unmergedBOM = np_unmergedBOM[np_unmergedBOM[:,2].argsort()]
-    # pprint.pprint(np_unmergedBOM)
 
     with open('unmerged_mergedBOM.txt', 'w') as fileObject:
         for i in np_unmergedBOM:
@@ -141,13 +149,12 @@ def buildDataModel(filePath):
                 if unmergedBOM[2][i] == mergedName[j]:
                     temp = mergedQTY[j]
                     mergedQTY[j] = mergedQTY[j] + unmergedBOM[0][i]
-                    print(f'merging {mergedName[j]}: {unmergedBOM[0][i]} + {temp} to {mergedQTY[j]}')
+        # print(f'merging {mergedName[j]}: {unmergedBOM[0][i]} + {temp} to {mergedQTY[j]}')
     mergedBOM = [mergedQTY, mergedType, mergedName]
     
     np_mergedBOM = np.array(mergedBOM)
     np_mergedBOM = np_mergedBOM.transpose()
     np_mergedBOM = np_mergedBOM[np_mergedBOM[:,2].argsort()]
-    # pprint.pprint(np_mergedBOM)
 
     np_bomSummary = np.array(bomSummary)
     np_bomSummary = np_bomSummary.transpose()
@@ -175,14 +182,14 @@ def buildDataModel(filePath):
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
     # comparison = np_mergedBOM == np_bomSummary
-    # # print(comparison)
+    # print(comparison)
     # try:
     #     equal_arrays = comparison.all()
     # except:
     #     print('BOM check failed')
     # print(f'Completed BOM check: {equal_arrays}')
 
-    print('Completed tree build.')
+    # print('Completed tree build.')
     return rootNode
 
 def searchPart(part):
@@ -215,7 +222,20 @@ def exploreTree():
 if __name__ == '__main__':
 
     rootNode = buildDataModel(importedBomFile)
-    
+
+    searchNodes = rootNode.findByName('RM7922000201-194-K2TRAY-LATCH-L', True)
+    for node in searchNodes:
+        # print(f'Name is {node.name}')
+        print(node.getParentsPrintout())
+        node.printTree()
+
+    # searchNodes = rootNode.findByName('RM7922000201-160-RISER-SUP-BKT', True)
+    # for node in searchNodes:
+    #     print('---')
+    #     # print(f'Name is {node.name}')
+    #     node.printTree()
+
+
     # exploreTree()
     # rootNode.printTree()
 

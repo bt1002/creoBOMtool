@@ -1,3 +1,5 @@
+#  script that checks for unique sub-assembly names in a Creo BOM export file, for debug only
+
 from lib.creoClass import CreoAsm
 from pathlib import Path
 import os, logging, pprint
@@ -30,8 +32,6 @@ with open('temp.txt', 'w') as fileObject:
         row = row.split()
         a = str(row[0])
         b = str(row[1])
-        # c = str(row[2])
-        # fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
         if a[:3] == 'Sub':
             fileObject.write(f'{a.ljust(15," ")} {b.ljust(8," ")}\n')
             full_asm_names.append(b)
