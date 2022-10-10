@@ -1,5 +1,4 @@
 # Define part classes
-from distutils.log import debug
 from anytree import AnyNode, NodeMixin, SymlinkNodeMixin, RenderTree, PreOrderIter, PostOrderIter, findall, search
 import re, logging, anytree
 from copy import copy, deepcopy
@@ -9,11 +8,15 @@ class CreoFile():
     def __init__(self, name, type, bomID, qty):
         if type[0] == "S" or type[0] == "A":
             self.type = 'ASM'
+            self.empty = False # Default flag for assemblies, this needs to be handled
         elif type == "Part":
             self.type = 'PRT'
+            self.empty = True
+        elif type[0].lower() == "C".lower():
+            self.type = "CONT"
         else:
             self.type = type
-        self.name = name + '.' + self.type
+        self.name = name # + '.' + self.type
         self.bomID = bomID
         self.qty = int(qty)
 
@@ -47,31 +50,41 @@ class CreoNode(NodeMixin, CreoFile):
         '''Returns string of parent path'''
         return self.ancestors
     
-    def searchTreeName(self, partName) -> "CreoNode":
+    def searchTreeName(self, partName, type='') -> "CreoNode":
         '''Searches tree for all nodes by str value'''
         if type(partName) != type('string'):
             return            
         partName = partName.lower()
         # partType = self.type
-        partList = self.findByName(partName, exact=False)
+        partList = self.findByName(partName, type, exact=False)
         strNames = []
         for node in partList:
             strNames.append({'name':node.name, 'type':node.type, 'path': node.getParentsPrintout})
         return partList
     
-    def findByName(self, searchterm='', exact=False):
+    def findByName(self, type='', searchterm='', exact=False):
         '''Search part tree for all unique nodes'''
         if exact:
             partList = findall(self, filter_=lambda node: searchterm.lower() == node.name.lower() )
-            return partList
+            # filtredList = findall(partList, filter=lambda node: type in node.type )
+            filtredList = []
+            for parts in partList:
+                if type in parts.type:
+                    filtredList.append(parts)
+            return filtredList
         else:
             partList = findall(self, filter_=lambda node: searchterm.lower() in node.name.lower() )
-            return partList
+            filtredList = []
+            for parts in partList:
+                if type in parts.type:
+                    filtredList.append(parts)
+            return filtredList
 
-    def searchLeaves(self) -> "CreoNode":
+    def findLeaves(self) -> "CreoNode":
         '''Searches part tree for all leaves (no children)'''
         leaves = []
         for CreoNode in self.descendants:  # walk down from the root
+            # print(f'CreoNode.is_leaf {CreoNode.is_leaf} name {CreoNode.name} in {self.name}')
             if CreoNode.is_leaf:
                 leaves.append(CreoNode)
         return leaves
@@ -115,47 +128,35 @@ class CreoNode(NodeMixin, CreoFile):
         my_copy.children = [deepcopy(child) for child in self.children]
         return my_copy
 
-    # def copy_creo_node_tree(self) -> "CreoNode": ###########BUGGED###########
-    #     """computes a deep copy of the full tree the node belongs to
+    def fix_empty_asm(self) -> "CreoNode":
+        allLeaves = self.findLeaves()
+        for leaf in allLeaves:
+            if leaf.type == "ASM" and leaf.depth == 1:
+                logging.info(f'Empty asm found: Name {leaf.name}')
+                leaf.empty = True
+    
+    def find_orphaned_subAsm(self) -> "CreoNode":
+        allLeaves = self.findLeaves()
+        orphanedSubAsm = []
+        for leaf in allLeaves:
+            if leaf.type == "ASM" and leaf.empty != True:
+                logging.debug(f'Orphaned subasm {leaf.name}')
+                orphanedSubAsm.append(leaf)
+        return orphanedSubAsm
 
-    #     Returns: the node corresponding to `self` in the copied tree
-    #     """
-    #     my_root = self.root
-    #     my_root_copy = deepcopy(my_root)  # full copy of my tree
-    #     # find copy of myself based on matching the some argument along the path
-    #     # NOTE: more efficient than searching the whole tree
-    #     matched_node = my_root_copy
-    #     for node in self.path:  # walk down from the root
-    #         if (
-    #             node.is_root
-    #         ):  # skip the first node in the path = root, has been matched already
-    #             continue
-    #         label2match = node.name
-    #         # matched_node = anytree.search.find(
-    #         #     matched_node, lambda n: n.name == label2match
-    #         # )
-            
-    #         matched_node = node.findByName(label2match, True)[0] # returns first item in tuple which must be a match
-    #     my_copy = matched_node
-    #     return my_copy
-
-    def find_missing_children(self) -> "CreoNode":
+    # def find_missing_children(self) -> "CreoNode":
         missingChildren = []
         for CreoNode in self.descendants:  # walk down from the root
             if (CreoNode.type[0] == 'P'):  # Ignore parts
                 continue
             if CreoNode.is_leaf:
                 missingChildren.append(CreoNode)
-        # for child in missingChildren:
-            # print(f'Missing child: {child.type} | {child.name}')
-            # print(f'{child.children}')
+        for child in missingChildren:
+            logging.info(f'Missing child: {child.type} | {child.name}')
+            print(f'{child.children}')
         return missingChildren
 
-    def assign_children(self, creoNodeCopy) -> "CreoNode":
-        '''Reassigns children of one node to another node'''
-        self.children = creoNodeCopy.children
-
-    def fix_missing_children(self):
+    # def fix_missing_children(self):
         missing_children = self.find_missing_children()
         for nodeMissing in missing_children:
             matchingParts = self.findByName(nodeMissing.name, True)
@@ -174,10 +175,47 @@ class CreoNode(NodeMixin, CreoFile):
 
                     break
 
-    
-        
+    def fix_missing_children(self, nodeContainer):
+        '''Tagets a model node and searches nodeContainer for assemblies
+        remaining BOM items, creates a copy of those assemblies
+        and makes them children'''
+
+        while True: # iterate across children until no more orphaned assemblies in BOM
+            
+            subAssemblies = self.find_orphaned_subAsm()
+            logging.warning(f'Length of ophaned sub: {len(self.find_orphaned_subAsm())}')
+
+            if len(subAssemblies) == 0:
+                # break 
+                continue
+
+            for subAsm in subAssemblies:
+                subAsmNodesMatches = nodeContainer.findByName(type='ASM', searchterm=subAsm.name, exact=True)
+                bomMatches = []
+
+###### Need to fix here, sort assembly by having a BOM item (thought i handled this....???)
 
 
-    # find copy of node with same name in root tree, create copy
-    # create copy of node from exiting tree with children
-    # assign child copies to new node
+                for match in subAsmNodesMatches:
+                    if match.is_leaf != True and match.empty == False:
+                        bomMatches.append(match)
+                for match in bomMatches:
+                    logging.info(f'Found match {subAsm.name} {subAsm.type}-> {match.name} {match.type}')
+                if len(bomMatches) > 1:
+                    logging.critical(f'Found multiple sub-assemblies for {subAsm.name}')
+                    for creoAsm in bomMatches:
+                        logging.critical(f'{subAsm.name} in {creoAsm.name}')
+                    exit()
+                elif len(bomMatches) == 0:
+                    logging.critical(f'No parents found for {subAsm.name}')
+                    exit()
+                else: # for unique match, create a copy and assign to parent
+                    copySubAsm = bomMatches[0].__deepcopy__()
+                    tempChildren = copySubAsm.children
+                    subAsm.children = copySubAsm.children
+                    logging.info(f'Child found for {subAsm.name}: {copySubAsm.name}')
+                    # print(subAsm.getParentsPrintout())
+                    # subAsm.printTree()
+            # self.printTree()
+
+

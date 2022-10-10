@@ -1,4 +1,3 @@
-from unicodedata import name
 from lib.creoClass import CreoNode
 from pathlib import Path
 import os, logging, pprint
@@ -29,7 +28,7 @@ def buildDataModel(filePath):
                 row.strip()
                 rows.append(row)
 
-    # Establish root assembly item" row 1
+    # Establish root assembly item" row 1 and top level assembly
     print('Building Root Row...')
     rootRow = rows[0]
     rows.pop(0)
@@ -39,78 +38,60 @@ def buildDataModel(filePath):
     rootNode = CreoNode(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
     logging.debug(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
 
-    cLevel = 1
+
+    rIndex = 0
     cBOMID = 1
-    cParent = rootNode
+    for row in rows:
+        row = row.strip().split()
+        if row[0] == 'Sub-Assembly':
+            break
+        logging.debug(f'Main assembly item routine started: {row[2]}, QTY {row[0]}')
+        cQTY, cType, cName = row[0:3]
+        CreoNode(cName, cType, cBOMID, cQTY, parent=rootNode)
+        cBOMID += 1
+        rIndex += 1
+    rows = rows[rIndex:]
+
+    cSubAsmNode = []
+    noParentNode = CreoNode(name='NOPARENTNODE', type='CONTAINER', bomID=1, qty=1, parent=None)
 
     # Iterate file rows looking for Assemblies or Parts and create 'Nodes'
     print('Parsing BOM...')
     summaryRowStart = 0
-    index = 0
+    sumRowIndex = 0
     for row in rows:
         row = row.strip().split()
+        sumRowIndex += 1
         # If read row starts with part summary line, exit loop
         if row[0] == 'Summary':
-            logging.info(f'Summary of parts found...row: {index}\n---EXITING LOOP---')
-            summaryRowStart = index + 1
+            logging.info(f'Summary of Parts found...row: {sumRowIndex}\n---EXITING LOOP---')
+            summaryRowStart = sumRowIndex + 1
             break
 
         # If read row is an assembly, iterate from bottom of tree upwards looking for a part name match in higher level parent
         # First part name found in upper level will be assigned as the new parent item and add following items as children
         elif row[0] == 'Sub-Assembly':
-            logging.debug(f'Assembly Header Identified: {row[0]}, {row[1]}')
-            logging.debug(f'Parent Level: {cParent.depth}')
-            logging.debug(f'Current Level: {cLevel}')
-            subAssyName = row[1] + '.ASM'
-
-            # for node in cParent.iter_path_reverse():
-            #     logging.warning(f'Node name {node.name}')
-            #     logging.warning(f'Node children count: {len(node.children)}')
-            #     for branch in node.children:
-            #         logging.info(f'Found node in {branch.name} Subassembly {subAssyName}:  {subAssyName == branch.name}')
-            #         if subAssyName == branch.name:
-            #             cParent = branch
-            #             cLevel = cParent.depth + 1
-            #             cBOMID = len(cParent.children) + 1
-            #             logging.warning(f'New Parent {node.name} to {branch.name}, Level: {cParent.depth}, Type: {cParent.type}')
-            #             logging.debug(f'\n\n{cParent.getParentsPrintout()}\n')
-            #             logging.debug(f'New Current Level: {cLevel}')
-            #             break
-            #         else:
-            #             logging.critical(f'Exit with no parents found for {branch.name}')
-            #     else:
-            #         continue
-
-            asmNameMatch = rootNode.findByName(subAssyName, exact=True)
-            if len(asmNameMatch) > 1:
-                logging.critical(f'Found multiple potential parent assemblies for {subAssyName}')
-                for creoAsm in asmNameMatch:
-                    logging.info(f'{subAssyName} in {creoAsm.name}')
-            elif len(asmNameMatch) == 0:
-                logging.info(f'No parents found for {subAssyName}')
-                cParent = None
-            else:
-                cParent = asmNameMatch[0]
-                logging.info(f'Parent found for {subAssyName}: {cParent.name}')
-                cBOMID = len(cParent.children) + 1
+            subAssyName = row[1]
+            cBOMID = 1
+            cSubAsmNode = CreoNode(name=subAssyName, type='ASM', bomID=0, qty=10, parent=noParentNode)
+            logging.debug(f'Sub-Assembly Header Identified: {row[0]}, {row[1]}')
+            continue
 
         # If read row is a sub-bom item, create node of parts and assign parent and part properties
         else:
             logging.debug(f'Sub-bom item routine started: {row[2]}, QTY {row[0]}')
             cQTY, cType, cName = row[0:3]
-            cNode = CreoNode(cName, cType, cBOMID, cQTY, parent=cParent)
+            cNode = CreoNode(cName, cType, cBOMID, cQTY, parent=cSubAsmNode)
+            logging.debug(f'Parent name {cNode.parent.name}, child name {cNode.name}')
             cBOMID += 1
-        index += 1
 
-    # Find assemblies without children and add children items
-    missingChildren = rootNode.find_missing_children()
-    for node in missingChildren:
-        logging.info(f'Missing child pre-fix- {node.name} | {node.type}')
-
-    rootNode.fix_missing_children()
-    missingChildren = rootNode.find_missing_children()
-    for node in missingChildren:
-        logging.critical(f'Missing child post-fix- {node.name} | {node.type}')
+    # Checks for intentionally empty assemblies in tree (no parts)
+    noParentNode.fix_empty_asm()
+    
+    # Subroutine that iterates indefinately across ophaned sub-assemblies and adds them as BOM items
+    rootNode.printTree()
+    rootNode.fix_missing_children(noParentNode)
+    rootNode.printTree()
 
     # Output list of summary from BOM import
     logging.info(f'Starting Part Summary')
@@ -128,7 +109,11 @@ def buildDataModel(filePath):
 
     # Crease list of items for calculated unique part items
     logging.info(f'Calculating BOM')
-    allLeaves = rootNode.searchLeaves()
+    allLeaves = rootNode.findLeaves()
+
+
+
+
 
     # Set extended quantities for each branch
     for leaf in allLeaves:
@@ -243,12 +228,14 @@ def exploreTree():
 if __name__ == '__main__':
 
     rootNode = buildDataModel(importedBomFile)
+    rootNode.printTree()
 
-    searchNodes = rootNode.findByName('K2-TRAY-FRONT-COVER-1', True)
-    for node in searchNodes:
-        # print(f'Name is {node.name}')
-        print(node.getParentsPrintout())
-        node.printTree()
+
+    # searchNodes = rootNode.findByName('K2-TRAY-FRONT-COVER-1', True)
+    # for node in searchNodes:
+    #     # print(f'Name is {node.name}')
+    #     print(node.getParentsPrintout())
+    #     node.printTree()
 
     # searchNodes = rootNode.findByName('RM7922000201-160-RISER-SUP-BKT', True)
     # for node in searchNodes:
@@ -258,7 +245,6 @@ if __name__ == '__main__':
 
 
     # exploreTree()
-    # rootNode.printTree()
 
     # while True:
     #     print('Print Input: ', end='')
