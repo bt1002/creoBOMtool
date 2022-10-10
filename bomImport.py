@@ -86,12 +86,13 @@ def buildDataModel(filePath):
             cBOMID += 1
 
     # Checks for intentionally empty assemblies in tree (no parts)
+    logging.info('Finding assemblies with no parts...')
     noParentNode.fix_empty_asm()
+    logging.info('Finding assemblies with no parts...')
     
     # Subroutine that iterates indefinately across ophaned sub-assemblies and adds them as BOM items
-    rootNode.printTree()
-    rootNode.fix_missing_children(noParentNode)
-    rootNode.printTree()
+    logging.info('Creating children for sub-assemblies in root...')
+    rootNode.create_node_children(noParentNode)
 
     # Output list of summary from BOM import
     logging.info(f'Starting Part Summary')
