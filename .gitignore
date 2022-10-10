@@ -9,8 +9,6 @@ notes/
 *_env*/
 
 *.DS_Store
-lib/__pycache__/__init__.cpython-310.pyc
-lib/__pycache__/creoClass.cpython-310.pyc
 
 junk*
 working*
@@ -19,5 +17,5 @@ np_mergedBOM.txt
 np_un-mergedBOM.txt
 np_unmergedBOM.txt
 unmerged_mergedBOM.txt
-lib/__pycache__/creoClass.cpython-310.pyc
-.gitignore
+lib/__pycache__/*
+*log*
