@@ -17,16 +17,16 @@ class CreoFile():
             self.type = "CONT"
         else:
             self.type = type
-        self.name = name # + '.' + self.type
+        self.name = name
         self.bomID = bomID
         self.qty = int(qty)
-
 
 class CreoNode(NodeMixin, CreoFile):
     '''Creates Tree Node of a CreoAsm part class'''
     def __init__(self, name, type, bomID, qty, parent=None, children=None, **kwargs):
         super().__init__(name, type, bomID, qty)
         self.branchQTY = 0
+        self.totalTreeQTY = 0
         self.printID = f'{name.ljust(40,"_")}| QTY: {str(self.qty).rjust(3,"*")} | {self.type} | BOMID: {str(self.bomID).rjust(3,"*")}'
         self.parent = parent
         if children:
@@ -43,18 +43,17 @@ class CreoNode(NodeMixin, CreoFile):
         '''Returns string of parent path'''
         parentNames = []
         for node in self.iter_path_reverse():
-            parentNames.append(node.name)
-        parentNames[0] = f'{self.name}.{self.type}'
-        return ' -> '.join(parentNames)
+            parentNames.append(f'{node.name} [QTY {node.qty}]')
+        parentNames[0] = f'{self.name}.{self.type} [QTY {self.qty}]'
+        return '-> '.join(parentNames)
 
     def getParents(self) -> "CreoNode":
         '''Returns string of parent path'''
         return self.ancestors
     
-    def searchTreeName(self, partName, type='') -> "CreoNode":
+    def humanSearchTreeName(self, partName, type='') -> "CreoNode":
         '''Searches tree for all nodes by str value'''
         partName = partName.lower()
-        # partType = self.type
         partList = self.findByName(type, partName, exact=False)
         strNames = []
         for node in partList:
@@ -89,13 +88,21 @@ class CreoNode(NodeMixin, CreoFile):
         return leaves
 
     def findParts(self) -> "CreoNode":
-        '''Searches part tree for all leaves (no children)'''
+        '''Searches  tree for all parts (no children)'''
         parts = []
         for CreoNode in self.descendants:  # walk down from the root
-            # print(f'CreoNode.is_leaf {CreoNode.is_leaf} name {CreoNode.name} in {self.name}')
             if CreoNode.is_leaf and CreoNode.type == "PRT":
                 parts.append(CreoNode)
         return parts
+
+    def findAsm(self) -> "CreoNode":
+        '''Searches tree for all assemblies (with or without parts)'''
+        assems = []
+        for CreoNode in self.descendants:  # walk down from the root
+            if CreoNode.type == "ASM":
+                assems.append(CreoNode)
+        return assems
+
 
     def setBranchQTY(self) -> "CreoNode":
         '''This will set branch multiplier to total qty in this leaf for parents qty > 1
