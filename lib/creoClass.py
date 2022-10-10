@@ -1,4 +1,5 @@
 # Define part classes
+from unicodedata import name
 from anytree import AnyNode, NodeMixin, SymlinkNodeMixin, RenderTree, PreOrderIter, PostOrderIter, findall, search
 import re, logging, anytree
 from copy import copy, deepcopy
@@ -52,17 +53,15 @@ class CreoNode(NodeMixin, CreoFile):
     
     def searchTreeName(self, partName, type='') -> "CreoNode":
         '''Searches tree for all nodes by str value'''
-        if type(partName) != type('string'):
-            return            
         partName = partName.lower()
         # partType = self.type
-        partList = self.findByName(partName, type, exact=False)
+        partList = self.findByName(type, partName, exact=False)
         strNames = []
         for node in partList:
             strNames.append({'name':node.name, 'type':node.type, 'path': node.getParentsPrintout})
         return partList
     
-    def findByName(self, type='', searchterm='', exact=False):
+    def findByName(self, type='', searchterm='', exact=False) -> "CreoNode":
         '''Search part tree for all unique nodes'''
         if exact:
             partList = findall(self, filter_=lambda node: searchterm.lower() == node.name.lower() )
@@ -88,6 +87,15 @@ class CreoNode(NodeMixin, CreoFile):
             if CreoNode.is_leaf:
                 leaves.append(CreoNode)
         return leaves
+
+    def findParts(self) -> "CreoNode":
+        '''Searches part tree for all leaves (no children)'''
+        parts = []
+        for CreoNode in self.descendants:  # walk down from the root
+            # print(f'CreoNode.is_leaf {CreoNode.is_leaf} name {CreoNode.name} in {self.name}')
+            if CreoNode.is_leaf and CreoNode.type == "PRT":
+                parts.append(CreoNode)
+        return parts
 
     def setBranchQTY(self) -> "CreoNode":
         '''This will set branch multiplier to total qty in this leaf for parents qty > 1
@@ -132,48 +140,27 @@ class CreoNode(NodeMixin, CreoFile):
         allLeaves = self.findLeaves()
         for leaf in allLeaves:
             if leaf.type == "ASM" and leaf.depth == 1:
-                logging.info(f'Empty asm found: Name {leaf.name}.{leaf.type} #Children: {len(leaf.children)}. Empty={leaf.empty}')
+                logging.debug(f'Empty asm found: Name {leaf.name}.{leaf.type} #Children: {len(leaf.children)}. Empty={leaf.empty}')
                 leaf.empty = True
-                logging.info(f'Empty asm found: Updated {leaf.name}.{leaf.type} to Empty={leaf.empty}')
+                logging.debug(f'Empty asm found: Updated {leaf.name}.{leaf.type} to Empty={leaf.empty}')
     
-    def find_orphaned_subAsm(self) -> "CreoNode":
+    def find_childless_subAsm(self) -> "CreoNode":
         allLeaves = self.findLeaves()
-        orphanedSubAsm = []
+        childlessSubAsm = []
         for leaf in allLeaves:
-            if leaf.type == "ASM" and leaf.empty != True:
-                logging.debug(f'Orphaned subasm {leaf.name}.{leaf.type}, # Children: {len(leaf.children)}, Empty={leaf.empty}')
-                orphanedSubAsm.append(leaf)
-        return orphanedSubAsm
+            if leaf.type == "ASM" and leaf.empty == False:
+                logging.debug(f'Childless subasm {leaf.name}.{leaf.type}, # Children: {len(leaf.children)}, Empty={leaf.empty}')
+                childlessSubAsm.append(leaf)
+        return childlessSubAsm
 
-    # def find_missing_children(self) -> "CreoNode":
-        missingChildren = []
-        for CreoNode in self.descendants:  # walk down from the root
-            if (CreoNode.type[0] == 'P'):  # Ignore parts
-                continue
-            if CreoNode.is_leaf:
-                missingChildren.append(CreoNode)
-        for child in missingChildren:
-            logging.info(f'Missing child: {child.type} | {child.name}')
-            print(f'{child.children}')
-        return missingChildren
+    def isEmptySubAsm(self, asmName):
+        emptyAsmNodes = self.findByName(type='ASM', searchterm=asmName, exact=True)
 
-    # def fix_missing_children(self):
-        missing_children = self.find_missing_children()
-        for nodeMissing in missing_children:
-            matchingParts = self.findByName(nodeMissing.name, True)
-            for nodeMatch in matchingParts: # Search for node that has sub-nodes to copy
-                if nodeMatch.is_leaf == False: 
-                    # print(f"nodeMatch.is_leaf =  {nodeMatch.is_leaf}")
-                    # print(f'nodematch = {nodeMatch.name}')
-                    nodeWithParts = nodeMatch.__deepcopy__()
-
-                    # print(nodeWithParts.getParentsPrintout())
-
-                    nodeWithParts.parent = None # sever link to tree
-                    nodeMissing.assign_children(nodeWithParts) # reassign children to missing nodes
-
-                    break
-
+        for match in emptyAsmNodes:
+            if match.is_leaf == True and match.empty == True:
+                logging.debug(f'Empty SubAsm Found: {match.name} --- Leaf: {match.is_leaf == True} and Emtpy: {match.empty == True} = {match.is_leaf == True and match.empty == True}')
+                return True
+    
     def create_node_children(self, nodeContainer):
         '''Tagets a model node and searches nodeContainer for assemblies
         remaining BOM items, creates a copy of those assemblies
@@ -181,57 +168,79 @@ class CreoNode(NodeMixin, CreoFile):
 
         while True: # iterate across children until no more orphaned assemblies in BOM
             
-            subAssemblies = self.find_orphaned_subAsm()
-            logging.info(f'Length of ophaned sub: {len(self.find_orphaned_subAsm())}')
+            allChildlessSubAssemblies = self.find_childless_subAsm()
+            logging.info(f'Number of childless sub: {len(self.find_childless_subAsm())}')
 
-            if len(subAssemblies) == 0:
-                # break 
-                continue
+            childlessSubAssemblies = []
 
-            for subAsm in subAssemblies:
-                subAsmNodesMatches = nodeContainer.findByName(type='ASM', searchterm=subAsm.name, exact=True)
+            for childlessSubAsm in allChildlessSubAssemblies:
+                if nodeContainer.isEmptySubAsm(childlessSubAsm.name) != True:
+                    childlessSubAssemblies.append(childlessSubAsm)
+            logging.debug(f'# childlessSubAssemblies {len(childlessSubAssemblies)}')
+
+            if len(childlessSubAssemblies) == 0: #####
+                # break loop if no childless Subassemblies are found
+                logging.info(f'Found no childless sub-assemblies...exiting: create_node_children()')
+                break
+            
+            childlessSubAsmIter = 1
+            for childlessSubAsm in childlessSubAssemblies:
+                logging.info(f'Entering childlessSubAsmIter loop: Count {childlessSubAsmIter}')
+                # Find all matches in name search of sub-assembly inported list and make list of matches of parents without children
+                subAsmNodesMatches = nodeContainer.findByName(type='ASM', searchterm=childlessSubAsm.name, exact=True)
                 
-            ##################### STILL DEBUGGING #######################
-
                 bomMatches = []
+                countMatch = 0
+                # Log all matches from searching container for assembly name
                 for match in subAsmNodesMatches:
-                    if match.is_leaf != True and match.empty == False:
-                        logging.info(f'Found match {subAsm.name}.{subAsm.type}-> {match.name}.{match.type}, IsLeaf={match.is_leaf}, Empty={match.empty}')
-                        bomMatches.append(match)
+                    countMatch += 1
+                    logging.debug(f'SubAsm {childlessSubAsm.name}.{childlessSubAsm.type} Match# {countMatch}-> {match.name}.{match.type}, IsLeaf={match.is_leaf}, Empty={match.empty}')
 
+                # Reduce matches to assemblies with children (ignores nodes that are at end of tree and marked as ASM with no children e.g. empty assemblies)
+                countMatch = 0
+                for match in subAsmNodesMatches:
+                    countMatch += 1
+                    if match.is_leaf == False and match.empty == False:
+                        logging.info(f'{match.name}: {match.is_leaf == False} and {match.empty == False} = {match.is_leaf == False and match.empty == False}')
+                        bomMatches.append(match)
+                        
                     for match in bomMatches:
-                        logging.info(f'Found match {subAsm.name}.{subAsm.type}-> {match.name}.{match.type}, IsLeaf={match.is_leaf}, Empty={match.empty}')
+                        logging.debug(f'Found match without children {childlessSubAsm.name}.{childlessSubAsm.type}-> Match: {match.name}.{match.type}, IsLeaf={match.is_leaf}, Empty={match.empty}')
 
                 if len(bomMatches) == 0:  # Check empty subassembly status if intentionally or missing tree items and exit
-                    logging.info(f'No BOM matches Found {subAsm.name}. Empty={subAsm.empty}. #Children={len(subAsm.children)}')
+                    logging.info(f'len(bomMatches)==0 : {len(bomMatches) == 0}')
+                    logging.info(f'No BOM matches Found {childlessSubAsm.name}. Empty={childlessSubAsm.empty}. #Children={len(childlessSubAsm.children)}')
+                    
+                    # Check if assembly is empty in node container
 
-                    if subAsm.empty == False:
-                        subAsm.printTree()
-                        logging.critical('\n\nExiting: find_orphaned_subAsm()\n')
-                        logging.critical(f'No children found for {subAsm.name}.{subAsm.type}. Empty={subAsm.empty}. #Children={len(subAsm.children)}')
-                        logging.critical(f'{subAsm.getParentsPrintout()}')
-                        exit()
+                    if nodeContainer.isEmptySubAsm(childlessSubAsm.name):
+                        logging.info(f'Empty subasm {childlessSubAsm.name} ignored.')
+                        break
 
                     else:
-                        logging.info(f'Empty subasm {subAsm.name} ignored. Empty {subAsm.empty}')
-                    continue
-                    print('continue')
+                        logging.critical('\n\nExiting: find_orphaned_subAsm()\n')
+                        logging.critical(f'No children found for {childlessSubAsm.name}.{childlessSubAsm.type}. Empty={childlessSubAsm.empty}. #Children={len(childlessSubAsm.children)}')
+                        logging.critical(f'{childlessSubAsm.getParentsPrintout()}')
+                        exit()
 
 
                 elif len(bomMatches) > 1:  # Check if we found multiple potential parents and exit if we did
-                    logging.critical(f'Found multiple sub-assemblies for {subAsm.name}')
+                    logging.critical(f'len(bomMatches)>0 : {len(bomMatches) == 0}')
+                    logging.critical(f'Found multiple sub-assemblies for {childlessSubAsm.name}')
                     for creoAsm in bomMatches:
-                        logging.critical(f'{subAsm.name}.{subAsm.type} in {creoAsm.name}.{subAsm.type}')
+                        logging.critical(f'{childlessSubAsm.name}.{childlessSubAsm.type} in {creoAsm.name}.{childlessSubAsm.type}')
                     exit()
 
 
                 else: # for unique match, create a copy and assign to parent
+                    logging.info(f'len(bomMatches)==1 : {not len(bomMatches) == 0}')
                     copySubAsm = bomMatches[0].__deepcopy__()
-                    subAsm.children = copySubAsm.children
-                    logging.info(f'Children found for {subAsm.name}.{subAsm.type}: {copySubAsm.name}.{subAsm.type}')
-                    # print(subAsm.getParentsPrintout())
-                    subAsm.printTree()
+                    logging.info(f'Children found for {childlessSubAsm.name}.{childlessSubAsm.type}: Copying {copySubAsm.name}.{copySubAsm.type} #Chilren: {len(copySubAsm.children)}')
+                    childlessSubAsm.children = copySubAsm.children
+                    # print(childlessSubAsm.getParentsPrintout())
+                    # subAsm.printTree()
                     # copySubAsm.printTree()
-            # self.printTree()
-
+                
+                childlessSubAsmIter += 1
+                logging.info(f'Exiting childlessSubAsmIter loop')
 
