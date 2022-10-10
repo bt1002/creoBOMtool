@@ -1,21 +1,34 @@
+from pprint import pprint
 from lib.creoClass import CreoNode
 from pathlib import Path
-import os, logging, pprint
+from anytree import AnyNode
+from anytree.exporter import JsonExporter
+import os, logging
+import pickle
 import pyinputplus as pyip
 import numpy as np
 from numpy import *
+from tkinter import Tk     # from tkinter import Tk for Python 3.x
+from tkinter.filedialog import askopenfilename
 
-logname = './logs/bom_import_log.txt'
-os.remove('./logs/bom_import_log.txt') # clears previous log file
-logging.basicConfig(filename=logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+logpath = './logs/'
+logname = 'bom_import_log.txt'
+os.remove(logpath + logname) # clears previous log file
+logging.basicConfig(filename=logpath+logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
 # Declare basepath and filenames
 BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
 os.chdir(BASE_DIR)
 
-fileName = 'chassis-000.bom'
+# fileName = 'chassis-000.bom'
 # fileName = 'gpu-tray-rivet.bom'
+
+# File open dialog
+Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+fileName = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+
 importedBomFile = Path('./BOM_imports/') / Path(fileName)
 
 def buildDataModel(filePath):
@@ -105,9 +118,12 @@ def buildDataModel(filePath):
         bomSummaryType.append(row[1])
         bomSummaryName.append(row[2])
     bomSummary = [bomSummaryQTY, bomSummaryType, bomSummaryName]
-    # pprint.pprint(bomSummary)
 
-    # Crease list of items for calculated unique part items
+    np_bomSummary = np.array(bomSummary)
+    np_bomSummary = np_bomSummary.transpose()
+    np_bomSummary = np_bomSummary[np_bomSummary[:,2].argsort()]
+
+    # Create array of all unique parts
     logging.info(f'Calculating BOM')
     allParts = rootNode.findParts()
 
@@ -115,18 +131,73 @@ def buildDataModel(filePath):
     for part in allParts:
         part.setBranchQTY()
 
+    mergedBOMparts, unmergedBOMparts = mergeBOM(allParts)
+
+    # Create array of all unique assembles
+    allAsm = rootNode.findAsm()
+    for asm in allAsm:
+        asm.setBranchQTY()
+    
+    mergedBOMasm, unmergedBOMasm = mergeBOM(allAsm)
+
+    fullMergedBOM = np.append(mergedBOMparts, mergedBOMasm, axis=0)
+
+    # with open(logpath + 'fullmerged_Part.txt', 'w', encoding='utf-8-sig') as fileObject:
+    #     for i in fullMergedBOM:
+    #         a = str(i[0]) #QTY
+    #         b = str(i[1]) #TYP
+    #         c = str(i[2]) #NAME
+    #         fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+
+    # Set total assembly quantities to match to node type, NOTE: this is not dynamic if tree is changed
+    for line in fullMergedBOM:
+        lineQTY = line[0]
+        lineType = line[1]
+        lineName = line[2]
+        nodeMatches = rootNode.findByName(type=lineType, searchterm=lineName, exact=True)
+        for creoNode in nodeMatches:
+            creoNode.totalTreeQTY = lineQTY
+
+    ### Write unmerged, merged, and bom summary to file for manual check ###
+    # writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
+
+    #### Write full asm BOM ####
+
+    comparison = mergedBOMparts == np_bomSummary
+    try:
+        equal_arrays = comparison.all()
+    except:
+        print('BOM check failed')
+    print(f'Completed BOM check: {equal_arrays}')
+  
+
+    # Data and file export
+    exporter = JsonExporter(indent=2, sort_keys=True)
+    logging.info(f'Writing JSON to file "./{fileName}.json"')
+    print(f'Writing JSON to file "{logpath}/{fileName}.json"')
+    with open(fileName + '.json', 'w', encoding='utf-8-sig') as fileObject:
+        fileObject.write(exporter.export(rootNode))
+
+    logging.info(f'Writing Data to file "./{fileName}.pk"')
+    with open(fileName + '.pk.', 'wb') as output:
+        pickle.dump(rootNode, output, pickle.HIGHEST_PROTOCOL)
+
+    print('Completed tree build.')
+    return rootNode
+
+def mergeBOM(creoAsm):
     #### Following section is used to check if BOM is built with the correct quantities after the tree is constructed.
     #### It checks against the creo exported part count list
-
-
     # Create unmerged BOM tree list for branch quantities
     partQTY = []
     partType = []
     partName = []
-    for part in allParts:
+    for part in creoAsm:
         partQTY.append(part.branchQTY)
-        # leafType.append(part.type)
-        partType.append('Part')
+        if part.type[0].lower() in 'p':
+            partType.append('Part')
+        else:
+            partType.append(part.type)
         partName.append(part.name)
     unmergedBOM = [partQTY, partType, partName]
 
@@ -138,7 +209,7 @@ def buildDataModel(filePath):
     mergedQTY = []
     mergedType = []
     mergedName = []
-    for i in range(len(allParts)):
+    for i in range(len(creoAsm)):
         if unmergedBOM[2][i] not in mergedName:  # If partname not in merged bom
             mergedQTY.append(unmergedBOM[0][i])
             mergedType.append(unmergedBOM[1][i])
@@ -148,102 +219,49 @@ def buildDataModel(filePath):
                 if unmergedBOM[2][i] == mergedName[j]:
                     temp = mergedQTY[j]
                     mergedQTY[j] = mergedQTY[j] + unmergedBOM[0][i]
-    mergedBOM = [mergedQTY, mergedType, mergedName]
+    mergedBOM_parts = [mergedQTY, mergedType, mergedName]
     
-    np_mergedBOM = np.array(mergedBOM)
-    np_mergedBOM = np_mergedBOM.transpose()
-    np_mergedBOM = np_mergedBOM[np_mergedBOM[:,2].argsort()]
+    np_mergedBOM_parts = np.array(mergedBOM_parts)
+    np_mergedBOM_parts = np_mergedBOM_parts.transpose()
+    np_mergedBOM_parts = np_mergedBOM_parts[np_mergedBOM_parts[:,2].argsort()]
 
-    np_bomSummary = np.array(bomSummary)
-    np_bomSummary = np_bomSummary.transpose()
-    np_bomSummary = np_bomSummary[np_bomSummary[:,2].argsort()]
-
-    ### Write unmerged, merged, and bom summary to file for manual check
-    # writeBomCheckFiles(np_unmergedBOM, np_mergedBOM, np_bomSummary)
-
-    comparison = np_mergedBOM == np_bomSummary
-    try:
-        equal_arrays = comparison.all()
-    except:
-        print('BOM check failed')
-    print(f'Completed BOM check: {equal_arrays}')
-
-    print('Completed tree build.')
-    return rootNode
-
-def searchPart(rootPart):
-    '''Searches input node for parts with ID'''
-    while True:
-
-        searchResults = []
-
-        userInput = pyip.inputStr('Enter Part Name (enter "quit" for quit):  ')
-        if userInput.lower() == 'quit':
-            break
-        else:
-            creoParts = rootPart.searchTreeName(userInput)
-            partNames = []
-            partTypes = []
-            partQtys = []
-            partPath = []
-            
-            resultIndex = 1
-            for part in creoParts:
-                partNames.append(part.name)
-                partTypes.append(part.type)
-                partQtys.append(part.qty)
-                partPath.append(part.getParentsPrintout())
-                searchResults.append(part) 
-                print(f'[{str(resultIndex).rjust(3," ")}] | {part.name.ljust(36,"_")} | {part.type} | QTY: {str(part.qty).rjust(3,"*")} | {part.getParentsPrintout()}')
-                resultIndex += 1
-            
-        inputChoices = ['Print Tree for Item', 'Search for Part', 'Return to main']
-        userInput = pyip.inputMenu(inputChoices, numbered=True)
-        if userInput == inputChoices[0]:
-            partChoiceNum = pyip.inputInt('Enter part selection [#]: ')
-            part = searchResults[partChoiceNum-1]
-            print(part.getParentsPrintout())
-            part.printTree()
-            break
-        if userInput == inputChoices[1]:
-            continue
-        if userInput == inputChoices[2]:
-            break
+    return np_mergedBOM_parts, np_unmergedBOM
 
 
-    return
-
-def exploreTree():
-    while True:
-        inputChoices = ['Search for Part', 'Print Master Tree', 'Quit']
-        userInput = pyip.inputMenu(inputChoices, numbered=True)
-        if userInput == inputChoices[0]:
-            searchPart(rootNode)
-        if userInput == inputChoices[1]:
-            rootNode.printTree()
-        if userInput == inputChoices[2]:
-            break
-
-def writeBomCheckFiles(np_unmergedBOM, np_mergedBOM, np_bomSummary):
+def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, bomSummary):
     '''Write unmerged, merged, and bom summary to file for manual check
     requires 3 file np array types with following column data: qty, type, name'''
 
-    with open('np_un-mergedBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
-        for i in np_unmergedBOM:
+    with open(logpath + 'unmerged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in unmergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open('np_mergedBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
-        for i in np_mergedBOM:
+    with open(logpath + 'merged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in mergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open('np_bomSummary.txt', 'w', encoding='utf-8-sig') as fileObject:
-        for i in np_bomSummary:
+    with open(logpath +'bomSummary.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in bomSummary:
+            a = str(i[0])
+            b = str(i[1])
+            c = str(i[2])
+            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+
+    with open(logpath + 'merged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in mergedBOMasm:
+            a = str(i[0])
+            b = str(i[1])
+            c = str(i[2])
+            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+
+    with open(logpath + 'unmerged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in unmergedBOMasm:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
@@ -253,12 +271,3 @@ def writeBomCheckFiles(np_unmergedBOM, np_mergedBOM, np_bomSummary):
 if __name__ == '__main__':
 
     rootNode = buildDataModel(importedBomFile)
-    # rootNode.printTree()
-
-    exploreTree()
-
-
-    # while True:
-    #     print('Print Input: ', end='')
-    #     userInput = pyip.inputStr()
-    #     rootNode.printTree(userInput)
