@@ -4,11 +4,11 @@
   "children": [
     {
       "bomID": 1,
-      "branchQTY": 0,
+      "branchQTY": 1,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -16,6 +16,7 @@
               "name": "RM7922000201-101-BOTTOM-BASE",
               "printID": "RM7922000201-101-BOTTOM-BASE____________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -24,6 +25,7 @@
               "name": "RM7922000201-101-S06",
               "printID": "RM7922000201-101-S06____________________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -32,6 +34,7 @@
               "name": "RM7922000201-101-S01",
               "printID": "RM7922000201-101-S01____________________| QTY: **4 | PRT | BOMID: **3",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -40,6 +43,7 @@
               "name": "RM7922000201-101-S10",
               "printID": "RM7922000201-101-S10____________________| QTY: **2 | PRT | BOMID: **4",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -48,6 +52,7 @@
               "name": "RM7922000201-101-S11",
               "printID": "RM7922000201-101-S11____________________| QTY: **2 | PRT | BOMID: **5",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -56,6 +61,7 @@
               "name": "RM59901-101-S01",
               "printID": "RM59901-101-S01_________________________| QTY: *20 | PRT | BOMID: **6",
               "qty": 20,
+              "totalTreeQTY": "20",
               "type": "PRT"
             },
             {
@@ -64,6 +70,7 @@
               "name": "RM7922000201-101-S05",
               "printID": "RM7922000201-101-S05____________________| QTY: **2 | PRT | BOMID: **7",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -72,6 +79,7 @@
               "name": "RM7922000201-101-S08",
               "printID": "RM7922000201-101-S08____________________| QTY: **7 | PRT | BOMID: **8",
               "qty": 7,
+              "totalTreeQTY": "7",
               "type": "PRT"
             },
             {
@@ -80,6 +88,7 @@
               "name": "RM7922000201-101-S12",
               "printID": "RM7922000201-101-S12____________________| QTY: **2 | PRT | BOMID: **9",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -88,6 +97,7 @@
               "name": "RM7922000201-101-S09",
               "printID": "RM7922000201-101-S09____________________| QTY: **2 | PRT | BOMID: *10",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -96,6 +106,7 @@
               "name": "RM7922000201-101-S03",
               "printID": "RM7922000201-101-S03____________________| QTY: *12 | PRT | BOMID: *11",
               "qty": 12,
+              "totalTreeQTY": "12",
               "type": "PRT"
             },
             {
@@ -104,6 +115,7 @@
               "name": "RM7922000201-101-S04",
               "printID": "RM7922000201-101-S04____________________| QTY: **4 | PRT | BOMID: *12",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -112,6 +124,7 @@
               "name": "RM7922000201-101-S13",
               "printID": "RM7922000201-101-S13____________________| QTY: **1 | PRT | BOMID: *13",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             }
           ],
@@ -119,11 +132,12 @@
           "name": "RM7922000201-101-BOTTOM-BASE",
           "printID": "RM7922000201-101-BOTTOM-BASE____________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 2,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -131,6 +145,7 @@
               "name": "RM7922000201-102-COV-TOP-FRONT",
               "printID": "RM7922000201-102-COV-TOP-FRONT__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -139,6 +154,7 @@
               "name": "RM7922000201-102-S01",
               "printID": "RM7922000201-102-S01____________________| QTY: **4 | PRT | BOMID: **2",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -147,6 +163,7 @@
               "name": "SI-0135-60H703200-022",
               "printID": "SI-0135-60H703200-022___________________| QTY: **6 | PRT | BOMID: **3",
               "qty": 6,
+              "totalTreeQTY": "6",
               "type": "PRT"
             }
           ],
@@ -154,15 +171,16 @@
           "name": "RM7922000201-102-COV-TOP-FRONT",
           "printID": "RM7922000201-102-COV-TOP-FRONT__________| QTY: **1 | ASM | BOMID: **2",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 3,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -170,6 +188,7 @@
                   "name": "RM7922000201-105-BOTTOM-SUPPORT",
                   "printID": "RM7922000201-105-BOTTOM-SUPPORT_________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -178,6 +197,7 @@
                   "name": "SI-0123-60H703000-155",
                   "printID": "SI-0123-60H703000-155___________________| QTY: **4 | PRT | BOMID: **2",
                   "qty": 4,
+                  "totalTreeQTY": "4",
                   "type": "PRT"
                 }
               ],
@@ -185,11 +205,12 @@
               "name": "RM7922000201-105-BOTTOM-SUPPORT",
               "printID": "RM7922000201-105-BOTTOM-SUPPORT_________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 2,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -197,6 +218,7 @@
                   "name": "RM7922000201-106-BOTTOM-PAR-V",
                   "printID": "RM7922000201-106-BOTTOM-PAR-V___________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -205,6 +227,7 @@
                   "name": "RM7922000201-106-S01",
                   "printID": "RM7922000201-106-S01____________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 }
               ],
@@ -212,6 +235,7 @@
               "name": "RM7922000201-106-BOTTOM-PAR-V",
               "printID": "RM7922000201-106-BOTTOM-PAR-V___________| QTY: **1 | ASM | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
@@ -220,6 +244,7 @@
               "name": "RIVET-60H453232A021",
               "printID": "RIVET-60H453232A021_____________________| QTY: **9 | PRT | BOMID: **3",
               "qty": 9,
+              "totalTreeQTY": "497",
               "type": "PRT"
             }
           ],
@@ -227,11 +252,12 @@
           "name": "7U-BOTTOM-BASE-SUPPORT",
           "printID": "7U-BOTTOM-BASE-SUPPORT__________________| QTY: **1 | ASM | BOMID: **3",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 4,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -239,6 +265,7 @@
               "name": "RM7922000201-107-BOTTOM-PAR-H",
               "printID": "RM7922000201-107-BOTTOM-PAR-H___________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -247,6 +274,7 @@
               "name": "RM7922000201-107-S01",
               "printID": "RM7922000201-107-S01____________________| QTY: **4 | PRT | BOMID: **2",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -255,6 +283,7 @@
               "name": "RM7922000201-107-S02",
               "printID": "RM7922000201-107-S02____________________| QTY: **2 | PRT | BOMID: **3",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             }
           ],
@@ -262,11 +291,12 @@
           "name": "RM7922000201-107-BOTTOM-PAR-H",
           "printID": "RM7922000201-107-BOTTOM-PAR-H___________| QTY: **1 | ASM | BOMID: **4",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 5,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -274,6 +304,7 @@
               "name": "RM7922000201-108-CANISTER-BAR",
               "printID": "RM7922000201-108-CANISTER-BAR___________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -282,6 +313,7 @@
               "name": "RM7922000201-108-S01",
               "printID": "RM7922000201-108-S01____________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -290,6 +322,7 @@
               "name": "BUSHING",
               "printID": "BUSHING_________________________________| QTY: **2 | PRT | BOMID: **3",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -298,6 +331,7 @@
               "name": "GUIDE-STD",
               "printID": "GUIDE-STD_______________________________| QTY: **2 | PRT | BOMID: **4",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -306,6 +340,7 @@
               "name": "RIVET-60H453232A021",
               "printID": "RIVET-60H453232A021_____________________| QTY: **2 | PRT | BOMID: **5",
               "qty": 2,
+              "totalTreeQTY": "497",
               "type": "PRT"
             }
           ],
@@ -313,6 +348,7 @@
           "name": "RM7922000201-108-CANISTER-BAR",
           "printID": "RM7922000201-108-CANISTER-BAR___________| QTY: **1 | ASM | BOMID: **5",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
@@ -321,15 +357,16 @@
           "name": "RM7922000201-109-TOP-PUSH-BKT",
           "printID": "RM7922000201-109-TOP-PUSH-BKT___________| QTY: **2 | PRT | BOMID: **6",
           "qty": 2,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
           "bomID": 7,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -337,6 +374,7 @@
                   "name": "RM7922000201-110-CHASSIS-SUP-BK",
                   "printID": "RM7922000201-110-CHASSIS-SUP-BK_________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -345,6 +383,7 @@
                   "name": "NU-0018-60H303240-002",
                   "printID": "NU-0018-60H303240-002___________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -353,6 +392,7 @@
                   "name": "2U_CHASSIS_YSKS-69172-ZI_1",
                   "printID": "2U_CHASSIS_YSKS-69172-ZI_1______________| QTY: **1 | PRT | BOMID: **3",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -361,6 +401,7 @@
                   "name": "RIVET-60H453232A052-L2_3",
                   "printID": "RIVET-60H453232A052-L2_3________________| QTY: **4 | PRT | BOMID: **4",
                   "qty": 4,
+                  "totalTreeQTY": "94",
                   "type": "PRT"
                 }
               ],
@@ -368,11 +409,12 @@
               "name": "RM7922000201-110-CHASSIS-SUP-BK",
               "printID": "RM7922000201-110-CHASSIS-SUP-BK_________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 2,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -380,11 +422,12 @@
                   "name": "RM7922000201-418-HINGE-BKT-L",
                   "printID": "RM7922000201-418-HINGE-BKT-L____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
                   "bomID": 2,
-                  "branchQTY": 0,
+                  "branchQTY": 8,
                   "children": [
                     {
                       "bomID": 1,
@@ -392,6 +435,7 @@
                       "name": "RM7922000201-419-SOFTSTOP-CVR-L",
                       "printID": "RM7922000201-419-SOFTSTOP-CVR-L_________| QTY: **1 | PRT | BOMID: **1",
                       "qty": 1,
+                      "totalTreeQTY": "8",
                       "type": "PRT"
                     },
                     {
@@ -400,6 +444,7 @@
                       "name": "RM7922000201-417-S01",
                       "printID": "RM7922000201-417-S01____________________| QTY: **1 | PRT | BOMID: **2",
                       "qty": 1,
+                      "totalTreeQTY": "11",
                       "type": "PRT"
                     }
                   ],
@@ -407,6 +452,7 @@
                   "name": "RM7922000201-419-SOFTSTOP-CVR-L",
                   "printID": "RM7922000201-419-SOFTSTOP-CVR-L_________| QTY: **8 | ASM | BOMID: **2",
                   "qty": 8,
+                  "totalTreeQTY": "8",
                   "type": "ASM"
                 },
                 {
@@ -415,6 +461,7 @@
                   "name": "RM7922000201-355-COVER-SPRING",
                   "printID": "RM7922000201-355-COVER-SPRING___________| QTY: **1 | PRT | BOMID: **3",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -423,6 +470,7 @@
                   "name": "HG-209-031-01_A_-20150311",
                   "printID": "HG-209-031-01_A_-20150311_______________| QTY: **2 | PRT | BOMID: **4",
                   "qty": 2,
+                  "totalTreeQTY": "4",
                   "type": "PRT"
                 },
                 {
@@ -431,6 +479,7 @@
                   "name": "RIVET-60H453232A021",
                   "printID": "RIVET-60H453232A021_____________________| QTY: **4 | PRT | BOMID: **5",
                   "qty": 4,
+                  "totalTreeQTY": "497",
                   "type": "PRT"
                 }
               ],
@@ -438,6 +487,7 @@
               "name": "RM7922000201-SOFT-STOP-COVER-L",
               "printID": "RM7922000201-SOFT-STOP-COVER-L__________| QTY: **1 | ASM | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
@@ -446,6 +496,7 @@
               "name": "RM7922000201-243-PULL-OUT-CARD",
               "printID": "RM7922000201-243-PULL-OUT-CARD__________| QTY: **2 | PRT | BOMID: **3",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -454,6 +505,7 @@
               "name": "RIVET-60H453232A021",
               "printID": "RIVET-60H453232A021_____________________| QTY: **4 | PRT | BOMID: **4",
               "qty": 4,
+              "totalTreeQTY": "497",
               "type": "PRT"
             }
           ],
@@ -461,15 +513,16 @@
           "name": "RM7922000201-CHASSIS-SUP-BKT-L",
           "printID": "RM7922000201-CHASSIS-SUP-BKT-L__________| QTY: **1 | ASM | BOMID: **7",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 8,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -477,6 +530,7 @@
                   "name": "RM7922000201-111-CHAS-SUP-BKT-R",
                   "printID": "RM7922000201-111-CHAS-SUP-BKT-R_________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -485,6 +539,7 @@
                   "name": "NU-0018-60H303240-002",
                   "printID": "NU-0018-60H303240-002___________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -493,6 +548,7 @@
                   "name": "RIVET-60H453232A052-L2_3",
                   "printID": "RIVET-60H453232A052-L2_3________________| QTY: **4 | PRT | BOMID: **3",
                   "qty": 4,
+                  "totalTreeQTY": "94",
                   "type": "PRT"
                 }
               ],
@@ -500,11 +556,12 @@
               "name": "RM7922000201-111-CHAS-SUP-BKT-R",
               "printID": "RM7922000201-111-CHAS-SUP-BKT-R_________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 2,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -512,11 +569,12 @@
                   "name": "RM7922000201-416-HINGE-BKT-R",
                   "printID": "RM7922000201-416-HINGE-BKT-R____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
                   "bomID": 2,
-                  "branchQTY": 0,
+                  "branchQTY": 3,
                   "children": [
                     {
                       "bomID": 1,
@@ -524,6 +582,7 @@
                       "name": "RM7922000201-417-SOFTSTOP-CVR-R",
                       "printID": "RM7922000201-417-SOFTSTOP-CVR-R_________| QTY: **1 | PRT | BOMID: **1",
                       "qty": 1,
+                      "totalTreeQTY": "3",
                       "type": "PRT"
                     },
                     {
@@ -532,6 +591,7 @@
                       "name": "RM7922000201-417-S01",
                       "printID": "RM7922000201-417-S01____________________| QTY: **1 | PRT | BOMID: **2",
                       "qty": 1,
+                      "totalTreeQTY": "11",
                       "type": "PRT"
                     }
                   ],
@@ -539,6 +599,7 @@
                   "name": "RM7922000201-417-SOFTSTOP-CVR-R",
                   "printID": "RM7922000201-417-SOFTSTOP-CVR-R_________| QTY: **3 | ASM | BOMID: **2",
                   "qty": 3,
+                  "totalTreeQTY": "3",
                   "type": "ASM"
                 },
                 {
@@ -547,6 +608,7 @@
                   "name": "HG-209-031-01_A_-20150311",
                   "printID": "HG-209-031-01_A_-20150311_______________| QTY: **2 | PRT | BOMID: **3",
                   "qty": 2,
+                  "totalTreeQTY": "4",
                   "type": "PRT"
                 },
                 {
@@ -555,6 +617,7 @@
                   "name": "RM7922000201-355-COVER-SPRING",
                   "printID": "RM7922000201-355-COVER-SPRING___________| QTY: **1 | PRT | BOMID: **4",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -563,6 +626,7 @@
                   "name": "RIVET-60H453232A021",
                   "printID": "RIVET-60H453232A021_____________________| QTY: **4 | PRT | BOMID: **5",
                   "qty": 4,
+                  "totalTreeQTY": "497",
                   "type": "PRT"
                 }
               ],
@@ -570,6 +634,7 @@
               "name": "RM7922000201-SOFT-STOP-COVER-R",
               "printID": "RM7922000201-SOFT-STOP-COVER-R__________| QTY: **1 | ASM | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
@@ -578,6 +643,7 @@
               "name": "RIVET-60H453232A021",
               "printID": "RIVET-60H453232A021_____________________| QTY: **4 | PRT | BOMID: **3",
               "qty": 4,
+              "totalTreeQTY": "497",
               "type": "PRT"
             }
           ],
@@ -585,11 +651,12 @@
           "name": "RM7922000201-CHASSIS-SUP-BKT-R",
           "printID": "RM7922000201-CHASSIS-SUP-BKT-R__________| QTY: **1 | ASM | BOMID: **8",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 9,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -597,6 +664,7 @@
               "name": "RM7922000201-248-CROSS-BAR",
               "printID": "RM7922000201-248-CROSS-BAR______________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             }
           ],
@@ -604,15 +672,16 @@
           "name": "RM7922000201-248-CROSS-BAR",
           "printID": "RM7922000201-248-CROSS-BAR______________| QTY: **1 | ASM | BOMID: **9",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 10,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -620,6 +689,7 @@
                   "name": "RM7922000201-201-TOP-AIR-DUCT",
                   "printID": "RM7922000201-201-TOP-AIR-DUCT___________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -628,6 +698,7 @@
                   "name": "RM7922000201-201-S02",
                   "printID": "RM7922000201-201-S02____________________| QTY: **9 | PRT | BOMID: **2",
                   "qty": 9,
+                  "totalTreeQTY": "9",
                   "type": "PRT"
                 },
                 {
@@ -636,6 +707,7 @@
                   "name": "RM7922000201-201-S03",
                   "printID": "RM7922000201-201-S03____________________| QTY: **8 | PRT | BOMID: **3",
                   "qty": 8,
+                  "totalTreeQTY": "8",
                   "type": "PRT"
                 }
               ],
@@ -643,6 +715,7 @@
               "name": "RM7922000201-201-TOP-AIR-DUCT",
               "printID": "RM7922000201-201-TOP-AIR-DUCT___________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
@@ -651,6 +724,7 @@
               "name": "RM7922000201-321-AIRDUCT",
               "printID": "RM7922000201-321-AIRDUCT________________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -659,6 +733,7 @@
               "name": "SCREW-60H151103-043",
               "printID": "SCREW-60H151103-043_____________________| QTY: **9 | PRT | BOMID: **3",
               "qty": 9,
+              "totalTreeQTY": "9",
               "type": "PRT"
             }
           ],
@@ -666,15 +741,16 @@
           "name": "RM7922000201-TOP-AIR-DUCT",
           "printID": "RM7922000201-TOP-AIR-DUCT_______________| QTY: **1 | ASM | BOMID: *10",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 11,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -682,6 +758,7 @@
                   "name": "RM7922000201-103-REAR-WINDOW",
                   "printID": "RM7922000201-103-REAR-WINDOW____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -690,6 +767,7 @@
                   "name": "ST-0309-60H703103-541",
                   "printID": "ST-0309-60H703103-541___________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "3",
                   "type": "PRT"
                 },
                 {
@@ -698,6 +776,7 @@
                   "name": "RM7922000201-103-S01",
                   "printID": "RM7922000201-103-S01____________________| QTY: **4 | PRT | BOMID: **3",
                   "qty": 4,
+                  "totalTreeQTY": "14",
                   "type": "PRT"
                 },
                 {
@@ -706,6 +785,7 @@
                   "name": "RM7922000201-103-S02",
                   "printID": "RM7922000201-103-S02____________________| QTY: **2 | PRT | BOMID: **4",
                   "qty": 2,
+                  "totalTreeQTY": "6",
                   "type": "PRT"
                 }
               ],
@@ -713,11 +793,12 @@
               "name": "RM7922000201-103-REAR-WINDOW",
               "printID": "RM7922000201-103-REAR-WINDOW____________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 2,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -725,6 +806,7 @@
                   "name": "RM7922000201-174-REAR-WINDOW",
                   "printID": "RM7922000201-174-REAR-WINDOW____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -733,6 +815,7 @@
                   "name": "ST-0309-60H703103-541",
                   "printID": "ST-0309-60H703103-541___________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "3",
                   "type": "PRT"
                 },
                 {
@@ -741,6 +824,7 @@
                   "name": "RM7922000201-103-S01",
                   "printID": "RM7922000201-103-S01____________________| QTY: **4 | PRT | BOMID: **3",
                   "qty": 4,
+                  "totalTreeQTY": "14",
                   "type": "PRT"
                 },
                 {
@@ -749,6 +833,7 @@
                   "name": "RM7922000201-103-S02",
                   "printID": "RM7922000201-103-S02____________________| QTY: **2 | PRT | BOMID: **4",
                   "qty": 2,
+                  "totalTreeQTY": "6",
                   "type": "PRT"
                 }
               ],
@@ -756,11 +841,12 @@
               "name": "RM7922000201-174-REAR-WINDOW",
               "printID": "RM7922000201-174-REAR-WINDOW____________| QTY: **1 | ASM | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 3,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -768,6 +854,7 @@
                   "name": "RM7922000201-177-REAR-WINDOW",
                   "printID": "RM7922000201-177-REAR-WINDOW____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -776,6 +863,7 @@
                   "name": "ST-0309-60H703103-541",
                   "printID": "ST-0309-60H703103-541___________________| QTY: **1 | PRT | BOMID: **2",
                   "qty": 1,
+                  "totalTreeQTY": "3",
                   "type": "PRT"
                 },
                 {
@@ -784,6 +872,7 @@
                   "name": "RM7922000201-103-S01",
                   "printID": "RM7922000201-103-S01____________________| QTY: **6 | PRT | BOMID: **3",
                   "qty": 6,
+                  "totalTreeQTY": "14",
                   "type": "PRT"
                 },
                 {
@@ -792,6 +881,7 @@
                   "name": "RM7922000201-103-S02",
                   "printID": "RM7922000201-103-S02____________________| QTY: **2 | PRT | BOMID: **4",
                   "qty": 2,
+                  "totalTreeQTY": "6",
                   "type": "PRT"
                 },
                 {
@@ -800,6 +890,7 @@
                   "name": "RM7922000201-177-S01",
                   "printID": "RM7922000201-177-S01____________________| QTY: *12 | PRT | BOMID: **5",
                   "qty": 12,
+                  "totalTreeQTY": "12",
                   "type": "PRT"
                 },
                 {
@@ -808,6 +899,7 @@
                   "name": "NU-0033-60H323103-261",
                   "printID": "NU-0033-60H323103-261___________________| QTY: **6 | PRT | BOMID: **6",
                   "qty": 6,
+                  "totalTreeQTY": "6",
                   "type": "PRT"
                 }
               ],
@@ -815,11 +907,12 @@
               "name": "RM7922000201-177-REAR-WINDOW",
               "printID": "RM7922000201-177-REAR-WINDOW____________| QTY: **1 | ASM | BOMID: **3",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 4,
-              "branchQTY": 0,
+              "branchQTY": 2,
               "children": [
                 {
                   "bomID": 1,
@@ -827,6 +920,7 @@
                   "name": "RM7922000201-140-BAR-PROTECTOR",
                   "printID": "RM7922000201-140-BAR-PROTECTOR__________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -835,6 +929,7 @@
                   "name": "RIVET-60H453232A021",
                   "printID": "RIVET-60H453232A021_____________________| QTY: **4 | PRT | BOMID: **2",
                   "qty": 4,
+                  "totalTreeQTY": "497",
                   "type": "PRT"
                 }
               ],
@@ -842,6 +937,7 @@
               "name": "RM7922000201-140-BAR-PROTECTOR",
               "printID": "RM7922000201-140-BAR-PROTECTOR__________| QTY: **2 | ASM | BOMID: **4",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "ASM"
             },
             {
@@ -850,6 +946,7 @@
               "name": "RM7922000201-178-REARWIN-SUP-BK",
               "printID": "RM7922000201-178-REARWIN-SUP-BK_________| QTY: **1 | PRT | BOMID: **5",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -858,11 +955,12 @@
               "name": "RM7922000201-179-REARWIN-SUP-BK",
               "printID": "RM7922000201-179-REARWIN-SUP-BK_________| QTY: **1 | PRT | BOMID: **6",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
               "bomID": 7,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
@@ -870,6 +968,7 @@
                   "name": "RM7922000201-196-REAR-NFC-SUP",
                   "printID": "RM7922000201-196-REAR-NFC-SUP___________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "1",
                   "type": "PRT"
                 },
                 {
@@ -878,6 +977,7 @@
                   "name": "RIVET-60H453203A001",
                   "printID": "RIVET-60H453203A001_____________________| QTY: **4 | PRT | BOMID: **2",
                   "qty": 4,
+                  "totalTreeQTY": "4",
                   "type": "PRT"
                 }
               ],
@@ -885,11 +985,12 @@
               "name": "RM7922000201-196-REAR-NFC-SUP",
               "printID": "RM7922000201-196-REAR-NFC-SUP___________| QTY: **1 | ASM | BOMID: **7",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "ASM"
             },
             {
               "bomID": 8,
-              "branchQTY": 0,
+              "branchQTY": 2,
               "children": [
                 {
                   "bomID": 1,
@@ -897,6 +998,7 @@
                   "name": "RM7922000201-197-CROSS-BAR",
                   "printID": "RM7922000201-197-CROSS-BAR______________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 },
                 {
@@ -905,6 +1007,7 @@
                   "name": "RM7922000201-197-S01",
                   "printID": "RM7922000201-197-S01____________________| QTY: **4 | PRT | BOMID: **2",
                   "qty": 4,
+                  "totalTreeQTY": "8",
                   "type": "PRT"
                 }
               ],
@@ -912,11 +1015,12 @@
               "name": "RM7922000201-197-CROSS-BAR",
               "printID": "RM7922000201-197-CROSS-BAR______________| QTY: **2 | ASM | BOMID: **8",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "ASM"
             },
             {
               "bomID": 9,
-              "branchQTY": 0,
+              "branchQTY": 2,
               "children": [
                 {
                   "bomID": 1,
@@ -924,6 +1028,7 @@
                   "name": "RM7922000201-249-CROSS-BAR-ZN",
                   "printID": "RM7922000201-249-CROSS-BAR-ZN___________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "PRT"
                 }
               ],
@@ -931,6 +1036,7 @@
               "name": "RM7922000201-249-CROSS-BAR-ZN",
               "printID": "RM7922000201-249-CROSS-BAR-ZN___________| QTY: **2 | ASM | BOMID: **9",
               "qty": 2,
+              "totalTreeQTY": "2",
               "type": "ASM"
             },
             {
@@ -939,6 +1045,7 @@
               "name": "RD-22SEP-22\u5ba2\u6236_20220930_",
               "printID": "RD-22SEP-22\u5ba2\u6236_20220930__________________| QTY: **4 | PRT | BOMID: *10",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -947,6 +1054,7 @@
               "name": "SCREW-60H151103-042",
               "printID": "SCREW-60H151103-042_____________________| QTY: **8 | PRT | BOMID: *11",
               "qty": 8,
+              "totalTreeQTY": "8",
               "type": "PRT"
             },
             {
@@ -955,6 +1063,7 @@
               "name": "SCREW-60H141103-059",
               "printID": "SCREW-60H141103-059_____________________| QTY: *26 | PRT | BOMID: *12",
               "qty": 26,
+              "totalTreeQTY": "73",
               "type": "PRT"
             },
             {
@@ -963,6 +1072,7 @@
               "name": "RIVET-60H453232A021",
               "printID": "RIVET-60H453232A021_____________________| QTY: *14 | PRT | BOMID: *13",
               "qty": 14,
+              "totalTreeQTY": "497",
               "type": "PRT"
             },
             {
@@ -971,6 +1081,7 @@
               "name": "RM7922000201-244-CABLE-CLIP",
               "printID": "RM7922000201-244-CABLE-CLIP_____________| QTY: **4 | PRT | BOMID: *14",
               "qty": 4,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -979,6 +1090,7 @@
               "name": "RM7922000201-2XX-CABLE-CLIP",
               "printID": "RM7922000201-2XX-CABLE-CLIP_____________| QTY: **8 | PRT | BOMID: *15",
               "qty": 8,
+              "totalTreeQTY": "8",
               "type": "PRT"
             },
             {
@@ -987,6 +1099,7 @@
               "name": "RM7922000201-1XX-BRACKET-1",
               "printID": "RM7922000201-1XX-BRACKET-1______________| QTY: **1 | PRT | BOMID: *16",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -995,6 +1108,7 @@
               "name": "RIVET-60H453032-032",
               "printID": "RIVET-60H453032-032_____________________| QTY: **7 | PRT | BOMID: *17",
               "qty": 7,
+              "totalTreeQTY": "7",
               "type": "PRT"
             }
           ],
@@ -1002,15 +1116,16 @@
           "name": "RM7922000201-REAR-WINDOW-ASSY",
           "printID": "RM7922000201-REAR-WINDOW-ASSY___________| QTY: **1 | ASM | BOMID: *11",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 12,
-          "branchQTY": 0,
+          "branchQTY": 4,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 4,
               "children": [
                 {
                   "bomID": 1,
@@ -1018,6 +1133,7 @@
                   "name": "RM7922000201-173-BD-SUP-BKT",
                   "printID": "RM7922000201-173-BD-SUP-BKT_____________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "4",
                   "type": "PRT"
                 },
                 {
@@ -1026,6 +1142,7 @@
                   "name": "RM7922000201-173-S01",
                   "printID": "RM7922000201-173-S01____________________| QTY: **3 | PRT | BOMID: **2",
                   "qty": 3,
+                  "totalTreeQTY": "12",
                   "type": "PRT"
                 }
               ],
@@ -1033,11 +1150,12 @@
               "name": "RM7922000201-173-BD-SUP-BKT",
               "printID": "RM7922000201-173-BD-SUP-BKT_____________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "4",
               "type": "ASM"
             },
             {
               "bomID": 2,
-              "branchQTY": 0,
+              "branchQTY": 8,
               "children": [
                 {
                   "bomID": 1,
@@ -1045,6 +1163,7 @@
                   "name": "RM7922000201-235-SLIDING-HOLDER",
                   "printID": "RM7922000201-235-SLIDING-HOLDER_________| QTY: **1 | PRT | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "8",
                   "type": "PRT"
                 },
                 {
@@ -1053,6 +1172,7 @@
                   "name": "RM7922000201-235-S01",
                   "printID": "RM7922000201-235-S01____________________| QTY: **3 | PRT | BOMID: **2",
                   "qty": 3,
+                  "totalTreeQTY": "24",
                   "type": "PRT"
                 }
               ],
@@ -1060,6 +1180,7 @@
               "name": "RM7922000201-235-SLIDING-HOLDER",
               "printID": "RM7922000201-235-SLIDING-HOLDER_________| QTY: **2 | ASM | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "8",
               "type": "ASM"
             },
             {
@@ -1068,6 +1189,7 @@
               "name": "SCREW-60H141103-059",
               "printID": "SCREW-60H141103-059_____________________| QTY: **6 | PRT | BOMID: **3",
               "qty": 6,
+              "totalTreeQTY": "73",
               "type": "PRT"
             }
           ],
@@ -1075,6 +1197,7 @@
           "name": "RM7922000201-CHASSIS-BP-SUP-BKT",
           "printID": "RM7922000201-CHASSIS-BP-SUP-BKT_________| QTY: **4 | ASM | BOMID: *12",
           "qty": 4,
+          "totalTreeQTY": "4",
           "type": "ASM"
         },
         {
@@ -1083,6 +1206,7 @@
           "name": "RIVET-60H453232A021",
           "printID": "RIVET-60H453232A021_____________________| QTY: *84 | PRT | BOMID: *13",
           "qty": 84,
+          "totalTreeQTY": "497",
           "type": "PRT"
         },
         {
@@ -1091,6 +1215,7 @@
           "name": "RIVET-60H453232A052-L2_3",
           "printID": "RIVET-60H453232A052-L2_3________________| QTY: *86 | PRT | BOMID: *14",
           "qty": 86,
+          "totalTreeQTY": "94",
           "type": "PRT"
         },
         {
@@ -1099,6 +1224,7 @@
           "name": "SCREW-60H141103-059",
           "printID": "SCREW-60H141103-059_____________________| QTY: *19 | PRT | BOMID: *15",
           "qty": 19,
+          "totalTreeQTY": "73",
           "type": "PRT"
         },
         {
@@ -1107,6 +1233,7 @@
           "name": "SCREW-60H141103-061",
           "printID": "SCREW-60H141103-061_____________________| QTY: **4 | PRT | BOMID: *16",
           "qty": 4,
+          "totalTreeQTY": "52",
           "type": "PRT"
         }
       ],
@@ -1114,15 +1241,16 @@
       "name": "7U-BOTTOM-RIVET",
       "printID": "7U-BOTTOM-RIVET_________________________| QTY: **1 | ASM | BOMID: **1",
       "qty": 1,
+      "totalTreeQTY": "1",
       "type": "ASM"
     },
     {
       "bomID": 2,
-      "branchQTY": 0,
+      "branchQTY": 1,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1130,6 +1258,7 @@
               "name": "RM7922000201-116-LATCH-BKT-R",
               "printID": "RM7922000201-116-LATCH-BKT-R____________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -1138,6 +1267,7 @@
               "name": "RM7922000201-116-S01",
               "printID": "RM7922000201-116-S01____________________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -1146,6 +1276,7 @@
               "name": "RIVET-171-00012-200030",
               "printID": "RIVET-171-00012-200030__________________| QTY: **8 | PRT | BOMID: **3",
               "qty": 8,
+              "totalTreeQTY": "42",
               "type": "PRT"
             }
           ],
@@ -1153,11 +1284,12 @@
           "name": "RM7922000201-116-LATCH-BKT-R",
           "printID": "RM7922000201-116-LATCH-BKT-R____________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 2,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1165,6 +1297,7 @@
               "name": "RM7922000201-188-LATCH-COVER-R",
               "printID": "RM7922000201-188-LATCH-COVER-R__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             }
           ],
@@ -1172,11 +1305,12 @@
           "name": "RM7922000201-188-LATCH-COVER-R",
           "printID": "RM7922000201-188-LATCH-COVER-R__________| QTY: **1 | ASM | BOMID: **2",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 3,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1184,6 +1318,7 @@
               "name": "RM7922000201-187-SUP-BRACKET-2",
               "printID": "RM7922000201-187-SUP-BRACKET-2__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             }
           ],
@@ -1191,6 +1326,7 @@
           "name": "RM7922000201-187-SUP-BRACKET-2",
           "printID": "RM7922000201-187-SUP-BRACKET-2__________| QTY: **1 | ASM | BOMID: **3",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1199,11 +1335,12 @@
           "name": "RM7922000201-230-LATCH-SUP-BLOC",
           "printID": "RM7922000201-230-LATCH-SUP-BLOC_________| QTY: **1 | PRT | BOMID: **4",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
           "bomID": 5,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1211,6 +1348,7 @@
               "name": "RM7922000201-112-LATCH-BT-R_MOD",
               "printID": "RM7922000201-112-LATCH-BT-R_MOD_________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             }
           ],
@@ -1218,23 +1356,24 @@
           "name": "RM7922000201-112-LATCH-BT-R_MOD",
           "printID": "RM7922000201-112-LATCH-BT-R_MOD_________| QTY: **1 | ASM | BOMID: **5",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
           "bomID": 6,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
-                  "branchQTY": 0,
+                  "branchQTY": 1,
                   "children": [
                     {
                       "bomID": 1,
-                      "branchQTY": 0,
+                      "branchQTY": 1,
                       "children": [
                         {
                           "bomID": 1,
@@ -1242,6 +1381,7 @@
                           "name": "RM7922000201-113-S01",
                           "printID": "RM7922000201-113-S01____________________| QTY: **2 | PRT | BOMID: **1",
                           "qty": 2,
+                          "totalTreeQTY": "4",
                           "type": "PRT"
                         },
                         {
@@ -1250,6 +1390,7 @@
                           "name": "RM7922000201-113-LOCKED-BTM-L",
                           "printID": "RM7922000201-113-LOCKED-BTM-L___________| QTY: **1 | PRT | BOMID: **2",
                           "qty": 1,
+                          "totalTreeQTY": "2",
                           "type": "PRT"
                         }
                       ],
@@ -1257,6 +1398,7 @@
                       "name": "RM7922000201-113-LOCKED-BTM-L",
                       "printID": "RM7922000201-113-LOCKED-BTM-L___________| QTY: **1 | ASM | BOMID: **1",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "ASM"
                     },
                     {
@@ -1265,11 +1407,12 @@
                       "name": "RM19808-315-LOCKED-SPRING",
                       "printID": "RM19808-315-LOCKED-SPRING_______________| QTY: **1 | PRT | BOMID: **2",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "PRT"
                     },
                     {
                       "bomID": 3,
-                      "branchQTY": 0,
+                      "branchQTY": 1,
                       "children": [
                         {
                           "bomID": 1,
@@ -1277,6 +1420,7 @@
                           "name": "RM7922000201-114-LOCKED-TOP",
                           "printID": "RM7922000201-114-LOCKED-TOP_____________| QTY: **1 | PRT | BOMID: **1",
                           "qty": 1,
+                          "totalTreeQTY": "2",
                           "type": "PRT"
                         }
                       ],
@@ -1284,6 +1428,7 @@
                       "name": "RM7922000201-114-LOCKED-TOP",
                       "printID": "RM7922000201-114-LOCKED-TOP_____________| QTY: **1 | ASM | BOMID: **3",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "ASM"
                     },
                     {
@@ -1292,6 +1437,7 @@
                       "name": "RM7922000201-202-LOCK-SLIDE-ZN",
                       "printID": "RM7922000201-202-LOCK-SLIDE-ZN__________| QTY: **2 | PRT | BOMID: **4",
                       "qty": 2,
+                      "totalTreeQTY": "4",
                       "type": "PRT"
                     }
                   ],
@@ -1299,6 +1445,7 @@
                   "name": "ASSEM24",
                   "printID": "ASSEM24_________________________________| QTY: **1 | ASM | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "ASM"
                 }
               ],
@@ -1306,6 +1453,7 @@
               "name": "RM19808-AUTO-LOCKED-L_ASM",
               "printID": "RM19808-AUTO-LOCKED-L_ASM_______________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "ASM"
             },
             {
@@ -1314,6 +1462,7 @@
               "name": "SCREW-60H141103-059",
               "printID": "SCREW-60H141103-059_____________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "73",
               "type": "PRT"
             }
           ],
@@ -1321,6 +1470,7 @@
           "name": "RM19808-AUTOLOCK",
           "printID": "RM19808-AUTOLOCK________________________| QTY: **1 | ASM | BOMID: **6",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1329,6 +1479,7 @@
           "name": "SCREW-60H141103-061",
           "printID": "SCREW-60H141103-061_____________________| QTY: **6 | PRT | BOMID: **7",
           "qty": 6,
+          "totalTreeQTY": "52",
           "type": "PRT"
         },
         {
@@ -1337,6 +1488,7 @@
           "name": "RIVET-171-00012-200030",
           "printID": "RIVET-171-00012-200030__________________| QTY: *13 | PRT | BOMID: **8",
           "qty": 13,
+          "totalTreeQTY": "42",
           "type": "PRT"
         },
         {
@@ -1345,6 +1497,7 @@
           "name": "RIVET-L-6_2",
           "printID": "RIVET-L-6_2_____________________________| QTY: **2 | PRT | BOMID: **9",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "PRT"
         }
       ],
@@ -1352,15 +1505,16 @@
       "name": "RM7922000201-LATCH-BKT-R-ASM",
       "printID": "RM7922000201-LATCH-BKT-R-ASM____________| QTY: **1 | ASM | BOMID: **2",
       "qty": 1,
+      "totalTreeQTY": "1",
       "type": "ASM"
     },
     {
       "bomID": 3,
-      "branchQTY": 0,
+      "branchQTY": 1,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1368,6 +1522,7 @@
               "name": "RM7922000201-115-LATCH-BKT-L-NE",
               "printID": "RM7922000201-115-LATCH-BKT-L-NE_________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             },
             {
@@ -1376,6 +1531,7 @@
               "name": "RM7922000201-116-S01",
               "printID": "RM7922000201-116-S01____________________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -1384,6 +1540,7 @@
               "name": "RIVET-171-00012-200030",
               "printID": "RIVET-171-00012-200030__________________| QTY: **8 | PRT | BOMID: **3",
               "qty": 8,
+              "totalTreeQTY": "42",
               "type": "PRT"
             }
           ],
@@ -1391,11 +1548,12 @@
           "name": "RM7922000201-115-LATCH-BKT-L-NE",
           "printID": "RM7922000201-115-LATCH-BKT-L-NE_________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 2,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1403,6 +1561,7 @@
               "name": "RM7922000201-112-LATCH-BT-R_MOD",
               "printID": "RM7922000201-112-LATCH-BT-R_MOD_________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             }
           ],
@@ -1410,6 +1569,7 @@
           "name": "RM7922000201-112-LATCH-BT-R_MOD",
           "printID": "RM7922000201-112-LATCH-BT-R_MOD_________| QTY: **1 | ASM | BOMID: **2",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1418,11 +1578,12 @@
           "name": "RM7922000201-230-LATCH-SUP-BLOC",
           "printID": "RM7922000201-230-LATCH-SUP-BLOC_________| QTY: **1 | PRT | BOMID: **3",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
           "bomID": 4,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1430,6 +1591,7 @@
               "name": "RM7922000201-186-LATCH-COVER-L",
               "printID": "RM7922000201-186-LATCH-COVER-L__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "1",
               "type": "PRT"
             }
           ],
@@ -1437,11 +1599,12 @@
           "name": "RM7922000201-186-LATCH-COVER-L",
           "printID": "RM7922000201-186-LATCH-COVER-L__________| QTY: **1 | ASM | BOMID: **4",
           "qty": 1,
+          "totalTreeQTY": "1",
           "type": "ASM"
         },
         {
           "bomID": 5,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
@@ -1449,6 +1612,7 @@
               "name": "RM7922000201-187-SUP-BRACKET-2",
               "printID": "RM7922000201-187-SUP-BRACKET-2__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             }
           ],
@@ -1456,23 +1620,24 @@
           "name": "RM7922000201-187-SUP-BRACKET-2",
           "printID": "RM7922000201-187-SUP-BRACKET-2__________| QTY: **1 | ASM | BOMID: **5",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
           "bomID": 6,
-          "branchQTY": 0,
+          "branchQTY": 1,
           "children": [
             {
               "bomID": 1,
-              "branchQTY": 0,
+              "branchQTY": 1,
               "children": [
                 {
                   "bomID": 1,
-                  "branchQTY": 0,
+                  "branchQTY": 1,
                   "children": [
                     {
                       "bomID": 1,
-                      "branchQTY": 0,
+                      "branchQTY": 1,
                       "children": [
                         {
                           "bomID": 1,
@@ -1480,6 +1645,7 @@
                           "name": "RM7922000201-113-S01",
                           "printID": "RM7922000201-113-S01____________________| QTY: **2 | PRT | BOMID: **1",
                           "qty": 2,
+                          "totalTreeQTY": "4",
                           "type": "PRT"
                         },
                         {
@@ -1488,6 +1654,7 @@
                           "name": "RM7922000201-113-LOCKED-BTM-L",
                           "printID": "RM7922000201-113-LOCKED-BTM-L___________| QTY: **1 | PRT | BOMID: **2",
                           "qty": 1,
+                          "totalTreeQTY": "2",
                           "type": "PRT"
                         }
                       ],
@@ -1495,6 +1662,7 @@
                       "name": "RM7922000201-113-LOCKED-BTM-L",
                       "printID": "RM7922000201-113-LOCKED-BTM-L___________| QTY: **1 | ASM | BOMID: **1",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "ASM"
                     },
                     {
@@ -1503,11 +1671,12 @@
                       "name": "RM19808-315-LOCKED-SPRING",
                       "printID": "RM19808-315-LOCKED-SPRING_______________| QTY: **1 | PRT | BOMID: **2",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "PRT"
                     },
                     {
                       "bomID": 3,
-                      "branchQTY": 0,
+                      "branchQTY": 1,
                       "children": [
                         {
                           "bomID": 1,
@@ -1515,6 +1684,7 @@
                           "name": "RM7922000201-114-LOCKED-TOP",
                           "printID": "RM7922000201-114-LOCKED-TOP_____________| QTY: **1 | PRT | BOMID: **1",
                           "qty": 1,
+                          "totalTreeQTY": "2",
                           "type": "PRT"
                         }
                       ],
@@ -1522,6 +1692,7 @@
                       "name": "RM7922000201-114-LOCKED-TOP",
                       "printID": "RM7922000201-114-LOCKED-TOP_____________| QTY: **1 | ASM | BOMID: **3",
                       "qty": 1,
+                      "totalTreeQTY": "2",
                       "type": "ASM"
                     },
                     {
@@ -1530,6 +1701,7 @@
                       "name": "RM7922000201-202-LOCK-SLIDE-ZN",
                       "printID": "RM7922000201-202-LOCK-SLIDE-ZN__________| QTY: **2 | PRT | BOMID: **4",
                       "qty": 2,
+                      "totalTreeQTY": "4",
                       "type": "PRT"
                     }
                   ],
@@ -1537,6 +1709,7 @@
                   "name": "ASSEM24",
                   "printID": "ASSEM24_________________________________| QTY: **1 | ASM | BOMID: **1",
                   "qty": 1,
+                  "totalTreeQTY": "2",
                   "type": "ASM"
                 }
               ],
@@ -1544,6 +1717,7 @@
               "name": "RM19808-AUTO-LOCKED-L_ASM",
               "printID": "RM19808-AUTO-LOCKED-L_ASM_______________| QTY: **1 | ASM | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "ASM"
             },
             {
@@ -1552,6 +1726,7 @@
               "name": "SCREW-60H141103-059",
               "printID": "SCREW-60H141103-059_____________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "73",
               "type": "PRT"
             }
           ],
@@ -1559,6 +1734,7 @@
           "name": "RM19808-AUTOLOCK",
           "printID": "RM19808-AUTOLOCK________________________| QTY: **1 | ASM | BOMID: **6",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1567,6 +1743,7 @@
           "name": "SCREW-60H141103-061",
           "printID": "SCREW-60H141103-061_____________________| QTY: **6 | PRT | BOMID: **7",
           "qty": 6,
+          "totalTreeQTY": "52",
           "type": "PRT"
         },
         {
@@ -1575,6 +1752,7 @@
           "name": "RIVET-171-00012-200030",
           "printID": "RIVET-171-00012-200030__________________| QTY: *13 | PRT | BOMID: **8",
           "qty": 13,
+          "totalTreeQTY": "42",
           "type": "PRT"
         },
         {
@@ -1583,6 +1761,7 @@
           "name": "RIVET-L-6_2",
           "printID": "RIVET-L-6_2_____________________________| QTY: **2 | PRT | BOMID: **9",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "PRT"
         }
       ],
@@ -1590,15 +1769,16 @@
       "name": "RM7922000201-LATCH-BKT-L-ASM",
       "printID": "RM7922000201-LATCH-BKT-L-ASM____________| QTY: **1 | ASM | BOMID: **3",
       "qty": 1,
+      "totalTreeQTY": "1",
       "type": "ASM"
     },
     {
       "bomID": 4,
-      "branchQTY": 0,
+      "branchQTY": 2,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 2,
           "children": [
             {
               "bomID": 1,
@@ -1606,6 +1786,7 @@
               "name": "RM7922000201-203-HANDLE-COVER",
               "printID": "RM7922000201-203-HANDLE-COVER___________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -1614,6 +1795,7 @@
               "name": "60H726103-701",
               "printID": "60H726103-701___________________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "8",
               "type": "PRT"
             },
             {
@@ -1622,6 +1804,7 @@
               "name": "RM7922-201-S01",
               "printID": "RM7922-201-S01__________________________| QTY: **2 | PRT | BOMID: **3",
               "qty": 2,
+              "totalTreeQTY": "4",
               "type": "PRT"
             }
           ],
@@ -1629,11 +1812,12 @@
           "name": "RM7922000201-203-HANDLE-COVER",
           "printID": "RM7922000201-203-HANDLE-COVER___________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
           "bomID": 2,
-          "branchQTY": 0,
+          "branchQTY": 4,
           "children": [
             {
               "bomID": 1,
@@ -1641,6 +1825,7 @@
               "name": "RM7922000201-204-LATCH",
               "printID": "RM7922000201-204-LATCH__________________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "4",
               "type": "PRT"
             }
           ],
@@ -1648,11 +1833,12 @@
           "name": "RM7922000201-204-LATCH",
           "printID": "RM7922000201-204-LATCH__________________| QTY: **2 | ASM | BOMID: **2",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "ASM"
         },
         {
           "bomID": 3,
-          "branchQTY": 0,
+          "branchQTY": 2,
           "children": [
             {
               "bomID": 1,
@@ -1660,6 +1846,7 @@
               "name": "RM7922000201-205-HANDLE",
               "printID": "RM7922000201-205-HANDLE_________________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -1668,6 +1855,7 @@
               "name": "60H726103-701",
               "printID": "60H726103-701___________________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "8",
               "type": "PRT"
             }
           ],
@@ -1675,6 +1863,7 @@
           "name": "RM7922000201-205-HANDLE",
           "printID": "RM7922000201-205-HANDLE_________________| QTY: **1 | ASM | BOMID: **3",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1683,6 +1872,7 @@
           "name": "RM19302-301-HANDLE-SPRING",
           "printID": "RM19302-301-HANDLE-SPRING_______________| QTY: **2 | PRT | BOMID: **4",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "PRT"
         },
         {
@@ -1691,6 +1881,7 @@
           "name": "RM7922000201-317-SCREW-6-32X10",
           "printID": "RM7922000201-317-SCREW-6-32X10__________| QTY: **2 | PRT | BOMID: **5",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "PRT"
         },
         {
@@ -1699,6 +1890,7 @@
           "name": "SCREW-60H141103-061",
           "printID": "SCREW-60H141103-061_____________________| QTY: **2 | PRT | BOMID: **6",
           "qty": 2,
+          "totalTreeQTY": "52",
           "type": "PRT"
         },
         {
@@ -1707,6 +1899,7 @@
           "name": "160-01000-000880-SCREW-632X8L",
           "printID": "160-01000-000880-SCREW-632X8L___________| QTY: **1 | PRT | BOMID: **7",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         }
       ],
@@ -1714,15 +1907,16 @@
       "name": "RM7922000201-CHASSIS-LATCH",
       "printID": "RM7922000201-CHASSIS-LATCH______________| QTY: **2 | ASM | BOMID: **4",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "ASM"
     },
     {
       "bomID": 5,
-      "branchQTY": 0,
+      "branchQTY": 2,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 2,
           "children": [
             {
               "bomID": 1,
@@ -1730,6 +1924,7 @@
               "name": "RM7922000201-117-HANDLE-BKT",
               "printID": "RM7922000201-117-HANDLE-BKT_____________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "2",
               "type": "PRT"
             },
             {
@@ -1738,6 +1933,7 @@
               "name": "SI-0147-60H703000-109",
               "printID": "SI-0147-60H703000-109___________________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "4",
               "type": "PRT"
             }
           ],
@@ -1745,6 +1941,7 @@
           "name": "RM7922000201-117-HANDLE-BKT",
           "printID": "RM7922000201-117-HANDLE-BKT_____________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "ASM"
         },
         {
@@ -1753,6 +1950,7 @@
           "name": "6R-72076-5_B_-20110527",
           "printID": "6R-72076-5_B_-20110527__________________| QTY: **1 | PRT | BOMID: **2",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
@@ -1761,6 +1959,7 @@
           "name": "SCREW-60H141240-060",
           "printID": "SCREW-60H141240-060_____________________| QTY: **2 | PRT | BOMID: **3",
           "qty": 2,
+          "totalTreeQTY": "4",
           "type": "PRT"
         }
       ],
@@ -1768,15 +1967,16 @@
       "name": "RM79XXX-CHASSIS-HANDLE",
       "printID": "RM79XXX-CHASSIS-HANDLE__________________| QTY: **2 | ASM | BOMID: **5",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "ASM"
     },
     {
       "bomID": 6,
-      "branchQTY": 0,
+      "branchQTY": 4,
       "children": [
         {
           "bomID": 1,
-          "branchQTY": 0,
+          "branchQTY": 4,
           "children": [
             {
               "bomID": 1,
@@ -1784,6 +1984,7 @@
               "name": "RM7922000201-118-FAN-BAR-01-SP",
               "printID": "RM7922000201-118-FAN-BAR-01-SP__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -1792,6 +1993,7 @@
               "name": "RM7922000201-118-S01",
               "printID": "RM7922000201-118-S01____________________| QTY: **8 | PRT | BOMID: **2",
               "qty": 8,
+              "totalTreeQTY": "32",
               "type": "PRT"
             }
           ],
@@ -1799,11 +2001,12 @@
           "name": "RM7922000201-118-FAN-BAR-01-SP",
           "printID": "RM7922000201-118-FAN-BAR-01-SP__________| QTY: **1 | ASM | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "ASM"
         },
         {
           "bomID": 2,
-          "branchQTY": 0,
+          "branchQTY": 16,
           "children": [
             {
               "bomID": 1,
@@ -1811,6 +2014,7 @@
               "name": "RM7922000201-119-FAN-BAR-02-SP",
               "printID": "RM7922000201-119-FAN-BAR-02-SP__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "16",
               "type": "PRT"
             },
             {
@@ -1819,6 +2023,7 @@
               "name": "27-420-501-6_B_FASTENED_2020818",
               "printID": "27-420-501-6_B_FASTENED_2020818_________| QTY: **2 | PRT | BOMID: **2",
               "qty": 2,
+              "totalTreeQTY": "40",
               "type": "PRT"
             }
           ],
@@ -1826,6 +2031,7 @@
           "name": "RM7922000201-119-FAN-BAR-02-SP",
           "printID": "RM7922000201-119-FAN-BAR-02-SP__________| QTY: **4 | ASM | BOMID: **2",
           "qty": 4,
+          "totalTreeQTY": "16",
           "type": "ASM"
         },
         {
@@ -1834,11 +2040,12 @@
           "name": "RM7922000201-120-FAN-PAR-OP1-SP",
           "printID": "RM7922000201-120-FAN-PAR-OP1-SP_________| QTY: **7 | PRT | BOMID: **3",
           "qty": 7,
+          "totalTreeQTY": "28",
           "type": "PRT"
         },
         {
           "bomID": 4,
-          "branchQTY": 0,
+          "branchQTY": 4,
           "children": [
             {
               "bomID": 1,
@@ -1846,6 +2053,7 @@
               "name": "RM7922000201-121-BAR-SUP-BKT-L",
               "printID": "RM7922000201-121-BAR-SUP-BKT-L__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -1854,6 +2062,7 @@
               "name": "27-420-501-6_B_FASTENED_2020818",
               "printID": "27-420-501-6_B_FASTENED_2020818_________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "40",
               "type": "PRT"
             }
           ],
@@ -1861,11 +2070,12 @@
           "name": "RM7922000201-121-BAR-SUP-BKT-L",
           "printID": "RM7922000201-121-BAR-SUP-BKT-L__________| QTY: **1 | ASM | BOMID: **4",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "ASM"
         },
         {
           "bomID": 5,
-          "branchQTY": 0,
+          "branchQTY": 4,
           "children": [
             {
               "bomID": 1,
@@ -1873,6 +2083,7 @@
               "name": "RM7922000201-122-BAR-SUP-BKT-R",
               "printID": "RM7922000201-122-BAR-SUP-BKT-R__________| QTY: **1 | PRT | BOMID: **1",
               "qty": 1,
+              "totalTreeQTY": "4",
               "type": "PRT"
             },
             {
@@ -1881,6 +2092,7 @@
               "name": "27-420-501-6_B_FASTENED_2020818",
               "printID": "27-420-501-6_B_FASTENED_2020818_________| QTY: **1 | PRT | BOMID: **2",
               "qty": 1,
+              "totalTreeQTY": "40",
               "type": "PRT"
             }
           ],
@@ -1888,6 +2100,7 @@
           "name": "RM7922000201-122-BAR-SUP-BKT-R",
           "printID": "RM7922000201-122-BAR-SUP-BKT-R__________| QTY: **1 | ASM | BOMID: **5",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "ASM"
         },
         {
@@ -1896,6 +2109,7 @@
           "name": "RM7922000201-172-FAN-SUP-BKT",
           "printID": "RM7922000201-172-FAN-SUP-BKT____________| QTY: **1 | PRT | BOMID: **6",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "PRT"
         },
         {
@@ -1904,6 +2118,7 @@
           "name": "RM7922000201-189-FAN-BKT-L",
           "printID": "RM7922000201-189-FAN-BKT-L______________| QTY: **1 | PRT | BOMID: **7",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "PRT"
         },
         {
@@ -1912,6 +2127,7 @@
           "name": "RM7922000201-190-FAN-BKT-R",
           "printID": "RM7922000201-190-FAN-BKT-R______________| QTY: **1 | PRT | BOMID: **8",
           "qty": 1,
+          "totalTreeQTY": "4",
           "type": "PRT"
         },
         {
@@ -1920,6 +2136,7 @@
           "name": "THUMBSCREW_BLOCK",
           "printID": "THUMBSCREW_BLOCK________________________| QTY: **4 | PRT | BOMID: **9",
           "qty": 4,
+          "totalTreeQTY": "16",
           "type": "PRT"
         },
         {
@@ -1928,6 +2145,7 @@
           "name": "RIVET-60H453232A021",
           "printID": "RIVET-60H453232A021_____________________| QTY: *91 | PRT | BOMID: *10",
           "qty": 91,
+          "totalTreeQTY": "497",
           "type": "PRT"
         }
       ],
@@ -1935,6 +2153,7 @@
       "name": "FAN-BAR-MODULE-SP",
       "printID": "FAN-BAR-MODULE-SP_______________________| QTY: **4 | ASM | BOMID: **6",
       "qty": 4,
+      "totalTreeQTY": "4",
       "type": "ASM"
     },
     {
@@ -1944,11 +2163,12 @@
       "name": "RM7922000201-231-BP-MODULE-STOP",
       "printID": "RM7922000201-231-BP-MODULE-STOP_________| QTY: **2 | PRT | BOMID: **7",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "PRT"
     },
     {
       "bomID": 8,
-      "branchQTY": 0,
+      "branchQTY": 2,
       "children": [
         {
           "bomID": 1,
@@ -1956,6 +2176,7 @@
           "name": "RM7922000201-250-TRAY-GUIDE",
           "printID": "RM7922000201-250-TRAY-GUIDE_____________| QTY: **1 | PRT | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
@@ -1964,6 +2185,7 @@
           "name": "RM7922000201-250-S01",
           "printID": "RM7922000201-250-S01____________________| QTY: **5 | PRT | BOMID: **2",
           "qty": 5,
+          "totalTreeQTY": "10",
           "type": "PRT"
         }
       ],
@@ -1971,6 +2193,7 @@
       "name": "RM7922000201-250-TRAY-GUIDE",
       "printID": "RM7922000201-250-TRAY-GUIDE_____________| QTY: **2 | ASM | BOMID: **8",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "ASM"
     },
     {
@@ -1980,11 +2203,12 @@
       "name": "RM7922000201-251-STOPER-METAL",
       "printID": "RM7922000201-251-STOPER-METAL___________| QTY: **2 | PRT | BOMID: **9",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "PRT"
     },
     {
       "bomID": 10,
-      "branchQTY": 0,
+      "branchQTY": 2,
       "children": [
         {
           "bomID": 1,
@@ -1992,6 +2216,7 @@
           "name": "RM7922000201-198-STOPER-SUP-BKT",
           "printID": "RM7922000201-198-STOPER-SUP-BKT_________| QTY: **1 | PRT | BOMID: **1",
           "qty": 1,
+          "totalTreeQTY": "2",
           "type": "PRT"
         },
         {
@@ -2000,6 +2225,7 @@
           "name": "9317012-152-B-M5-1ZI-4",
           "printID": "9317012-152-B-M5-1ZI-4__________________| QTY: **8 | PRT | BOMID: **2",
           "qty": 8,
+          "totalTreeQTY": "16",
           "type": "PRT"
         }
       ],
@@ -2007,6 +2233,7 @@
       "name": "RM7922000201-198-STOPER-SUP-BKT",
       "printID": "RM7922000201-198-STOPER-SUP-BKT_________| QTY: **2 | ASM | BOMID: *10",
       "qty": 2,
+      "totalTreeQTY": "2",
       "type": "ASM"
     },
     {
@@ -2016,6 +2243,7 @@
       "name": "SCREW-60H141103-061",
       "printID": "SCREW-60H141103-061_____________________| QTY: *32 | PRT | BOMID: *11",
       "qty": 32,
+      "totalTreeQTY": "52",
       "type": "PRT"
     },
     {
@@ -2025,6 +2253,7 @@
       "name": "SCREW-M5-60H123250-161",
       "printID": "SCREW-M5-60H123250-161__________________| QTY: *12 | PRT | BOMID: *12",
       "qty": 12,
+      "totalTreeQTY": "12",
       "type": "PRT"
     },
     {
@@ -2034,6 +2263,7 @@
       "name": "SCREW-M5-160-10101-101000",
       "printID": "SCREW-M5-160-10101-101000_______________| QTY: **4 | PRT | BOMID: *13",
       "qty": 4,
+      "totalTreeQTY": "4",
       "type": "PRT"
     }
   ],
@@ -2041,5 +2271,6 @@
   "name": "7U-BOTTOM",
   "printID": "7U-BOTTOM_______________________________| QTY: **1 | ASM | BOMID: **1",
   "qty": 1,
+  "totalTreeQTY": 1,
   "type": "ASM"
 }
