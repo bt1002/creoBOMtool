@@ -5,7 +5,6 @@ from anytree import AnyNode
 from anytree.exporter import JsonExporter
 import os, logging
 import pickle
-import pyinputplus as pyip
 import numpy as np
 from numpy import *
 from tkinter import Tk     # from tkinter import Tk for Python 3.x
@@ -14,7 +13,10 @@ from tkinter.filedialog import askopenfilename
 
 logpath = './logs/'
 logname = 'bom_import_log.txt'
-os.remove(logpath + logname) # clears previous log file
+try:
+    os.remove(logpath + logname) # clears previous log file
+except:
+    print(f'Creating Logfile: {logpath}{logname}')
 logging.basicConfig(filename=logpath+logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
@@ -50,6 +52,7 @@ def buildDataModel(filePath):
     rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
 
     rootNode = CreoNode(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
+    rootNode.totalTreeQTY = 1
     logging.debug(f'Assembly Node Created: {rootRow[0]}, {rootRow[1]}')
 
     rIndex = 0
@@ -140,26 +143,33 @@ def buildDataModel(filePath):
     
     mergedBOMasm, unmergedBOMasm = mergeBOM(allAsm)
 
+
+
     fullMergedBOM = np.append(mergedBOMparts, mergedBOMasm, axis=0)
 
-    # with open(logpath + 'fullmerged_Part.txt', 'w', encoding='utf-8-sig') as fileObject:
-    #     for i in fullMergedBOM:
-    #         a = str(i[0]) #QTY
-    #         b = str(i[1]) #TYP
-    #         c = str(i[2]) #NAME
-    #         fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+    with open(logpath + 'fullMergedBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+        for i in fullMergedBOM:
+            a = str(i[0])
+            b = str(i[1])
+            c = str(i[2])
+            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
     # Set total assembly quantities to match to node type, NOTE: this is not dynamic if tree is changed
     for line in fullMergedBOM:
         lineQTY = line[0]
-        lineType = line[1]
+        if line[1] == 'Part':
+            lineType = 'PRT'
+        else:
+            lineType = 'ASM'
+
         lineName = line[2]
         nodeMatches = rootNode.findByName(type=lineType, searchterm=lineName, exact=True)
         for creoNode in nodeMatches:
             creoNode.totalTreeQTY = lineQTY
+            print(f'{creoNode.name} {creoNode.totalTreeQTY}')
 
     ### Write unmerged, merged, and bom summary to file for manual check ###
-    # writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
+    writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
 
     #### Write full asm BOM ####
 
@@ -179,7 +189,8 @@ def buildDataModel(filePath):
         fileObject.write(exporter.export(rootNode))
 
     logging.info(f'Writing Data to file "./{fileName}.pk"')
-    with open(fileName + '.pk.', 'wb') as output:
+    print(f'Writing Data to file "./{fileName}.pk"')
+    with open(fileName + '.pk', 'wb') as output:
         pickle.dump(rootNode, output, pickle.HIGHEST_PROTOCOL)
 
     print('Completed tree build.')
@@ -227,7 +238,6 @@ def mergeBOM(creoAsm):
 
     return np_mergedBOM_parts, np_unmergedBOM
 
-
 def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, bomSummary):
     '''Write unmerged, merged, and bom summary to file for manual check
     requires 3 file np array types with following column data: qty, type, name'''
@@ -271,3 +281,4 @@ def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedB
 if __name__ == '__main__':
 
     rootNode = buildDataModel(importedBomFile)
+    print(rootNode.totalTreeQTY)

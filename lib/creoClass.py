@@ -109,16 +109,6 @@ class CreoNode(NodeMixin, CreoFile):
         Unique value to each leaf'''
         parents = self.getParents()
         qtyMultiplier = 1
-
-        #### DEBUG block to fix qty rollup
-        # debug_name = 'YSF-54438-ZI'
-        # if self.name == debug_name:
-        #     print(f'debug QTY {self.qty}')
-        #     for parent in parents:
-        #         print(f'"{parent.name} x{parent.qty}')
-        #         qtyMultiplier = parent.qty * qtyMultiplier
-        #     self.branchQTY = self.qty * qtyMultiplier
-        # else:
         
         for parent in parents:
             qtyMultiplier = parent.qty * qtyMultiplier
@@ -137,7 +127,6 @@ class CreoNode(NodeMixin, CreoFile):
         ATTENTION: this copy mechanism does only copy the instances from `self` downwards!
         -> call deepcopy(root_node) to copy a full tree
         """
-        # my_copy = self.__nodeCopy__()
         my_copy = copy(self)
         # recursion towards the leaves
         my_copy.children = [deepcopy(child) for child in self.children]
