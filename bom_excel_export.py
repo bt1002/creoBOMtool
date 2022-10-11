@@ -10,6 +10,8 @@ treeBinary = './Excel/7u-bottom.bom.1.pk'
 BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
 os.chdir(BASE_DIR)
 
+IMAGE_DIR = Path('7U-Bottom/images')
+
 # logpath = './7U-Bottom/logs/'
 # logname = 'bom_frontend.txt'
 
@@ -27,87 +29,82 @@ def importPickleBinary():
         creoNode = pickle.load(input)
     return creoNode
 
-# if __name__ == '__main__':
+def searchFileImg(partName, partType, directory):
+    '''Searches "directory" for image file using part name and type'''
 
-asmNode = importPickleBinary()
+    print(directory)
+    imageNameFiles = os.listdir(directory)
 
-# Expand tree in order from top to bottom as line items
-treeDepth = asmNode.height
+    regexImage = re.compile((f'{str(partName)}') + r'(prt|asm).(jpg|png|jpeg|)', re.IGNORECASE)
+    for file in imageNameFiles:
+        result = regexImage.match(file)
+        if result:
+            filePartType = result[1]
+            if filePartType.lower() == partType.lower():
+                print(f'Found math for {partName}.{partType} = {result[0]}')
+                return result[0]
+        else:
+            return None
 
-# # Create workbook class
-wrkb = openpyxl.Workbook()
-# # Number of sheets in the workbook (1 sheet in our case)
-ws = wrkb.worksheets[0]
+if __name__ == '__main__':
 
-## Print Rows:
-"""
-- Name
-- Image (skip)
-- QTY
-- FULLQTY
-- LEVELS(1-N:(max depth))
-"""
-asmColumns = (treeDepth + 1) * ['']
-rowCount = 0
+    asmNode = importPickleBinary()
 
-# Print Header
-headerCol = asmColumns[:]
-for col in range(len(headerCol)): headerCol[col] = col + 1
-cell = ws['B2']
-header = ['Name', 'Image', 'QTY', 'TOTAL\nQTY'] + headerCol
-ws.append(header)
-ws.freeze_panes = cell
+    # Expand tree in order from top to bottom as line items
+    treeDepth = asmNode.height
+    wrkb = openpyxl.Workbook()     # # Create workbook class
+    ws = wrkb.worksheets[0] # Number of sheets in the workbook (1 sheet in our case)
 
-# Print data to worksheet
-for node in anytree.PreOrderIter(asmNode):
-    
-    # Print Data
-    rowAsmColumns = asmColumns
-    col_name = node.name + '.' + node.type
-    col_image = ''
-    col_qty = node.qty
-    col_fullQty = node.totalTreeQTY
-    rowAsmColumns = asmColumns[:]
-    rowAsmColumns[node.depth] = 'X'
-    row = [col_name, col_image, col_qty, col_fullQty, node.depth] + rowAsmColumns
-    ws.append(row)
+    # Print Rows: Name / Image / QTY / FULLQTY / LEVELS(1-N:(max depth))
+    asmColumns = (treeDepth + 1) * ['']
+    rowCount = 0
 
-    # Search for image file
-    dirFiles = os.listdir('.\images\')
-    regexImage = re.compile(r'(^\w+)(PRT|ASM|prt|asm)().(jpg|png|JPG|PNG)')
-    dirFiles.search(dirFiles)
+    # Print Header
+    headerCol = asmColumns[:]
+    for col in range(len(headerCol)): headerCol[col] = col + 1
+    cell = ws['B2']
+    header = ['Name', 'Image', 'QTY', 'TOTAL\nQTY'] + headerCol
+    ws.append(header)
+    ws.freeze_panes = cell
 
-# Resize for image import
-ws.column_dimensions['A'].width = 40
-ws.column_dimensions['B'].width = 20
+    # Print data to worksheet
+    rowIndex = 1
+    for node in anytree.PreOrderIter(asmNode):
+        
+        # Print Data
+        rowAsmColumns = asmColumns
+        col_name = node.name + '.' + node.type
+        col_image = ''
+        col_qty = node.qty
+        col_fullQty = node.totalTreeQTY
+        rowAsmColumns = asmColumns[:]
+        rowAsmColumns[node.depth] = 'X'
+        row = [col_name, col_image, col_qty, col_fullQty, node.depth] + rowAsmColumns
+        ws.append(row)
 
-for row in range(ws.max_row+1):
-    if row == 0:
-        ws.row_dimensions[row].height = 20
-    else:
-        ws.row_dimensions[row].height = 100
-
-
-img = openpyxl.drawing.image.Image('./Excel/bushingprt.JPG')
-img.anchor = 'B2'
-ws.add_image(img)
-
-wrkb.save('out_test.xlsx')
-
+        # Add file image
+        imgName = searchFileImg(node.name, node.type, IMAGE_DIR)
+        print(f'{node.name}, {node.type}')
+        if imgName != None:
+            img = openpyxl.drawing.image.Image(IMAGE_DIR / imgName)
+            img.anchor = 'B' + str(rowIndex)
+            ws.add_image(img)
+        else:
+            print(f'No image found for {node.name}.{node.type}')
+            continue
+        
+        rowIndex += 1
 
 
+    # Resize for image import
+    ws.column_dimensions['A'].width = 40
+    ws.column_dimensions['B'].width = 20
 
-# Find image for each name
-"""
-find by name, associate to row #
-"""
+    for row in range(ws.max_row+1):
+        if row == 0:
+            ws.row_dimensions[row].height = 20
+        else:
+            ws.row_dimensions[row].height = 100
 
-# Embed image in column 2
-"""
-Resize column B width
-Resize rows with items
-embed image into column B, row n
-"""
-
-
+    wrkb.save('out_test.xlsx')
 
