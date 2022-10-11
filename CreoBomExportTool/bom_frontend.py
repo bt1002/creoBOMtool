@@ -1,33 +1,40 @@
-from lib.creoClass import CreoNode
 from pathlib import Path
-from anytree import AnyNode
-from anytree import RenderTree
-import pickle
-import os, logging, pprint
+import os, logging, pickle
 import pyinputplus as pyip
-
-# treeJSON = 'chassis-000.bom.json'
-# treeBinary = './7U-Bottom/7u-bottom.bom.1.pk'
-treeBinary = './BOM_imports/chassis-000.bom.pk'
-
-# logpath = './7U-Bottom/logs/'
-# logname = 'bom_frontend.txt'
-
-# try:
-#     os.remove(logpath + logname) # clears previous log file
-#     print('Clearing Logfile')
-# except:
-#     print(f'Creating Logfile: {logpath}{logname}')
-# logging.basicConfig(filename=logpath+logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logging.disable()
 
 # Declare basepath and filenames
 BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
 os.chdir(BASE_DIR)
 
+# Filename declarations
+LOG_FILE = Path('bom_frontend.py.txt')
+MERGED_BOM_FILE = Path('MERGED_BOM_FILE.txt')
+BINARY_IMP_FILE = Path('BINARY_EXPORT.pk')
+
+# Get current working directory
+BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
+os.chdir(BASE_DIR)
+
+# Folder locations for data
+LOG_ROOT_PATH = Path('./logs')
+EXPORT_ROOT_PATH = Path('./exports')
+
+# Export locations
+LOG_PATH = LOG_ROOT_PATH / LOG_FILE
+MERGED_BOM_EXP_PATH = EXPORT_ROOT_PATH / MERGED_BOM_FILE
+BINARY_IMP_PATH = EXPORT_ROOT_PATH / BINARY_IMP_FILE
+
+# Logging variables
+try:
+    os.remove(LOG_PATH) # clears previous log file
+except:
+    print(f'Creating Logfile: {LOG_FILE}')
+logging.basicConfig(filename=LOG_PATH, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.disable()
+
 def importPickleBinary():
 
-    with open(treeBinary, 'rb') as input:
+    with BINARY_IMP_PATH.open('rb') as input:
         creoNode = pickle.load(input)
     return creoNode
 

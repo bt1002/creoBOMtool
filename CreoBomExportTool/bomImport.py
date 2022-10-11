@@ -1,45 +1,54 @@
-from pprint import pprint
 from lib.creoClass import CreoNode
 from pathlib import Path
-from anytree import AnyNode
 from anytree.exporter import JsonExporter
 import os, logging
 import pickle
 import numpy as np
-from numpy import *
 from tkinter import Tk     # from tkinter import Tk for Python 3.x
 from tkinter.filedialog import askopenfilename
 
+# Filename declarations
+LOG_FILE = Path('bomImport.py.txt')
+MERGED_BOM_FILE = Path('MERGED_BOM_FILE.txt')
+JSON_EXPORT_FILE = Path('JSON_EXPORT.json')
+BINARY_EXPORT_FILE = Path('BINARY_EXPORT.pk')
 
-logpath = './logs/'
-logname = 'bom_import_log.txt'
-try:
-    os.remove(logpath + logname) # clears previous log file
-except:
-    print(f'Creating Logfile: {logpath}{logname}')
-logging.basicConfig(filename=logpath+logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-# logging.disable()
-
-# Declare basepath and filenames
+# Get current working directory
 BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
 os.chdir(BASE_DIR)
 
-# fileName = 'chassis-000.bom'
-# fileName = 'gpu-tray-rivet.bom'
+# Folder locations for data
+LOG_ROOT_PATH = Path('./logs')
+EXPORT_ROOT_PATH = Path('./exports')
 
-# File open dialog
-Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
-fileName = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+# Export locations
+LOG_PATH = LOG_ROOT_PATH / LOG_FILE
+MERGED_BOM_EXP_PATH = EXPORT_ROOT_PATH / MERGED_BOM_FILE
+JSON_EXP_PATH = EXPORT_ROOT_PATH / JSON_EXPORT_FILE
+BINARY_EXP_PATH = EXPORT_ROOT_PATH / BINARY_EXPORT_FILE
 
-importedBomFile = Path('./BOM_imports/') / Path(fileName)
+
+# Logging variables
+try:
+    os.remove(LOG_PATH) # clears previous log file
+except:
+    print(f'Creating Logfile: {LOG_FILE}')
+logging.basicConfig(filename=LOG_PATH, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
+# logging.disable()
+
+# importedBomFile = BASE_DIR / importedBomFile
 
 def buildDataModel(filePath):
     # Import BOM file and strip out blank lines
     rows = []
-    print(f'Importing file: {BASE_DIR}\{importedBomFile}')
+    print(f'Importing file: {BASE_DIR}\{filePath}')
     with open(importedBomFile, 'r', encoding='utf-8-sig') as file_object:
         contents = file_object.readlines()
         for row in contents:
+            if 'WARNING' in row:
+                continue
+            elif 'not in session' in row:
+                continue
             if row != '\n':
                 row.strip()
                 rows.append(row)
@@ -83,6 +92,12 @@ def buildDataModel(filePath):
             logging.info(f'Summary of Parts found...row: {sumRowIndex}\n---EXITING LOOP---')
             summaryRowStart = sumRowIndex + 1
             break
+        
+        # Handles an error with bom export including line about "Model not included in current Configuration State"
+        elif row[0:3] ==  ['Model','not','included']:
+            row
+            logging.info(f'Model not included in current Configuration State for {cSubAsmNode.name}, ignored')
+            continue
 
         # If read row is an assembly, iterate from bottom of tree upwards looking for a part name match in higher level parent
         # First part name found in upper level will be assigned as the new parent item and add following items as children
@@ -95,7 +110,6 @@ def buildDataModel(filePath):
 
         # If read row is a sub-bom item, create node of parts and assign parent and part properties
         else:
-            logging.debug(f'Sub-bom item routine started: {row[2]}, QTY {row[0]}')
             cQTY, cType, cName = row[0:3]
             cNode = CreoNode(cName, cType, cBOMID, cQTY, parent=cSubAsmNode)
             logging.debug(f'Parent name {cNode.parent.name}, child name {cNode.name}')
@@ -143,11 +157,9 @@ def buildDataModel(filePath):
     
     mergedBOMasm, unmergedBOMasm = mergeBOM(allAsm)
 
-
-
     fullMergedBOM = np.append(mergedBOMparts, mergedBOMasm, axis=0)
 
-    with open(logpath + 'fullMergedBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with MERGED_BOM_EXP_PATH.open('w', encoding='utf-8-sig') as fileObject:
         for i in fullMergedBOM:
             a = str(i[0])
             b = str(i[1])
@@ -166,32 +178,35 @@ def buildDataModel(filePath):
         nodeMatches = rootNode.findByName(type=lineType, searchterm=lineName, exact=True)
         for creoNode in nodeMatches:
             creoNode.totalTreeQTY = lineQTY
-            print(f'{creoNode.name} {creoNode.totalTreeQTY}')
 
     ### Write unmerged, merged, and bom summary to file for manual check ###
     writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
 
     #### Write full asm BOM ####
 
-    comparison = mergedBOMparts == np_bomSummary
     try:
+        comparison = mergedBOMparts == np_bomSummary
         equal_arrays = comparison.all()
+        print(f'Completed BOM check: {equal_arrays}')
+
     except:
-        print('BOM check failed')
-    print(f'Completed BOM check: {equal_arrays}')
-  
+        print('---- WARNING ----\n\nBOM check failed')
+        print('Potential issues include corrupted BOM or simplified rep without entire tree shown')
+        print('Check manual exports to verify, assembly tree with be used as source of data NOT creo BOM part rollup')
+        print('\n\n-----')
+      
 
     # Data and file export
     exporter = JsonExporter(indent=2, sort_keys=True)
-    logging.info(f'Writing JSON to file "./{fileName}.json"')
-    print(f'Writing JSON to file "{logpath}/{fileName}.json"')
-    with open(fileName + '.json', 'w', encoding='utf-8-sig') as fileObject:
+    logging.info(f'Writing JSON to file {str(JSON_EXP_PATH)}')
+    print(f'Writing JSON to file {str(JSON_EXP_PATH)}')
+    with JSON_EXP_PATH.open('w', encoding='utf-8-sig') as fileObject:
         fileObject.write(exporter.export(rootNode))
 
-    logging.info(f'Writing Data to file "./{fileName}.pk"')
-    print(f'Writing Data to file "./{fileName}.pk"')
-    with open(fileName + '.pk', 'wb') as output:
-        pickle.dump(rootNode, output, pickle.HIGHEST_PROTOCOL)
+    logging.info(f'Writing Data to file {str(BINARY_EXP_PATH)}')
+    print(f'Writing Data to file {str(BINARY_EXP_PATH)}')
+    with BINARY_EXP_PATH.open('wb') as fileObject:
+        pickle.dump((rootNode, fullMergedBOM), fileObject, pickle.HIGHEST_PROTOCOL)
 
     print('Completed tree build.')
     return rootNode
@@ -242,35 +257,35 @@ def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedB
     '''Write unmerged, merged, and bom summary to file for manual check
     requires 3 file np array types with following column data: qty, type, name'''
 
-    with open(logpath + 'unmerged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with open('./logs' + 'unmerged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
         for i in unmergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open(logpath + 'merged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with open('./logs' + 'merged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
         for i in mergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open(logpath +'bomSummary.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with open('./logs' +'bomSummary.txt', 'w', encoding='utf-8-sig') as fileObject:
         for i in bomSummary:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open(logpath + 'merged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with open('./logs' + 'merged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
         for i in mergedBOMasm:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open(logpath + 'unmerged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    with open('./logs' + 'unmerged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
         for i in unmergedBOMasm:
             a = str(i[0])
             b = str(i[1])
@@ -280,5 +295,8 @@ def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedB
 
 if __name__ == '__main__':
 
+    # File open dialog for imported BOM
+    Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
+    importedBomFile = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+
     rootNode = buildDataModel(importedBomFile)
-    print(rootNode.totalTreeQTY)

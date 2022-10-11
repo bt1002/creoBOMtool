@@ -1,31 +1,43 @@
 import openpyxl, pickle, re
 from pathlib import Path
 import os, anytree, logging
-# import pyinputplus as pyip
-# from lib.creoClass import CreoNode
 
+# Declare basepath and filenames
 BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
 os.chdir(BASE_DIR)
 
-TREE_BINARY = Path('./Excel/7u-bottom.bom.1.pk')
-IMAGE_DIR = Path('./7U-Bottom/images_1000')
+# Filename declarations
+LOG_FILE = Path('bom_frontend.py.txt')
+IMAGE_PATH = Path('./creo_images')
+BINARY_IMP_FILE = Path('BINARY_EXPORT.pk')
 
-LOGPATH = Path('./logs/')
-logname = Path('bom_excel_export.txt')
+# Get current working directory
+BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
+os.chdir(BASE_DIR)
 
-# try:
-#     os.remove(logpath + logname) # clears previous log file
-#     print('Clearing Logfile')
-# except:
-#     print(f'Creating Logfile: {logpath}{logname}')
-logging.basicConfig(filename=LOGPATH / logname, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+# Folder locations for data
+LOG_ROOT_PATH = Path('./logs')
+EXPORT_ROOT_PATH = Path('./exports')
+IMAGES_PATH = Path('./creo_images')
+
+# Export locations
+LOG_PATH = LOG_ROOT_PATH / LOG_FILE
+EXCEL_EXP_PATH = './exports/EXCEL_EXPORT.xlsx'
+BINARY_IMP_PATH = EXPORT_ROOT_PATH / BINARY_IMP_FILE
+
+# Logging variables
+try:
+    os.remove(LOG_PATH) # clears previous log file
+except:
+    print(f'Creating Logfile: {LOG_FILE}')
+logging.basicConfig(filename=LOG_PATH, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
 # logging.disable()
 
 def importPickleBinary():
     '''Opens binary file of path TREE_BINARY and returns CreoNode object'''
-    with open(TREE_BINARY, 'rb') as input:
-        creoNode = pickle.load(input)
-    return creoNode
+    with BINARY_IMP_PATH.open('rb') as input:
+        creoNode, asmBOM = pickle.load(input)
+    return creoNode, asmBOM
 
 def searchFileImg(partName, partType, directory):
     '''Searches "directory" for image file using part name and type'''
@@ -45,7 +57,7 @@ def searchFileImg(partName, partType, directory):
 
 if __name__ == '__main__':
 
-    asmNode = importPickleBinary()
+    asmNode, asmBOM = importPickleBinary()
 
     # Declare image size variables and rough fudge factor to excel widths
     IMAGE_WIDTH = None
@@ -57,7 +69,8 @@ if __name__ == '__main__':
     # Expand tree in order from top to bottom as line items
     treeDepth = asmNode.height
     wrkb = openpyxl.Workbook()     # # Create workbook class
-    ws = wrkb.worksheets[0] # Number of sheets in the workbook (1 sheet in our case)
+    ws1 = wrkb.worksheets[0] # Number of sheets in the workbook (1 sheet in our case)
+    ws1.title = 'Full_BOM'
 
     # Print Rows: Name / Image / QTY / FULLQTY / LEVELS(1-N:(max depth))
     asmColumns = (treeDepth + 1) * ['']
@@ -67,7 +80,7 @@ if __name__ == '__main__':
     headerCol = asmColumns[:]
     for i in range(len(headerCol)): headerCol[i] = f'LVL: {i + 1}'
     header = ['Name', 'Image', 'QTY', 'BRANCH\nQTY','TOTAL\nQTY', 'Path', 'Depth'] + headerCol
-    ws.append(header)
+    ws1.append(header)
 
     # Print data to worksheet
     rowIndex = 1
@@ -83,36 +96,45 @@ if __name__ == '__main__':
         rowAsmColumns = asmColumns[:]
         rowAsmColumns[node.depth] = 'X'
         row = [str(col_name), col_image, int(col_qty), int(col_brch_qty), int(col_fullQty), col_path, int(node.depth+1)] + rowAsmColumns
-        ws.append(row)
+        ws1.append(row)
 
         # Add file image
-        imgName = searchFileImg(node.name, node.type, IMAGE_DIR)
+        imgName = searchFileImg(node.name, node.type, IMAGES_PATH)
         if imgName != None:
-            img = openpyxl.drawing.image.Image(IMAGE_DIR / imgName)
+            img = openpyxl.drawing.image.Image(IMAGES_PATH / imgName)
             img.anchor = 'B' + str(rowIndex+1)
             img.height = img.height*IMAGE_SCALE # insert image height in pixels as float or int (e.g. 305.5)
             img.width= img.width*IMAGE_SCALE # insert image width in pixels as float or int (e.g. 405.8)
             IMAGE_WIDTH = img.height # In pixels
             IMAGE_HEIGHT = img.width # In pixels
-            ws.add_image(img)
+            ws1.add_image(img)
         else:
             print(f'No image found for {node.name}.{node.type}')
 
         rowIndex += 1
 
     # Resize columns and rows for images
+    ws1.column_dimensions['A'].width = 40
+    ws1.column_dimensions['B'].width = IMAGE_WIDTH * WIDTH_FUDGE + 1
 
-    ws.column_dimensions['A'].width = 40
-    ws.column_dimensions['B'].width = IMAGE_WIDTH * WIDTH_FUDGE + 1
-
-    for row in range(ws.max_row+1):
+    for row in range(ws1.max_row+1):
         if row == 0:
-            ws.row_dimensions[row].height = 20
+            ws1.row_dimensions[row].height = 20
         if row > 1:
-            ws.row_dimensions[row].height = IMAGE_HEIGHT * HEIGHT_FUDGE + 1
+            ws1.row_dimensions[row].height = IMAGE_HEIGHT * HEIGHT_FUDGE + 1
 
     # Misc formatting
-    cell = ws['B2'] ; ws.freeze_panes = cell # Freeze top row
-    ws.auto_filter.ref = ws.dimensions  # Add filter to data
+    cell = ws1['B2'] ; ws1.freeze_panes = cell # Freeze top row
+    ws1.auto_filter.ref = ws1.dimensions  # Add filter to data
 
-    wrkb.save('excel_bom_output.xlsx')
+    ws2 = wrkb.create_sheet()
+    ws2.title = 'Consolidated_BOM'
+
+    ws2Header = ['Name', 'Type', 'Qty']
+    ws2.append(ws2Header)
+
+    for creoPart in asmBOM:
+        row = [creoPart[2], creoPart[1], int(creoPart[0])]
+        ws2.append(row)
+
+    wrkb.save(EXCEL_EXP_PATH)
