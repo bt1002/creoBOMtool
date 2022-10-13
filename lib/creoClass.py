@@ -1,3 +1,14 @@
+# DEPRICATED INTO MAIN FILE
+
+
+
+
+
+
+
+
+
+
 # Define part classes
 from unicodedata import name
 from anytree import AnyNode, NodeMixin, SymlinkNodeMixin, RenderTree, PreOrderIter, PostOrderIter, findall, search
