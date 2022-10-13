@@ -35,8 +35,8 @@ logging.basicConfig(filename=LOG_PATH, level=logging.CRITICAL, format='%(asctime
 def importPickleBinary():
 
     with BINARY_IMP_PATH.open('rb') as input:
-        creoNode = pickle.load(input)
-    return creoNode
+        rootNode, fullMergedBOM = pickle.load(input)
+    return rootNode
 
 def exploreTree(node):
 
