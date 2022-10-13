@@ -1,52 +1,37 @@
-from lib.creoClass import CreoNode
-from pathlib import Path
-from anytree.exporter import JsonExporter
-import os, logging
-import pickle
+import logging, anytree, openpyxl, os, re
 import numpy as np
-from tkinter import Tk     # from tkinter import Tk for Python 3.x
-from tkinter.filedialog import askopenfilename
+from lib.creoClass import CreoNode
+import config
+from pathlib import Path
+from datetime import datetime
 
-# Filename declarations
-LOG_FILE = Path('bomImport.py.txt')
-MERGED_BOM_FILE = Path('MERGED_BOM_FILE.txt')
-JSON_EXPORT_FILE = Path('JSON_EXPORT.json')
-BINARY_EXPORT_FILE = Path('BINARY_EXPORT.pk')
+ROOT_DIR = Path('../')
+EXPORT_DIR = ROOT_DIR / Path('/exports')
+LOG_DIR = ROOT_DIR / Path('/logs')
+IMAGES_DIR = ROOT_DIR / Path('/creo_images')
 
-# Get current working directory
-BASE_DIR = Path(os.path.dirname(os.path.abspath(__file__))) # Get working directory of file
-os.chdir(BASE_DIR)
+JSON_EXP_DIR = EXPORT_DIR
+MERGED_BOM_EXP_DIR = EXPORT_DIR
 
-# Folder locations for data
-LOG_ROOT_PATH = Path('./logs')
-EXPORT_ROOT_PATH = Path('./exports')
-
-# Export locations
-LOG_PATH = LOG_ROOT_PATH / LOG_FILE
-MERGED_BOM_EXP_PATH = EXPORT_ROOT_PATH / MERGED_BOM_FILE
-JSON_EXP_PATH = EXPORT_ROOT_PATH / JSON_EXPORT_FILE
-BINARY_EXP_PATH = EXPORT_ROOT_PATH / BINARY_EXPORT_FILE
-
-
-# Logging variables
-try:
-    os.remove(LOG_PATH) # clears previous log file
-except:
-    print(f'Creating Logfile: {LOG_FILE}')
-logging.basicConfig(filename=LOG_PATH, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')
-# logging.disable()
-
-# importedBomFile = BASE_DIR / importedBomFile
 
 def buildDataModel(filePath):
     # Import BOM file and strip out blank lines
+
+    now = datetime.now()
+    bomFileRegex = re.compile(r'(\S+)(.bom.)[\d]*')
+    FILENAMEPREFIX = bomFileRegex.search(filePath.name)[1]
+    FILENAMESUFFIX = '_' + now.strftime("%y%d%m_%H%M")
+
     rows = []
-    print(f'Importing file: {BASE_DIR}\{filePath}')
-    with open(importedBomFile, 'r', encoding='utf-8-sig') as file_object:
+    print(f'Importing file: {filePath}')
+    with open(filePath, 'r', encoding='utf-8-sig') as file_object:
         contents = file_object.readlines()
-        for row in contents:
-            if 'WARNING' in row:
-                continue
+        for row in contents: # Ignores simplfied rep not present warning at header
+            if 'WARNING: Some' in row:
+                print('''
+                WARNING: Some components excluded from the active Simplified Rep. are currently not in session.
+                This may produce inconsistencies in BOM output.'
+                ''')
             elif 'not in session' in row:
                 continue
             if row != '\n':
@@ -58,7 +43,7 @@ def buildDataModel(filePath):
     rootRow = rows[0]
     rows.pop(0)
     rootRow = rootRow.strip().split()
-    rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
+    # rootID = f'{rootRow[1]}.{rootRow[0]}.0.0'
 
     rootNode = CreoNode(name=rootRow[1], type=rootRow[0], bomID=1, qty=1)
     rootNode.totalTreeQTY = 1
@@ -159,12 +144,6 @@ def buildDataModel(filePath):
 
     fullMergedBOM = np.append(mergedBOMparts, mergedBOMasm, axis=0)
 
-    with MERGED_BOM_EXP_PATH.open('w', encoding='utf-8-sig') as fileObject:
-        for i in fullMergedBOM:
-            a = str(i[0])
-            b = str(i[1])
-            c = str(i[2])
-            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
     # Set total assembly quantities to match to node type, NOTE: this is not dynamic if tree is changed
     for line in fullMergedBOM:
@@ -180,36 +159,26 @@ def buildDataModel(filePath):
             creoNode.totalTreeQTY = lineQTY
 
     ### Write unmerged, merged, and bom summary to file for manual check ###
-    writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
+    # writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, np_bomSummary)
 
     #### Write full asm BOM ####
-
     try:
         comparison = mergedBOMparts == np_bomSummary
         equal_arrays = comparison.all()
         print(f'Completed BOM check: {equal_arrays}')
 
     except:
-        print('---- WARNING ----\n\nBOM check failed')
-        print('Potential issues include corrupted BOM or simplified rep without entire tree shown')
-        print('Check manual exports to verify, assembly tree with be used as source of data NOT creo BOM part rollup')
-        print('\n\n-----')
-      
-
-    # Data and file export
-    exporter = JsonExporter(indent=2, sort_keys=True)
-    logging.info(f'Writing JSON to file {str(JSON_EXP_PATH)}')
-    print(f'Writing JSON to file {str(JSON_EXP_PATH)}')
-    with JSON_EXP_PATH.open('w', encoding='utf-8-sig') as fileObject:
-        fileObject.write(exporter.export(rootNode))
-
-    logging.info(f'Writing Data to file {str(BINARY_EXP_PATH)}')
-    print(f'Writing Data to file {str(BINARY_EXP_PATH)}')
-    with BINARY_EXP_PATH.open('wb') as fileObject:
-        pickle.dump((rootNode, fullMergedBOM), fileObject, pickle.HIGHEST_PROTOCOL)
+        print('''---- WARNING ----
+        
+        BOM check failed:
+        Potential issues include corrupted BOM or simplified rep without entire tree shown
+        Check manual exports to verify, assembly tree with be used as source of data NOT creo BOM part rollup
+        
+        -----''')
 
     print('Completed tree build.')
-    return rootNode
+    return rootNode, fullMergedBOM
+
 
 def mergeBOM(creoAsm):
     #### Following section is used to check if BOM is built with the correct quantities after the tree is constructed.
@@ -253,50 +222,152 @@ def mergeBOM(creoAsm):
 
     return np_mergedBOM_parts, np_unmergedBOM
 
+
 def writeBomCheckFiles(unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, bomSummary):
     '''Write unmerged, merged, and bom summary to file for manual check
     requires 3 file np array types with following column data: qty, type, name'''
 
-    with open('./logs' + 'unmerged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    unmergedPartBom = LOG_DIR / Path('unmergedPartBom.txt')
+    with unmergedPartBom.open(encoding='utf-8-sig') as fileObject:
         for i in unmergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open('./logs' + 'merged_PartBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    mergedPartBom = LOG_DIR / Path('mergedPartBom.txt')
+    with mergedPartBom.open('w', encoding='utf-8-sig') as fileObject:
         for i in mergedBOMparts:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open('./logs' +'bomSummary.txt', 'w', encoding='utf-8-sig') as fileObject:
+    bomSummary = LOG_DIR / Path('bomSummary.txt')
+    with bomSummary.open('w', encoding='utf-8-sig') as fileObject:
         for i in bomSummary:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    with open('./logs' + 'merged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
-        for i in mergedBOMasm:
-            a = str(i[0])
-            b = str(i[1])
-            c = str(i[2])
-            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
-
-    with open('./logs' + 'unmerged_asmBOM.txt', 'w', encoding='utf-8-sig') as fileObject:
+    unmergedASmBOM = LOG_DIR / Path('unmergedAsmBom.txt')
+    with unmergedASmBOM.open('w', encoding='utf-8-sig') as fileObject:
         for i in unmergedBOMasm:
             a = str(i[0])
             b = str(i[1])
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
+    mergedASmBOM = LOG_DIR / Path('mergedAsmBom.txt')
+    with mergedASmBOM.open('w', encoding='utf-8-sig') as fileObject:
+        for i in mergedBOMasm:
+            a = str(i[0])
+            b = str(i[1])
+            c = str(i[2])
+            fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
+
+
+def searchFileImg(partName, partType, directory):
+    '''Searches "directory" for image file using part name and type'''
+
+    imageNameFiles = os.listdir(directory)
+    
+    regexImage = re.compile((f'{str(partName)}') + r'(prt|asm).(jpg|png|jpeg|)', re.IGNORECASE)
+    for file in imageNameFiles:
+        result = regexImage.match(file)
+        if result:
+            filePartType = result[1]
+            if filePartType.lower() == partType.lower():
+                logging.info(f'Found match for {partName}.{partType} = {result[0]}')
+                return result[0]
+    logging.critical(f'Found no match for {partName}.{partType}')
+    return None
+
+
+def exportExcel(asmNode, asmBOM):
+
+    # Declare image size variables and rough fudge factor to excel widths
+    IMAGE_WIDTH = None
+    IMAGE_HEIGHT = None
+    IMAGE_SCALE = .12 # Approximate scale for 1000 x 1000 pixel image, change this to scale images in document
+    WIDTH_FUDGE = (1/7)
+    HEIGHT_FUDGE = (3/4)
+
+    # Expand tree in order from top to bottom as line items
+    treeDepth = asmNode.height
+    wrkb = openpyxl.Workbook()     # # Create workbook class
+    ws1 = wrkb.worksheets[0] # Number of sheets in the workbook (1 sheet in our case)
+    now = datetime.now()
+    ws1.title = 'asmNode.name' + '_' + now.strftime("%y%d%m_%H%M")
+
+    # Print Rows: Name / Image / QTY / FULLQTY / LEVELS(1-N:(max depth))
+    asmColumns = (treeDepth + 1) * ['']
+    rowCount = 0
+
+    # Print Header to worksheet
+    headerCol = asmColumns[:]
+    for i in range(len(headerCol)): headerCol[i] = f'LVL: {i + 1}'
+    header = ['Name', 'Image', 'QTY', 'BRANCH\nQTY','TOTAL\nQTY', 'Path', 'Depth'] + headerCol
+    ws1.append(header)
+
+    # Print data to worksheet
+    rowIndex = 1
+    for node in anytree.PreOrderIter(asmNode):
+        
+        # Print Data
+        col_name = node.name + '.' + node.type
+        col_image = ''
+        col_qty = node.qty
+        col_brch_qty = node.branchQTY
+        col_fullQty = node.totalTreeQTY
+        col_path = node.getParentsPrintout()
+        rowAsmColumns = asmColumns[:]
+        rowAsmColumns[node.depth] = 'X'
+        row = [str(col_name), col_image, int(col_qty), int(col_brch_qty), int(col_fullQty), col_path, int(node.depth+1)] + rowAsmColumns
+        ws1.append(row)
+
+        # Add file image
+        imgName = searchFileImg(node.name, node.type, str(IMAGES_DIR))
+        if imgName != None:
+            img = openpyxl.drawing.image.Image(str(IMAGES_DIR) / imgName)
+            img.anchor = 'B' + str(rowIndex+1)
+            img.height = img.height*IMAGE_SCALE # insert image height in pixels as float or int (e.g. 305.5)
+            img.width= img.width*IMAGE_SCALE # insert image width in pixels as float or int (e.g. 405.8)
+            IMAGE_WIDTH = img.height # In pixels
+            IMAGE_HEIGHT = img.width # In pixels
+            ws1.add_image(img)
+        else:
+            print(f'No image found for {node.name}.{node.type}')
+
+        rowIndex += 1
+
+    # Resize columns and rows for images
+    ws1.column_dimensions['A'].width = 40
+    ws1.column_dimensions['B'].width = IMAGE_WIDTH * WIDTH_FUDGE + 1
+
+    for row in range(ws1.max_row+1):
+        if row == 0:
+            ws1.row_dimensions[row].height = 20
+        if row > 1:
+            ws1.row_dimensions[row].height = IMAGE_HEIGHT * HEIGHT_FUDGE + 1
+
+    # Misc formatting
+    cell = ws1['B2'] ; ws1.freeze_panes = cell # Freeze top row
+    ws1.auto_filter.ref = ws1.dimensions  # Add filter to data
+
+    ws2 = wrkb.create_sheet()
+    ws2.title = 'Consolidated_BOM'
+
+    ws2Header = ['Name', 'Type', 'Qty']
+    ws2.append(ws2Header)
+
+    for creoPart in asmBOM:
+        row = [creoPart[2], creoPart[1], int(creoPart[0])]
+        ws2.append(row)
+
+    wrkb.save(EXPORT_DIR)
+
 
 if __name__ == '__main__':
-
-    # File open dialog for imported BOM
-    Tk().withdraw() # we don't want a full GUI, so keep the root window from appearing
-    importedBomFile = askopenfilename() # show an "Open" dialog box and return the path to the selected file
-
-    rootNode = buildDataModel(importedBomFile)
+    pass
