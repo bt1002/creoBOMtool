@@ -1,5 +1,9 @@
-# import os
-# from pathlib import Path
+import os
+from pathlib import Path
+import numpy
+
+
+
 
 # # Filename declarations
 # LOG_FILE = Path(f'LOG_creoBOMtool.py.txt')
