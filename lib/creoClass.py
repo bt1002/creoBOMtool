@@ -1,23 +1,15 @@
-# DEPRICATED INTO MAIN FILE
-
-
-
-
-
-
-
-
-
-
 # Define part classes
-from unicodedata import name
-from anytree import AnyNode, NodeMixin, SymlinkNodeMixin, RenderTree, PreOrderIter, PostOrderIter, findall, search
-import re, logging, anytree
+import logging
 from copy import copy, deepcopy
+from unicodedata import name
+
+from anytree import (AnyNode, NodeMixin, PostOrderIter, PreOrderIter,
+                     RenderTree, SymlinkNodeMixin, findall, search)
+
 
 class CreoFile():
     '''Creo Part'''
-    def __init__(self, name, type, bomID, qty):
+    def __init__(self, name, type, bomID, qty): # type: ignore
         if type[0] == "S" or type[0] == "A":
             self.type = 'ASM'
             self.empty = False # Default flag for assemblies, this needs to be handled
@@ -43,31 +35,31 @@ class CreoNode(NodeMixin, CreoFile):
         if children:
             self.children = children
 
-    def printTree(self, level=None) -> "CreoNode":
+    def printTree(self, level=None) -> None:
         '''Prints tree of Node'''
         if level == None:
             print(RenderTree(self).by_attr('printID'))
         else:
             print(RenderTree(self, maxlevel=level+1).by_attr('printID'))
     
-    def getParentsPrintout(self) -> "CreoNode":
+    def getParentsPrintout(self) -> str:
         '''Returns string of parent path'''
         parentNames = []
         for node in self.iter_path_reverse():
-            parentNames.append(f'{node.name} [QTY {node.qty}]')
+            parentNames.append(f'{node.name} [QTY {node.qty}]') # type: ignore
         parentNames[0] = f'{self.name}.{self.type} [QTY {self.qty}]'
         return '-> '.join(parentNames)
 
     def getParents(self) -> "CreoNode":
         '''Returns string of parent path'''
-        return self.ancestors
+        return self.ancestors  # type: ignore
     
     def humanSearchTreeName(self, partName, type='') -> "CreoNode":
         '''Searches tree for all nodes by str value'''
         partName = partName.lower()
         partList = self.findByName(type, partName, exact=False)
         strNames = []
-        for node in partList:
+        for node in partList:  # type: ignore
             strNames.append({'name':node.name, 'type':node.type, 'path': node.getParentsPrintout})
         return partList
     
@@ -76,18 +68,18 @@ class CreoNode(NodeMixin, CreoFile):
         if exact:
             partList = findall(self, filter_=lambda node: searchterm.lower() == node.name.lower() )
             # filtredList = findall(partList, filter=lambda node: type in node.type )
-            filtredList = []
+            filteredList = []
             for parts in partList:
                 if type in parts.type:
-                    filtredList.append(parts)
-            return filtredList
+                    filteredList.append(parts)
+            return filteredList  # type: ignore
         else:
             partList = findall(self, filter_=lambda node: searchterm.lower() in node.name.lower() )
             filtredList = []
             for parts in partList:
                 if type in parts.type:
                     filtredList.append(parts)
-            return filtredList
+            return filtredList  # type: ignore
 
     def findLeaves(self) -> "CreoNode":
         '''Searches part tree for all leaves (no children)'''
@@ -96,7 +88,7 @@ class CreoNode(NodeMixin, CreoFile):
             # print(f'CreoNode.is_leaf {CreoNode.is_leaf} name {CreoNode.name} in {self.name}')
             if CreoNode.is_leaf:
                 leaves.append(CreoNode)
-        return leaves
+        return leaves  # type: ignore
 
     def findParts(self) -> "CreoNode":
         '''Searches  tree for all parts (no children)'''
@@ -104,7 +96,7 @@ class CreoNode(NodeMixin, CreoFile):
         for CreoNode in self.descendants:  # walk down from the root
             if CreoNode.is_leaf and CreoNode.type == "PRT":
                 parts.append(CreoNode)
-        return parts
+        return parts  # type: ignore
 
     def findAsm(self) -> "CreoNode":
         '''Searches tree for all assemblies (with or without parts)'''
@@ -112,7 +104,7 @@ class CreoNode(NodeMixin, CreoFile):
         for CreoNode in self.descendants:  # walk down from the root
             if CreoNode.type == "ASM":
                 assems.append(CreoNode)
-        return assems
+        return assems  # type: ignore
 
 
     def setBranchQTY(self) -> "CreoNode":
@@ -121,10 +113,10 @@ class CreoNode(NodeMixin, CreoFile):
         parents = self.getParents()
         qtyMultiplier = 1
         
-        for parent in parents:
+        for parent in parents:  # type: ignore
             qtyMultiplier = parent.qty * qtyMultiplier
         self.branchQTY = self.qty * qtyMultiplier
-        return self.branchQTY
+        return self.branchQTY  # type: ignore
 
     def __copy__(self) -> "CreoNode":
         """Computes a deep copy of the sub-tree the node is a root of"""
@@ -143,9 +135,9 @@ class CreoNode(NodeMixin, CreoFile):
         my_copy.children = [deepcopy(child) for child in self.children]
         return my_copy
 
-    def fix_empty_asm(self) -> "CreoNode":
+    def fix_empty_asm(self) -> None:
         allLeaves = self.findLeaves()
-        for leaf in allLeaves:
+        for leaf in allLeaves:  # type: ignore
             if leaf.type == "ASM" and leaf.depth == 1:
                 logging.debug(f'Empty asm found: Name {leaf.name}.{leaf.type} #Children: {len(leaf.children)}. Empty={leaf.empty}')
                 leaf.empty = True
@@ -154,16 +146,16 @@ class CreoNode(NodeMixin, CreoFile):
     def find_childless_subAsm(self) -> "CreoNode":
         allLeaves = self.findLeaves()
         childlessSubAsm = []
-        for leaf in allLeaves:
+        for leaf in allLeaves:  # type: ignore
             if leaf.type == "ASM" and leaf.empty == False:
                 logging.debug(f'Childless subasm {leaf.name}.{leaf.type}, # Children: {len(leaf.children)}, Empty={leaf.empty}')
                 childlessSubAsm.append(leaf)
-        return childlessSubAsm
+        return childlessSubAsm  # type: ignore
 
     def isEmptySubAsm(self, asmName):
         emptyAsmNodes = self.findByName(type='ASM', searchterm=asmName, exact=True)
 
-        for match in emptyAsmNodes:
+        for match in emptyAsmNodes:  # type: ignore
             if match.is_leaf == True and match.empty == True:
                 logging.debug(f'Empty SubAsm Found: {match.name} --- Leaf: {match.is_leaf == True} and Emtpy: {match.empty == True} = {match.is_leaf == True and match.empty == True}')
                 return True
@@ -176,11 +168,11 @@ class CreoNode(NodeMixin, CreoFile):
         while True: # iterate across children until no more orphaned assemblies in BOM
             
             allChildlessSubAssemblies = self.find_childless_subAsm()
-            logging.info(f'Number of childless sub: {len(self.find_childless_subAsm())}')
+            logging.info(f'Number of childless sub: {len(self.find_childless_subAsm())}')  # type: ignore
 
             childlessSubAssemblies = []
 
-            for childlessSubAsm in allChildlessSubAssemblies:
+            for childlessSubAsm in allChildlessSubAssemblies:  # type: ignore
                 if nodeContainer.isEmptySubAsm(childlessSubAsm.name) != True:
                     childlessSubAssemblies.append(childlessSubAsm)
             logging.debug(f'# childlessSubAssemblies {len(childlessSubAssemblies)}')
