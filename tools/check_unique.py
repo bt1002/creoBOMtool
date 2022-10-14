@@ -5,7 +5,7 @@ from pathlib import Path
 import os, logging, pprint
 import pyinputplus as pyip
 import numpy as np
-from numpy import *
+# from numpy import *
 
 logname = 'bom_import_log.txt'
 logging.basicConfig(filename=logname, level=logging.CRITICAL, format='%(asctime)s - %(levelname)s - %(message)s')

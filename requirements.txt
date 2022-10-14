@@ -1,14 +1,4 @@
-Requirements:
-
-- Python 3.0+
-
-Packages:
-
-Add-on:
-- tkinter
-
-Core:
-- os
-- pickle
-- Numpy
-- anytree
+anytree==2.8.0
+numpy==1.23.1
+openpyxl==3.0.10
+PyInputPlus==0.2.12
