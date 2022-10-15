@@ -1,12 +1,9 @@
- CreoBomExportTool
-    bom_imports
-    images
-    exports
-        date/time
-
-
-
-
+# Update export to include date and time to make unique
+    - keep folder structure above
+    -  CreoBomExportTool
+        bom_imports
+        images
+        export
 
 # Filename declarations
 LOG_FILE = Path('bomImport.py.txt')
