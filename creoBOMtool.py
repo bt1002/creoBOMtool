@@ -32,10 +32,6 @@ XLS_EXP_DIR = EXPORT_DIR
 
 LOG_PATH = LOG_DIR / LOG_FILE
 
-# File prefex / suffix
-# FILENAMEPREFIX = ''
-# FILENAMESUFFIX = ''
-
 # Logging variables
 try:
     os.remove(LOG_DIR / LOG_FILE)  # clears previous log file
