@@ -10,39 +10,16 @@ import openpyxl
 import pyinputplus as pyip
 from anytree.exporter import JsonExporter
 
+import lib.constants as c
 from lib.creoClass import CreoNode
-
-# Filename declarations
-LOG_FILE = Path("LOG_creoBOMtool.py.txt")
-
-# Get current working directory
-ROOT_DIR = Path(
-    os.path.dirname(os.path.abspath(__file__))
-)  # Get working directory of file
-os.chdir(ROOT_DIR)
-
-# Folder locations for data
-EXPORT_DIR = ROOT_DIR / Path("./exports")
-LOG_DIR = ROOT_DIR / Path("./logs")
-IMPORT_DIR = ROOT_DIR / Path("./creo_bom_imports")
-IMAGES_DIR = ROOT_DIR / Path("./creo_images")
-JSON_EXP_DIR = EXPORT_DIR
-MERGED_BOM_EXP_DIR = EXPORT_DIR
-XLS_EXP_DIR = EXPORT_DIR
-
-LOG_PATH = LOG_DIR / LOG_FILE
-
-# File prefex / suffix
-# FILENAMEPREFIX = ''
-# FILENAMESUFFIX = ''
 
 # Logging variables
 try:
-    os.remove(LOG_DIR / LOG_FILE)  # clears previous log file
+    os.remove(c.LOG_PATH)  # clears previous log file
 except FileNotFoundError:
-    print(f"Creating Logfile: {LOG_FILE}")
+    print(f"Creating Logfile: {str(c.LOG_FILE)}")
 logging.basicConfig(
-    filename=str(LOG_PATH),
+    filename=str(c.LOG_PATH),
     level=logging.CRITICAL,
     format="%(asctime)s - %(levelname)s - %(message)s",
 )
@@ -67,7 +44,7 @@ def findBOMfile():
     bomRegex = re.compile(r".bom.[\d]*")
 
     results = []
-    for root, dirs, files in os.walk(IMPORT_DIR):
+    for root, dirs, files in os.walk(c.IMPORT_DIR):
         for name in files:
             if bomRegex.search(name):
                 results.append(name)
@@ -354,10 +331,11 @@ def mergeBOM(creoAsm):
 def writeBomCheckFiles(
     unmergedBOMparts, mergedBOMparts, unmergedBOMasm, mergedBOMasm, bomSummary
 ):
+
     """Write unmerged, merged, and bom summary to file for manual check
     requires 3 file np array types with following column data: qty, type, name"""
 
-    unmergedPartBomPath = LOG_DIR / Path("unmergedPartBom.txt")
+    unmergedPartBomPath = c.LOG_DIR / Path("unmergedPartBom.txt")
     with unmergedPartBomPath.open(encoding="utf-8-sig") as fileObject:
         for i in unmergedBOMparts:
             a = str(i[0])
@@ -365,7 +343,7 @@ def writeBomCheckFiles(
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    mergedPartBomPath = LOG_DIR / Path("mergedPartBom.txt")
+    mergedPartBomPath = c.LOG_DIR / Path("mergedPartBom.txt")
     with mergedPartBomPath.open("w", encoding="utf-8-sig") as fileObject:
         for i in mergedBOMparts:
             a = str(i[0])
@@ -373,7 +351,7 @@ def writeBomCheckFiles(
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    bomSummaryPath = LOG_DIR / Path("bomSummary.txt")
+    bomSummaryPath = c.LOG_DIR / Path("bomSummary.txt")
     with bomSummaryPath.open("w", encoding="utf-8-sig") as fileObject:
         for i in bomSummary:
             a = str(i[0])
@@ -381,7 +359,7 @@ def writeBomCheckFiles(
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    unmergedASmBOMPath = LOG_DIR / Path("unmergedAsmBom.txt")
+    unmergedASmBOMPath = c.LOG_DIR / Path("unmergedAsmBom.txt")
     with unmergedASmBOMPath.open("w", encoding="utf-8-sig") as fileObject:
         for i in unmergedBOMasm:
             a = str(i[0])
@@ -389,7 +367,7 @@ def writeBomCheckFiles(
             c = str(i[2])
             fileObject.write(f'{a.ljust(8," ")} {b.ljust(8," ")} {c}\n')
 
-    mergedASmBOMPath = LOG_DIR / Path("mergedAsmBom.txt")
+    mergedASmBOMPath = c.LOG_DIR / Path("mergedAsmBom.txt")
     with mergedASmBOMPath.open("w", encoding="utf-8-sig") as fileObject:
         for i in mergedBOMasm:
             a = str(i[0])
@@ -407,7 +385,7 @@ def searchFileImg(partName, partType, directory):
         (f"{str(partName)}") + r"(prt|asm).(jpg|png|jpeg|)", re.IGNORECASE
     )
     # for file in imageNameFiles:
-    for root, dirs, files in os.walk(IMAGES_DIR):
+    for root, dirs, files in os.walk(c.IMAGES_DIR):
         for name in files:
             result = regexImage.match(name)
             if result:
@@ -479,7 +457,7 @@ def exportExcel(asmNode, asmBOM):
         ws1.append(row)  # type: ignore
 
         # Add file image
-        imgPath = searchFileImg(node.name, node.type, str(IMAGES_DIR))
+        imgPath = searchFileImg(node.name, node.type, str(c.IMAGES_DIR))
         if imgPath != None:
             img = openpyxl.drawing.image.Image(imgPath)  # type: ignore
             img.anchor = "B" + str(rowIndex + 1)
@@ -522,7 +500,7 @@ def exportExcel(asmNode, asmBOM):
         row = [creoPart[2], creoPart[1], int(creoPart[0])]
         ws2.append(row)
 
-    XLS_EXP_PATH = XLS_EXP_DIR / Path(FILENAMEPREFIX + FILENAMESUFFIX + ".XLSX")
+    XLS_EXP_PATH = c.XLS_EXP_DIR / Path(FILENAMEPREFIX + FILENAMESUFFIX + ".XLSX")
 
     wrkb.save(str(XLS_EXP_PATH))
 
@@ -530,7 +508,7 @@ def exportExcel(asmNode, asmBOM):
 def writeBOM(fullMergedBOM):
 
     now = datetime.now()
-    MERGED_BOM_EXP_PATH = MERGED_BOM_EXP_DIR / Path(FILENAMEPREFIX + "BOM" + ".txt")
+    MERGED_BOM_EXP_PATH = c.MERGED_BOM_EXP_DIR / Path(FILENAMEPREFIX + "BOM" + ".txt")
     with MERGED_BOM_EXP_PATH.open("w", encoding="utf-8-sig") as fileObject:
         for i in fullMergedBOM:
             a = str(i[0])
@@ -542,7 +520,7 @@ def writeBOM(fullMergedBOM):
 def exportJSON(activeNode):
     # Data and file export to JSON
     exporter = JsonExporter(indent=2, sort_keys=True)
-    JSON_EXP_PATH = JSON_EXP_DIR / Path(FILENAMEPREFIX + FILENAMESUFFIX + ".JSON")
+    JSON_EXP_PATH = c.JSON_EXP_DIR / Path(FILENAMEPREFIX + FILENAMESUFFIX + ".JSON")
     logging.info(f"Writing JSON to file {str(JSON_EXP_PATH)}")
     print(f"Writing JSON to file {str(JSON_EXP_PATH)}")
     with JSON_EXP_PATH.open("w", encoding="utf-8-sig") as fileObject:
@@ -586,7 +564,7 @@ if __name__ == "__main__":
                 activeBOMtxt = bomFiles[0]
             else:
                 activeBOMtxt = pyip.inputMenu(bomFiles, numbered=True)
-            activeNode, activeBOMnp = buildDataModel(IMPORT_DIR / Path(activeBOMtxt))
+            activeNode, activeBOMnp = buildDataModel(c.IMPORT_DIR / Path(activeBOMtxt))
             now = datetime.now()
             bomFileRegex = re.compile(r"(\S+)(.bom.)[\d]*")
             FILENAMEPREFIX = bomFileRegex.search(activeBOMtxt)[1]  # type: ignore
