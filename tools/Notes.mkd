@@ -1,18 +1,4 @@
- CreoBomExportTool
-    bom_imports
-    images
-    exports
-        date/time
 
-
-
-
-
-# Filename declarations
-LOG_FILE = Path('bomImport.py.txt')
-MERGED_BOM_FILE = Path('MERGED_BOM_FILE.txt')
-JSON_EXPORT_FILE = Path('JSON_EXPORT.json')
-BINARY_EXPORT_FILE = Path('BINARY_EXPORT.pk')
 
 
 
