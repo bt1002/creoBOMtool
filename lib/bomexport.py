@@ -1,10 +1,16 @@
-import logging, os, re
-import openpyxl, anytree
+import logging
+import os
+import re
 from datetime import datetime
-from copy import copy, deepcopy
-from unicodedata import name
-import constants as c
 from pathlib import Path
+
+import anytree
+import openpyxl
+from anytree.exporter import JsonExporter
+
+from . import constants
+from .creoClass import CreoNode
+
 
 def searchFileImg(partName, partType, directory):
     """Searches "directory" for image file using part name and type"""
@@ -15,7 +21,7 @@ def searchFileImg(partName, partType, directory):
         (f"{str(partName)}") + r"(prt|asm).(jpg|png|jpeg|)", re.IGNORECASE
     )
     # for file in imageNameFiles:
-    for root, dirs, files in os.walk(c.IMAGES_DIR):
+    for root, dirs, files in os.walk(constants.IMAGES_DIR):
         for name in files:
             result = regexImage.match(name)
             if result:
@@ -24,8 +30,8 @@ def searchFileImg(partName, partType, directory):
                     logging.info(f"Found match for {partName}.{partType} = {result[0]}")
                     return os.path.join(root, name)
     logging.warning(f"Found no match for {partName}.{partType}")
-    
-    
+
+
 def exportExcel(asmNode, asmBOM, filenameprefix, filenamesuffix):
 
     # Declare image size variables and rough fudge factor to excel widths
@@ -86,7 +92,7 @@ def exportExcel(asmNode, asmBOM, filenameprefix, filenamesuffix):
         ws1.append(row)  # type: ignore
 
         # Add file image
-        imgPath = searchFileImg(node.name, node.type, str(c.IMAGES_DIR))
+        imgPath = searchFileImg(node.name, node.type, str(constants.IMAGES_DIR))
         if imgPath != None:
             img = openpyxl.drawing.image.Image(imgPath)  # type: ignore
             img.anchor = "B" + str(rowIndex + 1)
@@ -129,9 +135,22 @@ def exportExcel(asmNode, asmBOM, filenameprefix, filenamesuffix):
         row = [creoPart[2], creoPart[1], int(creoPart[0])]
         ws2.append(row)
 
-    XLS_EXP_PATH = c.XLS_EXP_DIR / Path(filenameprefix + filenamesuffix + ".XLSX")
+    XLS_EXP_PATH = constants.XLS_EXP_DIR / Path(filenameprefix + filenamesuffix + ".XLSX")
 
+    logging.info(f"Writing Excel BOM to file {str(XLS_EXP_PATH)}")
+    print(f"Writing Excel BOM to file {str(XLS_EXP_PATH)}")
     wrkb.save(str(XLS_EXP_PATH))
 
-if __name__ == '__main__':
-    exit()
+
+def exportJSON(activeNode, filenameprefix, filenamesuffix):
+    # Data and file export to JSON
+    exporter = JsonExporter(indent=2, sort_keys=True)
+    JSON_EXP_PATH = constants.JSON_EXP_DIR / Path(filenameprefix + filenamesuffix + ".JSON")
+    logging.info(f"Writing JSON to file {str(JSON_EXP_PATH)}")
+    print(f"Writing JSON to file {str(JSON_EXP_PATH)}")
+    with JSON_EXP_PATH.open("w", encoding="utf-8-sig") as fileObject:
+        fileObject.write(exporter.export(activeNode))
+
+
+if __name__ == "__main__":
+    print("Not indended to run standalone")
